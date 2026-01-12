@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      LovePage Angola - Presente Digital Exclusivo para o Dia dos Namorados
+    </title>
+    <meta
+      name="description"
+      content="Crie uma landing page personalizada e romântica para surpreender seu amor no Dia dos Namorados. Presente digital único a partir de 5.000 AOA."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                900: "#0a0a0f",
+                800: "#12121a",
+                700: "#1a1a25",
+                600: "#252532",
+                500: "#32323f",
+              },
+              accent: {
+                rose: "#e11d48",
+                pink: "#ec4899",
+                gold: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .gradient-border {
+        background: linear-gradient(135deg, #e11d48, #ec4899, #f59e0b);
+        padding: 1px;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #e11d48, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .card-glow:hover {
+        box-shadow: 0 0 40px rgba(225, 29, 72, 0.15);
+      }
+      .template-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .template-card:hover {
+        transform: translateY(-8px) scale(1.02);
+      }
+      .pricing-card {
+        transition: all 0.3s ease;
+      }
+      .pricing-card:hover {
+        transform: translateY(-4px);
+      }
+      @keyframes pulse-soft {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+      .bg-pulse {
+        animation: pulse-soft 4s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-dark-900 text-gray-100">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-dark-900/90 backdrop-blur-xl z-50 border-b border-dark-600/50"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="text-xl font-bold tracking-tight">
+          <span class="text-white">Love</span
+          ><span class="gradient-text">Page</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+          <a href="#como-funciona" class="hover:text-white transition-colors"
+            >Como Funciona</a
+          >
+          <a href="#templates" class="hover:text-white transition-colors"
+            >Templates</a
+          >
+          <a href="#precos" class="hover:text-white transition-colors"
+            >Preços</a
+          >
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        </div>
+        <a
+          href="https://wa.me/244928301450?text=Olá! Quero saber mais sobre a LovePage"
+          class="bg-accent-rose hover:bg-accent-rose/90 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-all"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center pt-20 pb-16 px-4 relative overflow-hidden"
+    >
+      <!-- Subtle gradient orbs -->
+      <div
+        class="absolute top-20 left-1/4 w-96 h-96 bg-accent-rose/10 rounded-full blur-3xl bg-pulse"
+      ></div>
+      <div
+        class="absolute bottom-20 right-1/4 w-80 h-80 bg-accent-pink/10 rounded-full blur-3xl bg-pulse"
+        style="animation-delay: 2s"
+      ></div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left content -->
+          <div>
+            <div
+              class="inline-flex items-center gap-2 bg-dark-700 border border-dark-500 rounded-full px-4 py-1.5 mb-6"
+            >
+              <span
+                class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+              ></span>
+              <span class="text-sm text-gray-400"
+                >Vagas limitadas para o Dia dos Namorados</span
+              >
+            </div>
+
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            >
+              Surpreenda com um<br />
+              <span class="gradient-text">presente digital</span><br />
+              inesquecível
+            </h1>
+
+            <p class="text-lg text-gray-400 mb-8 max-w-lg">
+              Uma página web personalizada com fotos, mensagens e a trilha
+              sonora do relacionamento de vocês. Ela abre no celular e vê algo
+              feito só para ela.
+            </p>
+
+            <!-- Countdown -->
+            <div class="flex items-center gap-6 mb-8">
+              <div class="text-center">
+                <span id="days" class="block text-3xl font-bold text-white"
+                  >--</span
+                >
+                <span class="text-xs text-gray-500 uppercase tracking-wider"
+                  >dias</span
+                >
+              </div>
+              <span class="text-gray-600">:</span>
+              <div class="text-center">
+                <span id="hours" class="block text-3xl font-bold text-white"
+                  >--</span
+                >
+                <span class="text-xs text-gray-500 uppercase tracking-wider"
+                  >horas</span
+                >
+              </div>
+              <span class="text-gray-600">:</span>
+              <div class="text-center">
+                <span id="minutes" class="block text-3xl font-bold text-white"
+                  >--</span
+                >
+                <span class="text-xs text-gray-500 uppercase tracking-wider"
+                  >min</span
+                >
+              </div>
+              <span class="text-sm text-gray-500 ml-2"
+                >até 14 de Fevereiro</span
+              >
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#precos"
+                class="bg-accent-rose hover:bg-accent-rose/90 text-white px-8 py-4 rounded-xl font-semibold text-center transition-all"
+              >
+                Ver Pacotes e Preços
+              </a>
+              <a
+                href="#templates"
+                class="bg-dark-700 hover:bg-dark-600 border border-dark-500 text-white px-8 py-4 rounded-xl font-semibold text-center transition-all"
+              >
+                Ver Templates
+              </a>
+            </div>
+          </div>
+
+          <!-- Right - Phone mockup -->
+          <div class="relative hidden lg:block">
+            <div class="relative mx-auto w-72">
+              <!-- Phone frame -->
+              <div class="bg-dark-600 rounded-[3rem] p-2 shadow-2xl">
+                <div class="bg-dark-800 rounded-[2.5rem] overflow-hidden">
+                  <!-- Screen content preview -->
+                  <div
+                    class="aspect-[9/19] bg-gradient-to-b from-rose-900/50 to-dark-900 flex flex-col items-center justify-center p-6 text-center"
+                  >
+                    <div
+                      class="w-20 h-20 rounded-full bg-dark-600 mb-4 flex items-center justify-center text-3xl"
+                    >
+                      💕
+                    </div>
+                    <p class="text-xl font-semibold text-white">João & Maria</p>
+                    <p class="text-sm text-gray-400 mt-1">365 dias juntos</p>
+                    <div class="mt-6 flex gap-4 text-xs text-gray-500">
+                      <span>📸 Fotos</span>
+                      <span>💌 Carta</span>
+                      <span>🎵 Música</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating notification -->
+              <div
+                class="absolute -left-20 top-1/3 bg-dark-700 border border-dark-500 rounded-xl p-3 shadow-xl max-w-[180px]"
+              >
+                <p class="text-xs text-gray-300">
+                  💕 <strong>Amor</strong> enviou um presente especial!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="como-funciona" class="py-20 px-4 bg-dark-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent-rose text-sm font-medium uppercase tracking-wider mb-3"
+          >
+            Simples e rápido
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold">Como funciona</h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-14 h-14 bg-dark-600 border border-dark-500 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="font-semibold mb-2">Escolhe o pacote</h3>
+            <p class="text-sm text-gray-400">
+              Básico, Premium ou Deluxe baseado nas features que queres
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-14 h-14 bg-dark-600 border border-dark-500 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="font-semibold mb-2">Envia os conteúdos</h3>
+            <p class="text-sm text-gray-400">
+              Fotos, textos, datas especiais e a música favorita de vocês
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-14 h-14 bg-dark-600 border border-dark-500 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="font-semibold mb-2">Criamos a página</h3>
+            <p class="text-sm text-gray-400">
+              Em 24-72h dependendo do pacote, tua página estará pronta
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-14 h-14 bg-dark-600 border border-dark-500 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4"
+            >
+              4
+            </div>
+            <h3 class="font-semibold mb-2">Surpreende o amor</h3>
+            <p class="text-sm text-gray-400">
+              Envia o link e vê a reação quando ela/ele abrir
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates Gallery -->
+    <section id="templates" class="py-20 px-4 bg-dark-900">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent-rose text-sm font-medium uppercase tracking-wider mb-3"
+          >
+            7 templates disponíveis
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Escolhe o template perfeito
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            5 temas base para pacote Básico + templates exclusivos Premium e
+            Deluxe. Clica para ver o demo ao vivo.
+          </p>
+        </div>
+
+        <!-- Package filter tabs -->
+        <div class="flex justify-center gap-4 mb-10">
+          <span
+            class="bg-dark-700 border border-dark-500 text-gray-300 px-4 py-2 rounded-lg text-sm"
+            >Básico (5 temas)</span
+          >
+          <span
+            class="bg-accent-rose/20 border border-accent-rose/30 text-accent-rose px-4 py-2 rounded-lg text-sm"
+            >Premium</span
+          >
+          <span
+            class="bg-accent-gold/20 border border-accent-gold/30 text-accent-gold px-4 py-2 rounded-lg text-sm"
+            >Deluxe</span
+          >
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Classic Romance -->
+          <a
+            href="templates/classic-romance/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-red-900 via-red-800 to-yellow-900 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">❤️</span>
+                  <span class="text-white/80 text-sm">Vermelho & Dourado</span>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1">Classic Romance</h3>
+                <p class="text-sm text-gray-400">
+                  Elegante e tradicional. Para quem aprecia o romantismo
+                  clássico.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Modern Love -->
+          <a
+            href="templates/modern-love/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-600 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">💜</span>
+                  <span class="text-white/80 text-sm">Rosa & Roxo</span>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1">Modern Love</h3>
+                <p class="text-sm text-gray-400">
+                  Vibrante e contemporâneo. Gradientes e efeitos glassmorphism.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Sunset Passion -->
+          <a
+            href="templates/sunset-passion/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-orange-500 via-rose-500 to-amber-600 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">🌅</span>
+                  <span class="text-white/80 text-sm">Laranja & Coral</span>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1">Sunset Passion</h3>
+                <p class="text-sm text-gray-400">
+                  Caloroso e acolhedor. Estilo polaroid nostálgico.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Ocean Breeze -->
+          <a
+            href="templates/ocean-breeze/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">🌊</span>
+                  <span class="text-white/80 text-sm">Azul & Verde-água</span>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1">Ocean Breeze</h3>
+                <p class="text-sm text-gray-400">
+                  Sereno e tranquilo. Perfeito para casais calmos.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Dark Elegance -->
+          <a
+            href="templates/dark-elegance/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-dark-600 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-gray-900 via-gray-800 to-rose-900/30 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">👑</span>
+                  <span class="text-white/80 text-sm">Preto & Rose Gold</span>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1">Dark Elegance</h3>
+                <p class="text-sm text-gray-400">
+                  Luxuoso e sofisticado. Para quem quer impressionar.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Premium Template -->
+          <a
+            href="templates/premium/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-accent-rose/40 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-rose-600 via-pink-500 to-amber-500 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">💝</span>
+                  <span class="text-white font-semibold">PREMIUM</span>
+                </div>
+                <div
+                  class="absolute top-2 right-2 bg-accent-rose text-white text-xs px-2 py-1 rounded-full font-bold"
+                >
+                  12k AOA
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1 text-accent-rose">
+                  Template Premium
+                </h3>
+                <p class="text-sm text-gray-400">
+                  Timeline, vídeo, cores personalizáveis e design avançado.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Deluxe Template -->
+          <a
+            href="templates/deluxe/index.html"
+            target="_blank"
+            class="template-card group block"
+          >
+            <div
+              class="bg-dark-800 border border-accent-gold/40 rounded-2xl overflow-hidden card-glow"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-gray-900 via-yellow-900/30 to-amber-800/50 flex items-center justify-center relative"
+              >
+                <div class="text-center">
+                  <span class="text-4xl mb-2 block">👑</span>
+                  <span class="text-accent-gold font-semibold">DELUXE</span>
+                </div>
+                <div
+                  class="absolute top-2 right-2 bg-accent-gold text-dark-900 text-xs px-2 py-1 rounded-full font-bold"
+                >
+                  25k AOA
+                </div>
+                <div
+                  class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="bg-white text-dark-900 px-4 py-2 rounded-lg text-sm font-medium"
+                    >Ver Demo →</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold text-lg mb-1 text-accent-gold">
+                  Template Deluxe
+                </h3>
+                <p class="text-sm text-gray-400">
+                  Quiz interativo, design exclusivo, fotos ilimitadas e QR code.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precos" class="py-20 px-4 bg-dark-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent-rose text-sm font-medium uppercase tracking-wider mb-3"
+          >
+            Investimento
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Escolhe o teu pacote
+          </h2>
+          <p class="text-gray-400">
+            Presente que cabe no bolso e fica para sempre
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Basic -->
+          <div
+            class="pricing-card bg-dark-700 border border-dark-500 rounded-2xl p-6"
+          >
+            <div class="mb-6">
+              <span class="text-3xl">💕</span>
+              <h3 class="text-xl font-bold mt-3">Básico</h3>
+              <p class="text-gray-400 text-sm mt-1">Simples e especial</p>
+            </div>
+
+            <div class="mb-6">
+              <span class="text-4xl font-bold">5.000</span>
+              <span class="text-gray-400"> AOA</span>
+            </div>
+
+            <ul class="space-y-3 mb-6 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">5 templates à escolha</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Até 10 fotos</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">1 música do Spotify</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Carta de amor</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Entrega em 24h</span>
+              </li>
+              <li class="flex items-start gap-2 opacity-40">
+                <span>✗</span>
+                <span>Timeline do relacionamento</span>
+              </li>
+            </ul>
+
+            <a
+              href="https://wa.me/244928301450?text=Olá! Quero o pacote BÁSICO da LovePage"
+              class="block w-full text-center bg-dark-600 hover:bg-dark-500 border border-dark-500 text-white py-3 rounded-xl font-medium transition-all"
+            >
+              Encomendar
+            </a>
+          </div>
+
+          <!-- Premium -->
+          <div
+            class="pricing-card bg-gradient-to-b from-accent-rose/20 to-dark-700 border border-accent-rose/30 rounded-2xl p-6 relative"
+          >
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-rose text-white text-xs font-bold px-3 py-1 rounded-full"
+            >
+              MAIS POPULAR
+            </div>
+
+            <div class="mb-6">
+              <span class="text-3xl">💝</span>
+              <h3 class="text-xl font-bold mt-3">Premium</h3>
+              <p class="text-gray-400 text-sm mt-1">Completo e emocionante</p>
+            </div>
+
+            <div class="mb-6">
+              <span class="text-4xl font-bold">12.000</span>
+              <span class="text-gray-400"> AOA</span>
+            </div>
+
+            <ul class="space-y-3 mb-6 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Tudo do Básico +</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Até 30 fotos + 1 vídeo</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300 font-medium"
+                  >Timeline do relacionamento</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300 font-medium"
+                  >Cores personalizadas</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Animações exclusivas</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✓</span>
+                <span class="text-gray-300">Entrega em 48h</span>
+              </li>
+            </ul>
+
+            <a
+              href="https://wa.me/244928301450?text=Olá! Quero o pacote PREMIUM da LovePage"
+              class="block w-full text-center bg-accent-rose hover:bg-accent-rose/90 text-white py-3 rounded-xl font-medium transition-all"
+            >
+              Encomendar Agora
+            </a>
+          </div>
+
+          <!-- Deluxe -->
+          <div
+            class="pricing-card bg-dark-700 border border-accent-gold/30 rounded-2xl p-6"
+          >
+            <div class="mb-6">
+              <span class="text-3xl">👑</span>
+              <h3 class="text-xl font-bold mt-3">Deluxe</h3>
+              <p class="text-gray-400 text-sm mt-1">Exclusivo e único</p>
+            </div>
+
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-accent-gold">25.000</span>
+              <span class="text-gray-400"> AOA</span>
+            </div>
+
+            <ul class="space-y-3 mb-6 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300">Tudo do Premium +</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300 font-medium"
+                  >Design 100% exclusivo</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300">Fotos ilimitadas</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300 font-medium"
+                  >Quiz interativo do casal</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300">QR Code em cartão físico</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-gold mt-0.5">✓</span>
+                <span class="text-gray-300">Entrega em 72h</span>
+              </li>
+            </ul>
+
+            <a
+              href="https://wa.me/244928301450?text=Olá! Quero o pacote DELUXE da LovePage"
+              class="block w-full text-center bg-accent-gold hover:bg-accent-gold/90 text-dark-900 py-3 rounded-xl font-bold transition-all"
+            >
+              Encomendar
+            </a>
+          </div>
+        </div>
+
+        <!-- Payment info -->
+        <div class="text-center mt-10">
+          <p class="text-gray-500 text-sm mb-3">Formas de pagamento</p>
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <span
+              class="bg-dark-700 border border-dark-500 px-4 py-2 rounded-lg text-sm text-gray-300"
+              >💳 Multicaixa Express</span
+            >
+            <span
+              class="bg-dark-700 border border-dark-500 px-4 py-2 rounded-lg text-sm text-gray-300"
+              >🏦 Transferência Bancária</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4 bg-dark-900">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent-rose text-sm font-medium uppercase tracking-wider mb-3"
+          >
+            O que dizem
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold">
+            Casais que já surpreenderam
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-dark-800 border border-dark-600 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 bg-dark-600 rounded-full flex items-center justify-center text-lg"
+              >
+                M
+              </div>
+              <div>
+                <p class="font-medium">Maria C.</p>
+                <p class="text-xs text-gray-500">Talatona</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "Meu namorado chorou quando viu todas as nossas fotos e a
+              mensagem. Melhor presente que já dei!"
+            </p>
+            <div class="mt-4 text-yellow-500 text-sm">★★★★★</div>
+          </div>
+
+          <div class="bg-dark-800 border border-dark-600 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 bg-dark-600 rounded-full flex items-center justify-center text-lg"
+              >
+                J
+              </div>
+              <div>
+                <p class="font-medium">João P.</p>
+                <p class="text-xs text-gray-500">Maianga</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "Ela ficou tão emocionada que postou nos stories! Recomendo muito.
+              Atendimento super rápido."
+            </p>
+            <div class="mt-4 text-yellow-500 text-sm">★★★★★</div>
+          </div>
+
+          <div class="bg-dark-800 border border-dark-600 rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 bg-dark-600 rounded-full flex items-center justify-center text-lg"
+              >
+                A
+              </div>
+              <div>
+                <p class="font-medium">Ana S.</p>
+                <p class="text-xs text-gray-500">Viana</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "A página fica pra sempre, diferente de flores que morrem. Cada
+              vez que ela abre, se emociona de novo."
+            </p>
+            <div class="mt-4 text-yellow-500 text-sm">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 bg-dark-800">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent-rose text-sm font-medium uppercase tracking-wider mb-3"
+          >
+            Dúvidas
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold">Perguntas frequentes</h2>
+        </div>
+
+        <div class="space-y-3">
+          <details class="bg-dark-700 border border-dark-600 rounded-xl group">
+            <summary
+              class="p-5 cursor-pointer font-medium flex items-center justify-between"
+            >
+              Como funciona o processo?
+              <span
+                class="text-gray-500 group-open:rotate-180 transition-transform"
+                >▼</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-gray-400 text-sm">
+              <p>1. Escolhes o pacote e fazes o pagamento</p>
+              <p>2. Envias fotos, textos e informações pelo WhatsApp</p>
+              <p>3. Criamos a página personalizada</p>
+              <p>4. Recebes o link para enviar ao teu amor!</p>
+            </div>
+          </details>
+
+          <details class="bg-dark-700 border border-dark-600 rounded-xl group">
+            <summary
+              class="p-5 cursor-pointer font-medium flex items-center justify-between"
+            >
+              Em quanto tempo recebo a página?
+              <span
+                class="text-gray-500 group-open:rotate-180 transition-transform"
+                >▼</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-gray-400 text-sm">
+              Básico: 24 horas | Premium: 48 horas | Deluxe: 72 horas.
+              Recomendamos encomendar com antecedência!
+            </div>
+          </details>
+
+          <details class="bg-dark-700 border border-dark-600 rounded-xl group">
+            <summary
+              class="p-5 cursor-pointer font-medium flex items-center justify-between"
+            >
+              A página fica online para sempre?
+              <span
+                class="text-gray-500 group-open:rotate-180 transition-transform"
+                >▼</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-gray-400 text-sm">
+              Sim! A página fica online por pelo menos 1 ano sem custos
+              adicionais. Podes aceder sempre que quiseres.
+            </div>
+          </details>
+
+          <details class="bg-dark-700 border border-dark-600 rounded-xl group">
+            <summary
+              class="p-5 cursor-pointer font-medium flex items-center justify-between"
+            >
+              Posso pedir alterações depois?
+              <span
+                class="text-gray-500 group-open:rotate-180 transition-transform"
+                >▼</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-gray-400 text-sm">
+              Claro! Cada pacote inclui 2 revisões gratuitas. Alterações
+              adicionais custam 1.000 AOA cada.
+            </div>
+          </details>
+
+          <details class="bg-dark-700 border border-dark-600 rounded-xl group">
+            <summary
+              class="p-5 cursor-pointer font-medium flex items-center justify-between"
+            >
+              Como faço o pagamento?
+              <span
+                class="text-gray-500 group-open:rotate-180 transition-transform"
+                >▼</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-gray-400 text-sm">
+              Aceitamos Multicaixa Express e transferência bancária. Pagamento
+              100% antecipado para garantir a tua vaga.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4 bg-dark-900 border-t border-dark-700">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="text-5xl mb-6 block">💕</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Pronto para surpreender?
+        </h2>
+        <p class="text-gray-400 mb-8">
+          Vagas limitadas para entrega antes do dia 14 de Fevereiro
+        </p>
+        <a
+          href="https://wa.me/244928301450?text=Olá! Quero encomendar uma LovePage para o Dia dos Namorados"
+          class="inline-block bg-accent-rose hover:bg-accent-rose/90 text-white px-10 py-4 rounded-xl font-semibold transition-all"
+        >
+          Falar no WhatsApp →
+        </a>
+        <p class="mt-4 text-xs text-gray-500">
+          Resposta em até 1 hora • Pagamento seguro
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 bg-dark-800 border-t border-dark-600">
+      <div class="max-w-6xl mx-auto text-center">
+        <p class="text-lg font-semibold text-white mb-2">
+          <span>Love</span><span class="gradient-text">Page</span> Angola
+        </p>
+        <p class="text-gray-500 text-sm">
+          © 2026 LovePage. Presentes digitais que emocionam.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+      function updateCountdown() {
+        const valentines = new Date("February 14, 2026 00:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = valentines - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("days").textContent = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").textContent = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes
+          .toString()
+          .padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

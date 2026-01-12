@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{NOME_ELE}} ❤️ {{NOME_ELA}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sunset: {
+                50: "#fff7ed",
+                100: "#ffedd5",
+                400: "#fb923c",
+                500: "#f97316",
+                600: "#ea580c",
+              },
+              coral: { 400: "#fb7185", 500: "#f43f5e", 600: "#e11d48" },
+            },
+            fontFamily: {
+              display: ["Libre Baskerville", "serif"],
+              body: ["Karla", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-sunset {
+        background: linear-gradient(
+          135deg,
+          #f97316 0%,
+          #fb7185 50%,
+          #f43f5e 100%
+        );
+      }
+      .polaroid {
+        background: white;
+        padding: 8px 8px 32px 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+      .photo-tilt:nth-child(odd) {
+        transform: rotate(-2deg);
+      }
+      .photo-tilt:nth-child(even) {
+        transform: rotate(2deg);
+      }
+      .photo-tilt:hover {
+        transform: rotate(0deg) scale(1.02);
+      }
+      .sun-glow {
+        box-shadow: 0 0 60px rgba(251, 146, 60, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-sunset-50 text-gray-800 font-body antialiased">
+    <!-- Hero -->
+    <section
+      class="min-h-screen flex items-center justify-center relative px-4 py-12 gradient-sunset overflow-hidden"
+    >
+      <div
+        class="absolute top-10 right-10 w-32 h-32 bg-yellow-300/40 rounded-full blur-2xl"
+      ></div>
+
+      <div class="relative z-10 text-center text-white max-w-2xl">
+        <!-- Photo -->
+        <div class="relative inline-block mb-10">
+          <div
+            class="polaroid sun-glow mx-auto rotate-2 hover:rotate-0 transition-transform duration-500"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=280&h=280&fit=crop"
+              alt="{{NOME_ELE}} e {{NOME_ELA}}"
+              class="w-56 h-56 md:w-64 md:h-64 object-cover"
+            />
+            <p
+              class="text-gray-600 text-center mt-2 font-display text-sm italic"
+            >
+              {{DIAS_JUNTOS}} dias juntos
+            </p>
+          </div>
+        </div>
+
+        <!-- Names -->
+        <h1 class="font-display text-4xl md:text-5xl font-bold drop-shadow-lg">
+          {{NOME_ELE}} & {{NOME_ELA}}
+        </h1>
+
+        <p class="mt-6 text-white/80 text-lg">
+          Desde <span class="font-medium">{{DATA_INICIO}}</span>
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 animate-bounce"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Message -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-xl md:text-2xl text-sunset-500 mb-8">
+          Mensagem Especial
+        </h2>
+
+        <blockquote
+          class="font-display text-xl md:text-2xl text-gray-700 leading-relaxed italic"
+        >
+          "{{MENSAGEM_PRINCIPAL}}"
+        </blockquote>
+
+        <div class="mt-6 text-coral-500">— {{NOME_ELE}}</div>
+      </div>
+    </section>
+
+    <!-- Gallery - Polaroid Style -->
+    <section class="py-20 px-4 bg-sunset-50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display text-2xl md:text-3xl text-sunset-600">
+            Nossos Momentos
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div
+            class="polaroid photo-tilt cursor-pointer transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=200&h=200&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section class="py-16 px-4 gradient-sunset">
+      <div class="max-w-xl mx-auto text-center text-white">
+        <h2 class="font-display text-2xl mb-6">Nossa Música</h2>
+        <div class="bg-white/20 backdrop-blur rounded-xl p-4">
+          <iframe
+            title="Spotify - Nossa Música"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-2xl md:text-3xl text-sunset-600">
+            Carta de Amor
+          </h2>
+        </div>
+
+        <div
+          class="polaroid p-8 md:p-10 rotate-1 hover:rotate-0 transition-transform duration-300"
+        >
+          <p class="text-gray-500 mb-6 font-display italic">Meu amor,</p>
+
+          <p class="text-gray-700 leading-relaxed whitespace-pre-line">
+            {{CARTA_AMOR}}
+          </p>
+
+          <div class="mt-10 text-right">
+            <p class="text-coral-500 text-sm">Com carinho,</p>
+            <p class="font-display text-xl text-sunset-600 mt-1">
+              {{NOME_ELE}}
+            </p>
+            <p class="text-gray-400 text-xs mt-2">{{DATA_CARTA}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 gradient-sunset text-center text-white">
+      <p class="font-display text-xl">{{NOME_ELE}} & {{NOME_ELA}}</p>
+      <p class="text-white/60 text-sm mt-2">Dia dos Namorados 2026</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <div class="polaroid max-w-2xl">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="max-w-full max-h-[70vh] object-contain"
+        />
+      </div>
+      <button
+        class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl"
+      >
+        &times;
+      </button>
+    </div>
+
+    <script>
+      document.querySelectorAll(".polaroid img").forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          document.getElementById("lightbox-img").src = img.src.replace(
+            "w=200",
+            "w=800"
+          );
+          document.getElementById("lightbox").classList.remove("hidden");
+          document.getElementById("lightbox").classList.add("flex");
+        });
+      });
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.add("hidden");
+        document.getElementById("lightbox").classList.remove("flex");
+      }
+    </script>
+  </body>
+</html>

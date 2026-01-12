@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{NOME_ELE}} ❤️ {{NOME_ELA}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ocean: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                400: "#2dd4bf",
+                500: "#14b8a6",
+                600: "#0d9488",
+                800: "#115e59",
+                900: "#134e4a",
+              },
+              sea: { 400: "#22d3ee", 500: "#06b6d4" },
+            },
+            fontFamily: {
+              display: ["Crimson Pro", "serif"],
+              body: ["Work Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-ocean {
+        background: linear-gradient(
+          180deg,
+          #0d9488 0%,
+          #115e59 50%,
+          #134e4a 100%
+        );
+      }
+      .wave-line {
+        background: linear-gradient(90deg, transparent, #2dd4bf, transparent);
+      }
+      .photo-hover {
+        transition: all 0.4s ease;
+      }
+      .photo-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+      .float {
+        animation: float 5s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-ocean-50 text-ocean-900 font-body antialiased">
+    <!-- Hero -->
+    <section
+      class="min-h-screen flex items-center justify-center relative px-4 py-12 gradient-ocean overflow-hidden"
+    >
+      <!-- Decorative waves -->
+      <div class="absolute bottom-0 left-0 right-0 h-24 opacity-20">
+        <svg
+          viewBox="0 0 1440 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-full h-full"
+        >
+          <path
+            d="M0 50C240 80 480 20 720 50C960 80 1200 20 1440 50V100H0V50Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+
+      <div class="relative z-10 text-center text-white max-w-2xl">
+        <!-- Photo -->
+        <div class="relative inline-block mb-10">
+          <div
+            class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl mx-auto float"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop"
+              alt="{{NOME_ELE}} e {{NOME_ELA}}"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white text-ocean-600 px-4 py-1.5 rounded-full text-sm font-medium shadow-lg"
+          >
+            {{DIAS_JUNTOS}} dias
+          </div>
+        </div>
+
+        <!-- Names -->
+        <h1 class="font-display text-4xl md:text-5xl font-semibold">
+          {{NOME_ELE}} <span class="text-sea-400">&</span> {{NOME_ELA}}
+        </h1>
+
+        <p class="mt-6 text-white/70 text-lg">
+          Navegando juntos desde
+          <span class="text-white font-medium">{{DATA_INICIO}}</span>
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 animate-bounce"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Message -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-xl md:text-2xl text-ocean-600 mb-8">
+          Mensagem Especial
+        </h2>
+
+        <blockquote
+          class="font-display text-xl md:text-2xl text-ocean-800/80 leading-relaxed italic"
+        >
+          "{{MENSAGEM_PRINCIPAL}}"
+        </blockquote>
+
+        <div class="mt-6 text-ocean-500">— {{NOME_ELE}}</div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-20 px-4 bg-ocean-50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display text-2xl md:text-3xl text-ocean-600">
+            Nossos Momentos
+          </h2>
+          <div class="w-20 h-px wave-line mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-xl overflow-hidden shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section class="py-16 px-4 bg-ocean-600">
+      <div class="max-w-xl mx-auto text-center text-white">
+        <h2 class="font-display text-2xl mb-6">Nossa Música</h2>
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4">
+          <iframe
+            title="Spotify - Nossa Música"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-2xl md:text-3xl text-ocean-600">
+            Carta de Amor
+          </h2>
+          <div class="w-20 h-px wave-line mx-auto mt-4"></div>
+        </div>
+
+        <div
+          class="bg-ocean-50 rounded-2xl p-8 md:p-10 border border-ocean-100"
+        >
+          <p class="text-ocean-500 mb-6 font-display italic">Meu amor,</p>
+
+          <p class="text-ocean-800/80 leading-relaxed whitespace-pre-line">
+            {{CARTA_AMOR}}
+          </p>
+
+          <div class="mt-10 text-right">
+            <p class="text-ocean-500 text-sm">Com todo carinho,</p>
+            <p class="font-display text-xl text-ocean-600 mt-1">{{NOME_ELE}}</p>
+            <p class="text-ocean-400 text-xs mt-2">{{DATA_CARTA}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 gradient-ocean text-center text-white">
+      <p class="font-display text-xl">{{NOME_ELE}} & {{NOME_ELA}}</p>
+      <p class="text-white/60 text-sm mt-2">Dia dos Namorados 2026</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-ocean-900/95 z-50 hidden items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <img
+        id="lightbox-img"
+        src=""
+        alt=""
+        class="max-w-full max-h-full object-contain rounded-xl"
+      />
+      <button
+        class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl"
+      >
+        &times;
+      </button>
+    </div>
+
+    <script>
+      document.querySelectorAll(".photo-hover img").forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          document.getElementById("lightbox-img").src = img.src.replace(
+            "w=300",
+            "w=800"
+          );
+          document.getElementById("lightbox").classList.remove("hidden");
+          document.getElementById("lightbox").classList.add("flex");
+        });
+      });
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.add("hidden");
+        document.getElementById("lightbox").classList.remove("flex");
+      }
+    </script>
+  </body>
+</html>

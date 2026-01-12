@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{NOME_ELE}} ❤️ {{NOME_ELA}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pink: {
+                50: "#fdf4f8",
+                100: "#fce8f1",
+                400: "#ec4899",
+                500: "#db2777",
+                600: "#be185d",
+              },
+              purple: {
+                400: "#a855f7",
+                500: "#9333ea",
+                600: "#7c3aed",
+                900: "#1e1033",
+              },
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              body: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-main {
+        background: linear-gradient(
+          135deg,
+          #db2777 0%,
+          #9333ea 50%,
+          #7c3aed 100%
+        );
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #ec4899, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .photo-hover {
+        transition: all 0.3s ease;
+      }
+      .photo-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+      .blob {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: blob 8s ease-in-out infinite;
+      }
+      @keyframes blob {
+        0%,
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        50% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-purple-900 text-white font-body antialiased">
+    <!-- Hero -->
+    <section
+      class="min-h-screen flex items-center justify-center relative px-4 py-12 gradient-main overflow-hidden"
+    >
+      <!-- Blobs -->
+      <div class="absolute top-20 -left-20 w-72 h-72 bg-pink-400/20 blob"></div>
+      <div
+        class="absolute bottom-20 -right-20 w-80 h-80 bg-purple-400/20 blob"
+        style="animation-delay: 4s"
+      ></div>
+
+      <div class="relative z-10 text-center max-w-2xl">
+        <!-- Photo -->
+        <div class="relative inline-block mb-10">
+          <div
+            class="w-48 h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden shadow-2xl mx-auto rotate-3 hover:rotate-0 transition-transform duration-500"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop"
+              alt="{{NOME_ELE}} e {{NOME_ELA}}"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-2 -right-2 glass text-white px-4 py-2 rounded-xl text-sm font-medium"
+          >
+            {{DIAS_JUNTOS}} dias ✨
+          </div>
+        </div>
+
+        <!-- Names -->
+        <h1
+          class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight"
+        >
+          {{NOME_ELE}} <span class="text-pink-300">&</span> {{NOME_ELA}}
+        </h1>
+
+        <p class="mt-6 text-white/70 text-lg">
+          Juntos desde
+          <span class="text-white font-medium">{{DATA_INICIO}}</span>
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 animate-bounce"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Message -->
+    <section class="py-20 px-4 bg-purple-900">
+      <div class="max-w-2xl mx-auto">
+        <div class="glass rounded-3xl p-8 md:p-10 text-center">
+          <h2 class="font-display text-xl md:text-2xl text-pink-300 mb-6">
+            Mensagem Especial
+          </h2>
+
+          <blockquote
+            class="text-xl md:text-2xl text-white/90 leading-relaxed font-light"
+          >
+            "{{MENSAGEM_PRINCIPAL}}"
+          </blockquote>
+
+          <div class="mt-6 text-pink-400">— {{NOME_ELE}}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-20 px-4 bg-gradient-to-b from-purple-900 to-pink-900/50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2
+            class="font-display text-2xl md:text-3xl gradient-text inline-block"
+          >
+            Nossos Momentos
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+          <div class="photo-hover rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=300&h=300&fit=crop"
+              alt="Momento"
+              class="w-full aspect-square object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section class="py-16 px-4 bg-pink-900/50">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="font-display text-2xl gradient-text inline-block mb-6">
+          Nossa Música
+        </h2>
+        <div class="glass rounded-2xl p-4">
+          <iframe
+            title="Spotify - Nossa Música"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="py-20 px-4 bg-purple-900">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <h2
+            class="font-display text-2xl md:text-3xl gradient-text inline-block"
+          >
+            Carta de Amor
+          </h2>
+        </div>
+
+        <div class="glass rounded-3xl p-8 md:p-10">
+          <p class="text-pink-300/70 mb-6">Meu amor,</p>
+
+          <p class="text-white/80 leading-relaxed whitespace-pre-line">
+            {{CARTA_AMOR}}
+          </p>
+
+          <div class="mt-10 text-right">
+            <p class="text-pink-300/70 text-sm">Com todo meu amor,</p>
+            <p class="font-display text-xl text-white mt-1">{{NOME_ELE}}</p>
+            <p class="text-white/40 text-xs mt-2">{{DATA_CARTA}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 gradient-main text-center">
+      <p class="font-display text-xl">{{NOME_ELE}} & {{NOME_ELA}}</p>
+      <p class="text-white/60 text-sm mt-2">Dia dos Namorados 2026</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <img
+        id="lightbox-img"
+        src=""
+        alt=""
+        class="max-w-full max-h-full object-contain rounded-2xl"
+      />
+      <button
+        class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl"
+      >
+        &times;
+      </button>
+    </div>
+
+    <script>
+      document.querySelectorAll(".photo-hover img").forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          document.getElementById("lightbox-img").src = img.src.replace(
+            "w=300",
+            "w=800"
+          );
+          document.getElementById("lightbox").classList.remove("hidden");
+          document.getElementById("lightbox").classList.add("flex");
+        });
+      });
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.add("hidden");
+        document.getElementById("lightbox").classList.remove("flex");
+      }
+    </script>
+  </body>
+</html>
