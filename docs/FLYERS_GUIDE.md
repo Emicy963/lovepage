@@ -25,7 +25,7 @@ Este guia ensina como criar flyers para marketing da LovePage Angola usando **Ca
 
 ### Estrutura
 
-```
+```md
 ┌─────────────────────────────────┐
 │                                 │
 │         [Background escuro]     │
@@ -110,7 +110,7 @@ Este guia ensina como criar flyers para marketing da LovePage Angola usando **Ca
 
 **Cor dominante:** Rosa `#E11D48`
 
-```
+```md
 ┌─────────────────────────────────┐
 │     [Background gradiente]      │
 │                                 │
@@ -147,7 +147,7 @@ Este guia ensina como criar flyers para marketing da LovePage Angola usando **Ca
 
 **Cor dominante:** Rosa + destaque vermelho
 
-```
+```md
 ┌─────────────────────────────────┐
 │     [Background escuro]         │
 │                                 │
@@ -186,7 +186,7 @@ Este guia ensina como criar flyers para marketing da LovePage Angola usando **Ca
 
 **Cor dominante:** Preto + Gold `#F59E0B`
 
-```
+```md
 ┌─────────────────────────────────┐
 │    [Background preto elegante]  │
 │                                 │
@@ -226,29 +226,35 @@ Este guia ensina como criar flyers para marketing da LovePage Angola usando **Ca
 
 **Formato:** 1080x1350px ou 1080x1920px
 
-```
+```md
 ┌─────────────────────────────────┐
-│         LovePage                │
-│   Escolhe o teu pacote          │
 │                                 │
-│ ┌─────────┬─────────┬─────────┐ │
-│ │ BÁSICO  │ PREMIUM │ DELUXE  │ │
-│ │  💕     │  💝     │  👑     │ │
-│ │         │ POPULAR │         │ │
-│ ├─────────┼─────────┼─────────┤ │
-│ │ 5 temas │✓        │✓        │ │
-│ │ 10 fotos│30+vídeo │Ilimitado│ │
-│ │ Música  │✓        │✓        │ │
-│ │ -       │Timeline │✓        │ │
-│ │ -       │Cores    │✓        │ │
-│ │ -       │-        │Quiz     │ │
-│ │ -       │-        │QR físico│ │
-│ ├─────────┼─────────┼─────────┤ │
-│ │ 5.000   │12.000   │25.000   │ │
-│ │  AOA    │  AOA    │  AOA    │ │
-│ └─────────┴─────────┴─────────┘ │
+│         [Background escuro]     │
 │                                 │
-│    📱 +244 XXX XXX XXX          │
+│            LovePage             │
+│                                 │
+│   ┌───────────────────────┐     │
+│   │                       │     │
+│   │   SURPREENDA NO       │     │
+│   │   DIA DOS             │     │
+│   │   NAMORADOS           │     │
+│   │                       │     │
+│   └───────────────────────┘     │
+│                                 │
+│   ┌─────────┐                   │
+│   │ Mockup  │   Uma página      │
+│   │  Phone  │   só para         │
+│   │         │   vocês 💕        │
+│   └─────────┘                   │
+│                                 │
+│   A partir de                   │
+│   ┌────────────────────┐        │
+│   │    5.000 AOA       │        │
+│   └────────────────────┘        │
+│                                 │
+│   📱 WhatsApp: +244 XXX XXX     │
+│                                 │
+│   [Countdown: X dias restantes] │
 │                                 │
 └─────────────────────────────────┘
 ```
@@ -261,7 +267,7 @@ Criar 3-5 stories em sequência:
 
 ### Story 1 - Hook
 
-```
+```md
 Quer surpreender no
 Dia dos Namorados?
 ↓ Arrasta
@@ -269,7 +275,7 @@ Dia dos Namorados?
 
 ### Story 2 - Problema
 
-```
+```md
 Flores murcham...
 Chocolates acabam...
 
@@ -279,7 +285,7 @@ durasse PARA SEMPRE?
 
 ### Story 3 - Solução
 
-```
+```md
 [Mockup do telefone]
 
 Uma página web
@@ -292,7 +298,7 @@ só de vocês
 
 ### Story 4 - Prova Social
 
-```
+```md
 "Ele CHOROU quando viu"
 - Maria, Talatona
 
@@ -302,7 +308,7 @@ só de vocês
 
 ### Story 5 - CTA
 
-```
+```md
 A partir de 5.000 AOA
 
 Vagas limitadas!

@@ -1,7 +1,7 @@
 # 📱 LovePage - Copies para Marketing
 
-**Site:** lovepage.art
-**WhatsApp:** +244 XXX XXX XXX (substituir)
+**Site:** lovepage.art  
+**WhatsApp:** +244 928 301 450
 
 ---
 
@@ -75,7 +75,7 @@ Ou se conheceres alguém que quer surpreender, partilha com ele/ela! 💕
 ```md
 💕 Novo projeto para o Dia dos Namorados...
 
-Em breve vou revelar! 
+Em breve vou revelar!
 
 Quem adivinhar ganha desconto 😏
 ```
@@ -208,7 +208,7 @@ Vê os detalhes em lovepage.art
 ```md
 Encomenda agora!
 
-📱 WhatsApp: +244 XXX XXX XXX
+📱 WhatsApp: +244 928 301 450
 🌐 Site: lovepage.art
 
 Vagas limitadas! ⚠️
@@ -319,7 +319,7 @@ Páginas web personalizadas para casais.
 
 💰 Preços: 5.000 - 25.000 AOA
 🌐 Demos: lovepage.art
-📱 WhatsApp: +244 XXX XXX XXX
+📱 WhatsApp: +244 928 301 450
 
 #DiaDoNamorados #PresenteOriginal
 ```
@@ -345,7 +345,7 @@ lovepage.art
 
 ## ✅ Checklist de Lançamento
 
-- [ ] Substituir "+244 XXX XXX XXX" pelo teu número real
+- [ ] Configurar número do WhatsApp (+244 928 301 450) nos botões e links
 - [ ] Criar 3-5 status do WhatsApp em sequência
 - [ ] Enviar para 10-20 contactos próximos primeiro
 - [ ] Postar em 2-3 grupos relevantes
