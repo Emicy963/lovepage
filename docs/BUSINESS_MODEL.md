@@ -2,9 +2,9 @@
 
 ## Visão Geral
 
-**Produto:** Landing pages personalizadas para o Dia dos Namorados
-**Mercado:** Casais em Angola (foco Luanda)
-**Modelo:** Serviço de produção unitária com 3 tiers de preço
+**Produto:** Landing pages personalizadas para o Dia dos Namorados  
+**Mercado:** Casais em Angola (foco Luanda)  
+**Modelo:** Serviço de produção unitária com 3 tiers de preço  
 **Período:** Sazonal (Janeiro-Fevereiro 2026)
 
 ---
