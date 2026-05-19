@@ -5,7 +5,7 @@
 **Produto:** Landing pages personalizadas para qualquer ocasião especial  
 **Mercado:** Angola (foco Luanda) — qualquer pessoa que queira surpreender alguém  
 **Modelo:** Serviço de produção unitária com 3 tiers de preço  
-**Período:** Evergreen — aniversários (12 meses/ano), namoro, casamento, surpresas  
+**Posicionamento:** Evergreen — aniversários (12 meses/ano), namoro, casamento, surpresas  
 **Domínio:** lovepage.art
 
 ### Ocasiões-alvo (por prioridade de volume)
@@ -17,7 +17,7 @@
 
 ---
 
-## 💰 Estrutura de Preços
+## Estrutura de Preços
 
 | Pacote      | Preço      | Margem | Tempo Produção | Lucro/h       |
 | ----------- | ---------- | ------ | -------------- | ------------- |
@@ -27,207 +27,212 @@
 
 ### Custos Fixos
 
-- Domínio (opcional): 0 AOA (usando subdomínios Vercel)
+- Domínio: 0 AOA (usando subdomínios Vercel gratuitos)
 - Hosting: 0 AOA (Vercel free tier)
-- Marketing: 5.000-10.000 AOA (opcional)
+- Marketing: 0 AOA na fase de validação (boca-a-boca e WhatsApp Status)
 
 ### Custos Variáveis
 
-- Praticamente zero (seu tempo é o único custo)
+- Apenas tempo do produtor
 
 ---
 
-## 🎯 Projeções de Receita
+## Funil de Vendas (Processo Correto)
 
-### Meta: 250.000 AOA
+O produto é emocional e visual. A venda acontece com demo ao vivo, não com descrição verbal.
+
+```text
+Lead qualificado (alguém com ocasião real nos próximos 30 dias)
+        ↓
+Demo parcial gratuita com fotos reais do cliente (20 minutos)
+        ↓
+Cliente vê o próprio conteúdo na página → impacto emocional
+        ↓
+"Queres a versão completa?" → confirmação de pacote
+        ↓
+Pagamento 100% antecipado → produção → entrega → pedido de referral
+```
+
+### Regra principal de conversão
+
+Nunca pedir pagamento sem a pessoa ter visto a própria demo com as próprias fotos.
+
+---
+
+## Projeções de Receita
+
+### Meta fase de validação: 5 vendas convertidas
+
+| Mix de Vendas | Qtd   | Receita        |
+| ------------- | ----- | -------------- |
+| Básico (60%)  | 3     | 15.000 AOA     |
+| Premium (30%) | 1     | 12.000 AOA     |
+| Deluxe (10%)  | 1     | 25.000 AOA     |
+| **TOTAL**     | **5** | **52.000 AOA** |
+
+**Tempo total de produção:** ~4 horas
+
+### Meta mês 1 (após validação confirmada)
 
 | Mix de Vendas | Qtd    | Receita         |
 | ------------- | ------ | --------------- |
-| Básico (50%)  | 25     | 125.000 AOA     |
-| Premium (35%) | 9      | 108.000 AOA     |
-| Deluxe (15%)  | 3      | 75.000 AOA      |
-| **TOTAL**     | **37** | **308.000 AOA** |
-
-**Tempo total de produção:** ~20 horas
-**Receita por hora:** ~15.400 AOA (~$18 USD/h)
+| Básico (50%)  | 10     | 50.000 AOA      |
+| Premium (35%) | 5      | 60.000 AOA      |
+| Deluxe (15%)  | 2      | 50.000 AOA      |
+| **TOTAL**     | **17** | **160.000 AOA** |
 
 ---
 
-## 📈 Funil de Vendas
+## Canais de Aquisição (por ROI)
 
-```markdown
-Visualizações Landing Page
-        ↓ (10% conversão)
-   Contatos WhatsApp
-        ↓ (50% conversão)
-      Vendas Fechadas
-        ↓ (20% upsell)
-    Upgrades de Pacote
-```
-
-### Métricas Alvo
-
-- 500 visitas na landing page
-- 50 contatos WhatsApp
-- 25-37 vendas
-- 5-7 upsells
+| Canal                    | Custo | Conversão | Prioridade  |
+| ------------------------ | ----- | --------- | ----------- |
+| Referral de cliente      | 0     | Muito alta | **#1**      |
+| Demo parcial grátis      | tempo | Alta       | **#2**      |
+| WhatsApp Status          | 0     | Média      | **#3**      |
+| Parceria floristas       | 0–10% | Alta       | **#4**      |
+| Grupos WhatsApp          | 0     | Baixa      | #5          |
+| Instagram/TikTok         | tempo | Baixa-Média | #6 (futuro)|
+| Anúncios pagos           | dinheiro | Variável | #7 (futuro)|
 
 ---
 
-## 🔄 Fluxo Operacional
+## Fluxo Operacional
 
-### 1. Captação (Marketing)
+### 1. Qualificação do lead
 
-```markdown
-WhatsApp Groups → Landing Page → Contato WhatsApp
-Instagram/TikTok → Landing Page → Contato WhatsApp
-Boca a boca → Contato WhatsApp direto
+```text
+Contacto recebido ou referral
+    ↓
+Verificar: há uma ocasião real nos próximos 30 dias?
+    ↓
+Não → arquivar, manter contacto para futura ocasião
+Sim → avançar para demo
 ```
 
-### 2. Venda
+### 2. Demo parcial (pré-venda)
 
-```markdown
-Contato recebido
+```text
+Pedir 2-3 fotos + texto curto (máximo)
     ↓
-Enviar preços + demo
+Montar rascunho no template base (20 min)
     ↓
-Negociação (se necessário)
+Deploy em URL Vercel temporário
     ↓
+Enviar link sem mencionar preço ainda
+    ↓
+Aguardar reação (o produto fecha a venda)
+    ↓
+"Queres a versão completa com todas as funcionalidades?"
+```
+
+### 3. Venda
+
+```text
 Confirmação do pacote
     ↓
-Envio dados pagamento
+Enviar dados de pagamento (Multicaixa Express / Transferência)
     ↓
-Confirmação pagamento
+Confirmar comprovativo
     ↓
-Início produção
+Recolher assets completos (fotos, textos, música Spotify)
 ```
 
-### 3. Produção
+### 4. Produção
 
-```markdown
-Receber assets (fotos, textos, música)
-    ↓
+```text
 Escolher template base
     ↓
-Find/Replace variáveis
+Find/Replace variáveis (Ctrl+H no VSCode)
     ↓
 Adicionar fotos
     ↓
 Configurar música Spotify
     ↓
-Testar (mobile!)
+Testar no mobile (obrigatório)
     ↓
-Deploy Vercel
+Deploy Vercel com URL definitivo
     ↓
 Enviar link ao cliente
 ```
 
-### 4. Pós-Venda
+### 5. Pós-venda
 
-```markdown
-Confirmar satisfação
+```text
+Confirmar satisfação (24h após entrega)
     ↓
-Pedir depoimento (se satisfeito)
+Pedir depoimento (áudio ou texto curto)
     ↓
-Oferecer upsell (se aplicável)
+Pedir referral: "Conheces alguém com aniversário em breve?"
     ↓
-Pedir indicações
+Oferecer upsell para próxima ocasião (se aplicável)
 ```
 
 ---
 
-## 📅 Cronograma de Marketing
+## Canais de Parceria
 
-### Semana 1 (13-19 Jan) - Validação
+### Floristas (maior ROI)
 
-- [ ] Deploy demo funcional
-- [ ] 5 vendas círculo íntimo
-- [ ] Coletar 3 depoimentos
+Proposta: por cada cliente referenciado que feche venda, a florista recebe 10% do valor.
 
-### Semana 2 (20-26 Jan) - Expansão Inicial
+- Básico 5.000 → florista ganha 500 AOA por referral
+- Premium 12.000 → florista ganha 1.200 AOA por referral
+- Deluxe 25.000 → florista ganha 2.500 AOA por referral
 
-- [ ] 10 posts WhatsApp status
-- [ ] 5 grupos WhatsApp
-- [ ] 10-15 vendas total
+Abordagem: presencial, não WhatsApp. Ver `docs/PARTNERSHIP_PROPOSAL.md` para o script completo.
 
-### Semana 3 (27 Jan - 2 Fev) - Escala
+### Outros parceiros potenciais
 
-- [ ] Parcerias micro-influencers
-- [ ] Conteúdo em redes sociais
-- [ ] 25-30 vendas total
-
-### Semana 4 (3-9 Fev) - Urgência
-
-- [ ] Countdown "últimas vagas"
-- [ ] Upsells para clientes existentes
-- [ ] 35-40 vendas total
-
-### Sprint Final (10-13 Fev)
-
-- [ ] "ÚLTIMO DIA" marketing
-- [ ] Entregas finais
-- [ ] 37+ vendas total
+- Lojas de presentes
+- Fotógrafos de casal (referral mútuo)
+- Salões de beleza (clientes que se preparam para surpresas)
 
 ---
 
-## ⚠️ Gestão de Capacidade
+## Gestão de Capacidade
 
-### Capacidade Máxima por Dia
+| Pacote  | Tempo  | Máximo/dia (4h produção) |
+| ------- | ------ | ------------------------ |
+| Básico  | 20 min | 12                       |
+| Premium | 45 min | 5                        |
+| Deluxe  | 90 min | 2                        |
 
-| Pacote  | Tempo  | Máximo/dia (4h) |
-| ------- | ------ | --------------- |
-| Básico  | 20 min | 12              |
-| Premium | 45 min | 5               |
-| Deluxe  | 90 min | 2               |
-
-### Limites de Aceitação
-
-- **Dia 10 Fev:** Último dia para Deluxe
-- **Dia 11 Fev:** Último dia para Premium
-- **Dia 12 Fev:** Último dia para Básico
-- **Dia 13 Fev:** Só entregas pendentes
+Limite prático: 3-4 pedidos/dia em modo solo. Acima disso, priorizar Premium e Deluxe por lucro/hora.
 
 ---
 
-## 🔄 Pós Dia dos Namorados
-
-### Opção A: Pivotar para Outros Eventos
-
-- Dia das Mães (Maio)
-- Aniversários (evergreen)
-- Casamentos (premium)
-
-### Opção B: Escalar com Automação
-
-- Formulário self-service
-- Pagamento automático
-- Templates pré-prontos
-
-### Opção C: Descontinuar
-
-- Coletar aprendizados
-- Usar receita para próximo projeto
-
----
-
-## 📝 Políticas
+## Políticas
 
 ### Pagamento
 
-- 100% antecipado (obrigatório)
-- Métodos: Multicaixa Express, Transferência
+- 100% antecipado (obrigatório, sem exceções)
+- Métodos: Multicaixa Express, Transferência bancária
+
+### Assets do cliente
+
+- Cliente deve enviar fotos e textos em 24h após pagamento
+- Atrasos do cliente não alteram o prazo de entrega prometido — prazo conta a partir do recebimento dos assets
 
 ### Revisões
 
-- 2 inclusas no preço
-- Adicional: 1.000 AOA cada
-
-### Prazos
-
-- Cliente deve enviar assets em 24h após pagamento
-- Atrasos do cliente não adiam deadline
+- 2 revisões incluídas no preço
+- Revisão adicional: 1.000 AOA cada
 
 ### Reembolso
 
-- Antes de iniciar: 100%
-- Após iniciar: 0%
+- Antes de iniciar produção: 100%
+- Após iniciar produção: 0%
+
+---
+
+## Milestones de Validação
+
+| Milestone        | Critério                                         | Ação seguinte                         |
+| ---------------- | ------------------------------------------------ | ------------------------------------- |
+| Validação básica | 3 demos feitas, pelo menos 2 convertidas         | Continuar processo, pedir referrals   |
+| Validação real   | 5 vendas pagas entregues, 3 depoimentos          | Activar WhatsApp Status regularmente  |
+| Escala inicial   | 10 vendas, 1 parceria florista activa            | Considerar Instagram/redes sociais    |
+| Escala média     | 25 vendas, 2-3 parcerias activas, 10 depoimentos | Avaliar automação ou segundo operador |
+
+Não avançar para o milestones seguinte sem completar o anterior.
