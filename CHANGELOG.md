@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- `docs/BUSINESS_MODEL.md`: full rewrite — Valentine's sprint replaced with
+  evergreen model; demo-first sales funnel, ROI-ranked acquisition channels,
+  florista partnership economics, validation milestones, updated projections
+- `docs/MARKETING_COPY.md`: removed all Valentine's-specific copy; new scripts
+  built around demo-parcial approach, birthday/anniversary qualification,
+  WhatsApp Status cadence
+- `.markdownlint.json`: disable MD013 (line length) and MD060 (table alignment)
+
 ## [1.1.1] - 2026-05-19
 
 ### Fixed
