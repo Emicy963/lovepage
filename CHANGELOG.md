@@ -1,0 +1,55 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.1.0] - 2026-05-19
+
+### Added
+- New `birthday` template — confetti animation, photo grid (10 images), timeline section,
+  birthday letter, Spotify embed, violet/gold dark palette
+- Scroll reveal animations (IntersectionObserver) wired up in all 5 base templates
+- `vercel.json` — security headers, cache rules, and `/docs/` access restriction
+- `docs/PARTNERSHIP_PROPOSAL.md` — distributor and affiliate partner program outline
+
+### Changed
+- Landing page (`index.html`) pivoted from Valentine's Day only to year-round use:
+  removed expired countdown, updated headline/meta/CTA copy to cover birthdays, anniversaries, etc.
+- WhatsApp link updated to generic message (no Valentine's-specific text)
+- FAQ answers reformatted with cleaner line breaks and more informative language
+- Footer updated to `lovepage.art` branding; removed "Angola" from displayed name
+- `docs/PACKAGES_GUIDE.md`: added "quick demo" pre-sale step (send partial preview before full payment)
+- `docs/MARKETING_COPY.md`, `docs/BUSINESS_MODEL.md`, `README.md`: updated to reflect year-round positioning
+
+### Fixed
+- `modern-love` template: missing `type="button"` on lightbox close button
+- All gallery images now include `loading="lazy"` to reduce initial page load time
+- Added `will-change` hints on animated elements (`float`, `blob`, `photo-hover`, `reveal`) across all templates
+- Spotify iframe in all templates now has explicit `border-radius: 12px` via `.spotify-wrap iframe`
+
+## [1.0.0] - 2026-01-15
+
+### Added
+- Initial product launch targeted at Valentine's Day 2026 (Angola market)
+- 5 HTML/TailwindCSS templates: `classic-romance`, `dark-elegance`, `modern-love`,
+  `ocean-breeze`, `sunset-passion` — each with hero, message, gallery (8 photos),
+  Spotify embed, love letter, footer, and photo lightbox
+- `premium` template with customisable accent colours, timeline, and video section
+- `deluxe` template with interactive quiz and QR code feature
+- Landing page with pricing, package comparison (Básico 5k / Premium 12k / Deluxe 25k AOA),
+  countdown to 14 Feb, FAQ, and WhatsApp CTA
+- `docs/BUSINESS_MODEL.md` — pricing model, cost breakdown, projections
+- `docs/PACKAGES_GUIDE.md` — step-by-step production guide per package (15–90 min)
+- `docs/MARKETING_COPY.md` — WhatsApp scripts, Instagram captions, story templates
+- `docs/BRANDING.md` — logo, colours, typography guidelines
+- `docs/FLYERS_GUIDE.md` and PDF version
+- `docs/NOTION_GUIDE.md` — client management template
+- Marketing flyers (`assets/flyers/`) in PNG format, including main, premium, deluxe, and beta variants
+
+[Unreleased]: https://github.com/Emicy963/lovepage/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Emicy963/lovepage/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/Emicy963/lovepage/releases/tag/v1.0.0

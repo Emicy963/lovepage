@@ -76,6 +76,17 @@
           border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
         }
       }
+      .blob { will-change: border-radius; }
+      .photo-hover { will-change: transform; }
+      .blob-delay-4s { animation-delay: 4s; }
+      .spotify-wrap iframe { border-radius: 12px; }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
   </head>
   <body class="bg-purple-900 text-white font-body antialiased">
@@ -86,8 +97,7 @@
       <!-- Blobs -->
       <div class="absolute top-20 -left-20 w-72 h-72 bg-pink-400/20 blob"></div>
       <div
-        class="absolute bottom-20 -right-20 w-80 h-80 bg-purple-400/20 blob"
-        style="animation-delay: 4s"
+        class="absolute bottom-20 -right-20 w-80 h-80 bg-purple-400/20 blob blob-delay-4s"
       ></div>
 
       <div class="relative z-10 text-center max-w-2xl">
@@ -145,7 +155,7 @@
     <!-- Message -->
     <section class="py-20 px-4 bg-purple-900">
       <div class="max-w-2xl mx-auto">
-        <div class="glass rounded-3xl p-8 md:p-10 text-center">
+        <div class="reveal glass rounded-3xl p-8 md:p-10 text-center">
           <h2 class="font-display text-xl md:text-2xl text-pink-300 mb-6">
             Mensagem Especial
           </h2>
@@ -164,7 +174,7 @@
     <!-- Gallery -->
     <section class="py-20 px-4 bg-gradient-to-b from-purple-900 to-pink-900/50">
       <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
+        <div class="reveal text-center mb-12">
           <h2
             class="font-display text-2xl md:text-3xl gradient-text inline-block"
           >
@@ -177,6 +187,7 @@
             <img
               src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -184,6 +195,7 @@
             <img
               src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -191,6 +203,7 @@
             <img
               src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -198,6 +211,7 @@
             <img
               src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -205,6 +219,7 @@
             <img
               src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -212,6 +227,7 @@
             <img
               src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -219,6 +235,7 @@
             <img
               src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -226,6 +243,7 @@
             <img
               src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -235,20 +253,18 @@
 
     <!-- Music -->
     <section class="py-16 px-4 bg-pink-900/50">
-      <div class="max-w-xl mx-auto text-center">
+      <div class="reveal max-w-xl mx-auto text-center">
         <h2 class="font-display text-2xl gradient-text inline-block mb-6">
           Nossa Música
         </h2>
         <div class="glass rounded-2xl p-4">
           <iframe
             title="Spotify - Nossa Música"
-            style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0?utm_source=generator&theme=0"
             width="100%"
             height="152"
             frameborder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
           >
           </iframe>
         </div>
@@ -266,7 +282,7 @@
           </h2>
         </div>
 
-        <div class="glass rounded-3xl p-8 md:p-10">
+        <div class="reveal glass rounded-3xl p-8 md:p-10">
           <p class="text-pink-300/70 mb-6">Meu amor,</p>
 
           <p class="text-white/80 leading-relaxed whitespace-pre-line">
@@ -285,7 +301,7 @@
     <!-- Footer -->
     <footer class="py-10 px-4 gradient-main text-center">
       <p class="font-display text-xl">{{NOME_ELE}} & {{NOME_ELA}}</p>
-      <p class="text-white/60 text-sm mt-2">Dia dos Namorados 2026</p>
+      <p class="text-white/60 text-sm mt-2">lovepage.art</p>
     </footer>
 
     <!-- Lightbox -->
@@ -301,6 +317,7 @@
         class="max-w-full max-h-full object-contain rounded-2xl"
       />
       <button
+        type="button"
         class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl"
       >
         &times;
@@ -323,6 +340,13 @@
         document.getElementById("lightbox").classList.add("hidden");
         document.getElementById("lightbox").classList.remove("flex");
       }
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
   </body>
 </html>

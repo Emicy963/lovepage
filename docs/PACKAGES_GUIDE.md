@@ -35,8 +35,6 @@
 - Vídeos
 - Animações especiais
 
-### Como produzir (15-20 min)
-
 1. **Duplicar template** (1 min)
 
    ```
@@ -44,31 +42,33 @@
    Renomeia: cliente-nome
    ```
 
-2. **Find/Replace variáveis** (5 min)
+2. **Amostra Rápida (Pré-venda):**
+   - Substituir pelas 2 fotos do Hero e o Nome.
+   - Enviar link para o cliente sentir o produto.
+   - Se aprovado -> Solicitar pagamento -> Continuar produção.
 
+3. **Find/Replace variáveis** (5 min)
    - Ctrl+H no VSCode
    - Substitui todas as `{{VARIÁVEIS}}`
 
-3. **Adicionar fotos** (5 min)
-
+4. **Adicionar fotos** (5 min)
    - Recebe fotos do cliente (WhatsApp/Drive)
    - Faz upload para serviço (Imgur/Cloudinary)
    - Substitui URLs das imagens
 
-4. **Música Spotify** (2 min)
-
+5. **Música Spotify** (2 min)
    - Pede link da música ao cliente
    - Pega embed code
    - Substitui iframe
 
-5. **Deploy** (2 min)
+6. **Deploy** (2 min)
 
    ```bash
    cd pasta-cliente
    vercel --name cliente-lovepage
    ```
 
-6. **Teste rápido** (2 min)
+7. **Teste rápido** (2 min)
    - Abre no celular
    - Verifica fotos, nomes, música
 
@@ -266,13 +266,11 @@ Adicionar seção de quiz interativo:
 #### 10. QR Code Físico (10 min)
 
 1. **Gerar QR Code:**
-
    - Acessa [qr-code-generator.com](https://www.qr-code-generator.com)
    - Cola URL da página
    - Baixa PNG em alta resolução
 
 2. **Criar cartão para impressão:**
-
    - Template no Canva (grátis)
    - Tamanho: cartão de visita (8.5 x 5.5 cm)
    - Frente: QR Code + "Escaneie para ver nossa história"
