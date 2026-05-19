@@ -72,6 +72,17 @@ Abra o template desejado e use **Ctrl+H** (Find/Replace) para substituir:
 | `{{CARTA_AMOR}}`         | Carta de amor completa (pode ter múltiplas linhas) |                         |
 | `{{DATA_CARTA}}`         | Data da carta                                      | 14 de Fevereiro de 2026 |
 
+### Birthday (template `birthday/`)
+
+| Variável                   | Descrição                            | Exemplo              |
+| -------------------------- | ------------------------------------ | -------------------- |
+| `{{NOME_ANIVERSARIANTE}}`  | Nome de quem faz anos                | Ana                  |
+| `{{NOME_REMETENTE}}`       | Nome de quem oferece a surpresa      | Pedro                |
+| `{{IDADE}}`                | Idade que faz                        | 25                   |
+| `{{MENSAGEM_PRINCIPAL}}`   | Frase curta de abertura              |                      |
+| `{{CARTA_PARABENS}}`       | Mensagem completa de aniversário     |                      |
+| `{{DATA_CARTA}}`           | Data de criação da carta             | 19 de Maio de 2026   |
+
 ### Timeline
 
 | Variável                | Descrição               | Exemplo                 |
@@ -165,7 +176,7 @@ O arquivo `index.html` na raiz é a landing page de vendas.
 
 **Para configurar:**
 
-1. Substitua `244XXXXXXXXX` pelo seu número de WhatsApp (formato internacional)
+1. O número de WhatsApp já está configurado para `+244 928 301 450` — altere em `index.html` se necessário (pesquisa por `wa.me/244928301450`)
 2. Atualize os depoimentos com feedback real de clientes
 3. Ajuste os preços se necessário
 
@@ -204,4 +215,4 @@ Dúvidas sobre o uso? Consulte este README ou entre em contato.
 
 ---
 
-**Feito com 💕 para o Dia dos Namorados 2026**
+**Feito com 💕 para surpreender quem amas — em qualquer ocasião.**

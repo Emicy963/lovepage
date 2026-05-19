@@ -7,9 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-05-19
+
+### Fixed
+
+- Birthday template: duplicate `class` attribute on Memória 8 image — `aspect-wide` was silently ignored by browsers
+- Premium template: missing `will-change: transform` on `.float` and `.photo-hover`
+- Premium template: missing `type="button"` on lightbox close button
+- Premium template: gallery images missing `loading="lazy"` (10 images affected)
+- Premium template: footer showed hardcoded "Feliz Dia dos Namorados 2026"
+- Deluxe template: missing `will-change` on `.float-luxury`, `.photo-luxury`, `.gold-shine`, `.reveal`
+- Deluxe template: missing `type="button"` on lightbox close button
+- Deluxe template: gallery images missing `loading="lazy"` (8 images affected)
+- Deluxe template: footer showed hardcoded "Dia dos Namorados 2026"
+- `vercel.json`: HTML cache-control header used `/(.*)\\.html` pattern which never matches clean URLs; replaced with explicit routes for `/` and `/templates/:path*`
+- README: footer text referenced Valentine's Day 2026 — updated to year-round copy
+- README: WhatsApp setup instruction referenced placeholder `244XXXXXXXXX` when number was already configured
+- README: added birthday template variable table (`{{NOME_ANIVERSARIANTE}}`, `{{NOME_REMETENTE}}`, `{{IDADE}}`, `{{CARTA_PARABENS}}`)
+
 ## [1.1.0] - 2026-05-19
 
 ### Added
+
 - New `birthday` template — confetti animation, photo grid (10 images), timeline section,
   birthday letter, Spotify embed, violet/gold dark palette
 - Scroll reveal animations (IntersectionObserver) wired up in all 5 base templates
@@ -17,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/PARTNERSHIP_PROPOSAL.md` — distributor and affiliate partner program outline
 
 ### Changed
+
 - Landing page (`index.html`) pivoted from Valentine's Day only to year-round use:
   removed expired countdown, updated headline/meta/CTA copy to cover birthdays, anniversaries, etc.
 - WhatsApp link updated to generic message (no Valentine's-specific text)
@@ -26,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/MARKETING_COPY.md`, `docs/BUSINESS_MODEL.md`, `README.md`: updated to reflect year-round positioning
 
 ### Fixed
+
 - `modern-love` template: missing `type="button"` on lightbox close button
 - All gallery images now include `loading="lazy"` to reduce initial page load time
 - Added `will-change` hints on animated elements (`float`, `blob`, `photo-hover`, `reveal`) across all templates
@@ -34,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-01-15
 
 ### Added
+
 - Initial product launch targeted at Valentine's Day 2026 (Angola market)
 - 5 HTML/TailwindCSS templates: `classic-romance`, `dark-elegance`, `modern-love`,
   `ocean-breeze`, `sunset-passion` — each with hero, message, gallery (8 photos),
