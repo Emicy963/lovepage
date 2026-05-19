@@ -54,6 +54,7 @@
 
       .float {
         animation: float 4s ease-in-out infinite;
+        will-change: transform;
       }
       @keyframes float {
         0%,
@@ -78,6 +79,7 @@
 
       .photo-hover {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
       }
       .photo-hover:hover {
         transform: scale(1.05) rotate(1deg);
@@ -253,6 +255,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=300&h=300&fit=crop"
+              loading="lazy"
               alt="Momento 1"
               class="w-full h-full object-cover"
             />
@@ -262,6 +265,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop"
+              loading="lazy"
               alt="Momento 2"
               class="w-full h-full object-cover"
             />
@@ -271,6 +275,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=300&h=300&fit=crop"
+              loading="lazy"
               alt="Momento 3"
               class="w-full h-full object-cover"
             />
@@ -280,6 +285,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=300&h=300&fit=crop"
+              loading="lazy"
               alt="Momento 4"
               class="w-full h-full object-cover"
             />
@@ -293,6 +299,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 5"
               class="w-full h-full object-cover"
             />
@@ -302,6 +309,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 6"
               class="w-full h-full object-cover"
             />
@@ -311,6 +319,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 7"
               class="w-full h-full object-cover"
             />
@@ -320,6 +329,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 8"
               class="w-full h-full object-cover"
             />
@@ -329,6 +339,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 9"
               class="w-full h-full object-cover"
             />
@@ -338,6 +349,7 @@
           >
             <img
               src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=200&h=200&fit=crop"
+              loading="lazy"
               alt="Momento 10"
               class="w-full h-full object-cover"
             />
@@ -556,7 +568,7 @@
     <footer class="py-12 px-4 bg-primary-900 text-white text-center">
       <div class="max-w-3xl mx-auto">
         <p class="font-display text-3xl mb-4">{{NOME_ELE}} ❤️ {{NOME_ELA}}</p>
-        <p class="text-white/60">Feliz Dia dos Namorados 2026</p>
+        <p class="text-white/60">lovepage.art</p>
         <div class="mt-6 flex justify-center gap-4 text-3xl">
           <span class="float">💕</span>
           <span class="float" style="animation-delay: 0.3s">💖</span>
@@ -578,6 +590,7 @@
         class="max-w-full max-h-full object-contain rounded-lg"
       />
       <button
+        type="button"
         class="absolute top-4 right-4 text-white text-4xl hover:text-primary-500 transition-colors"
       >
         &times;
