@@ -65,6 +65,16 @@
           transform: translateY(-10px);
         }
       }
+      .float { will-change: transform; }
+      .photo-hover { will-change: transform; }
+      .spotify-wrap iframe { border-radius: 12px; }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
   </head>
   <body class="bg-ocean-50 text-ocean-900 font-body antialiased">
@@ -139,7 +149,7 @@
 
     <!-- Message -->
     <section class="py-20 px-4 bg-white">
-      <div class="max-w-2xl mx-auto text-center">
+      <div class="reveal max-w-2xl mx-auto text-center">
         <h2 class="font-display text-xl md:text-2xl text-ocean-600 mb-8">
           Mensagem Especial
         </h2>
@@ -157,7 +167,7 @@
     <!-- Gallery -->
     <section class="py-20 px-4 bg-ocean-50">
       <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
+        <div class="reveal text-center mb-12">
           <h2 class="font-display text-2xl md:text-3xl text-ocean-600">
             Nossos Momentos
           </h2>
@@ -169,6 +179,7 @@
             <img
               src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -176,6 +187,7 @@
             <img
               src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -183,6 +195,7 @@
             <img
               src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -190,6 +203,7 @@
             <img
               src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -197,6 +211,7 @@
             <img
               src="https://images.unsplash.com/photo-1522146776529-84e1c494ab88?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -204,6 +219,7 @@
             <img
               src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -211,6 +227,7 @@
             <img
               src="https://images.unsplash.com/photo-1508206217219-7b5c7b4c7f4f?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -218,6 +235,7 @@
             <img
               src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=300&h=300&fit=crop"
               alt="Momento"
+              loading="lazy"
               class="w-full aspect-square object-cover"
             />
           </div>
@@ -227,18 +245,16 @@
 
     <!-- Music -->
     <section class="py-16 px-4 bg-ocean-600">
-      <div class="max-w-xl mx-auto text-center text-white">
+      <div class="reveal max-w-xl mx-auto text-center text-white">
         <h2 class="font-display text-2xl mb-6">Nossa Música</h2>
         <div class="bg-white/10 backdrop-blur rounded-xl p-4">
           <iframe
             title="Spotify - Nossa Música"
-            style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0?utm_source=generator&theme=0"
             width="100%"
             height="152"
             frameborder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
           >
           </iframe>
         </div>
@@ -256,7 +272,7 @@
         </div>
 
         <div
-          class="bg-ocean-50 rounded-2xl p-8 md:p-10 border border-ocean-100"
+          class="reveal bg-ocean-50 rounded-2xl p-8 md:p-10 border border-ocean-100"
         >
           <p class="text-ocean-500 mb-6 font-display italic">Meu amor,</p>
 
@@ -276,7 +292,7 @@
     <!-- Footer -->
     <footer class="py-10 px-4 gradient-ocean text-center text-white">
       <p class="font-display text-xl">{{NOME_ELE}} & {{NOME_ELA}}</p>
-      <p class="text-white/60 text-sm mt-2">Dia dos Namorados 2026</p>
+      <p class="text-white/60 text-sm mt-2">lovepage.art</p>
     </footer>
 
     <!-- Lightbox -->
@@ -292,6 +308,7 @@
         class="max-w-full max-h-full object-contain rounded-xl"
       />
       <button
+        type="button"
         class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl"
       >
         &times;
@@ -314,6 +331,13 @@
         document.getElementById("lightbox").classList.add("hidden");
         document.getElementById("lightbox").classList.remove("flex");
       }
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
   </body>
 </html>
