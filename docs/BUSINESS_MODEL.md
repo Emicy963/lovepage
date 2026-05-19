@@ -1,11 +1,19 @@
-# 📊 LovePage Angola - Modelo de Negócio
+# LovePage Angola — Modelo de Negócio
 
 ## Visão Geral
 
-**Produto:** Landing pages personalizadas para o Dia dos Namorados  
-**Mercado:** Casais em Angola (foco Luanda)  
+**Produto:** Landing pages personalizadas para qualquer ocasião especial  
+**Mercado:** Angola (foco Luanda) — qualquer pessoa que queira surpreender alguém  
 **Modelo:** Serviço de produção unitária com 3 tiers de preço  
-**Período:** Sazonal (Janeiro-Fevereiro 2026)
+**Período:** Evergreen — aniversários (12 meses/ano), namoro, casamento, surpresas  
+**Domínio:** lovepage.art
+
+### Ocasiões-alvo (por prioridade de volume)
+
+1. **Aniversários** — evergreen, acontecem todos os meses, template dedicado
+2. **Surpresas especiais** — declarações, pedidos de desculpas, homenagens
+3. **Namoro / Casamento** — alta emoção, maior ticket médio
+4. **Família** — Dia das Mães, Pais, homenagens especiais (sazonais)
 
 ---
 

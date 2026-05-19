@@ -7,18 +7,30 @@
 
 ## 🎯 Mensagem Inicial para Contactos (WhatsApp Direto)
 
-### Versão Curta (para amigos próximos)
+### Versão "Amostra Grátis" (RECOMENDADO - Baixa Fricção) ✨
+
+```md
+Oi [Nome]! 👋
+
+Lançamos a LovePage para o Dia dos Namorados e queremos dar-te uma amostra.
+
+Manda-me 2 fotos vossas aqui no WhatsApp agora. Em 10 minutos monto um rascunho rápido da vossa página (grátis) só para veres como fica. 🎁
+
+Sem compromisso. Queres ver?
+```
+
+### Versão Emocional (Foco no Valor Eterno) 🌹
 
 ```md
 Ei! 👋
 
-Lancei um serviço novo para o Dia dos Namorados e queria partilhar contigo.
+Já pensaste que flores murcham em 3 dias, mas memórias digitais ficam para sempre?
 
-É uma página web personalizada com fotos, mensagens e música do casal. Tipo um presente digital que dura para sempre.
+Estou a criar as "LovePages" — um espaço online exclusivo só para ti e para o teu amor. Com as vossas fotos, a vossa música e uma carta que ele/ela pode ler sempre que tiver saudades tuas. 🥺
 
-Dá uma olhada: lovepage.art
+Vê como funciona: lovepage.art
 
-Se conheceres alguém que quer surpreender a namorada/o, passa o link! 💕
+Manda-me um "SIM" se quiseres que eu monte uma prévia grátis para ti agora!
 ```
 
 ### Versão Média (contactos gerais)
@@ -70,14 +82,15 @@ Ou se conheceres alguém que quer surpreender, partilha com ele/ela! 💕
 
 ## 📢 Status do WhatsApp
 
-### Status 1 - Teaser
+### Status 1 - O Desafio
 
 ```md
-💕 Novo projeto para o Dia dos Namorados...
+💕 Desafio do Dia dos Namorados:
 
-Em breve vou revelar!
+Quem me mandar 2 fotos agora, recebe um link de surpresa em 15 minutos. 🎁
 
-Quem adivinhar ganha desconto 😏
+Sem pagar nada para ver.
+Quem topa? 👇
 ```
 
 ### Status 2 - Revelação
@@ -93,7 +106,7 @@ A partir de 5.000 AOA
 
 lovepage.art 💕
 ```
-
+x
 ### Status 3 - Demo
 
 ```md
@@ -326,18 +339,17 @@ Páginas web personalizadas para casais.
 
 ---
 
-## 🎁 Promoção de Lançamento
+## 🤝 Campanha "Beta Tester" (Gerar Prova Social)
 
 ```md
-🎉 PROMOÇÃO DE LANÇAMENTO!
+🎉 PROPORÇÃO ESPECIAL DE LANÇAMENTO!
 
-Para os primeiros 5 clientes:
+Estamos à procura dos primeiros 3 casais para inaugurar a LovePage Angola.
 
-💕 Básico: 4.000 AOA (era 5.000)
-💝 Premium: 10.000 AOA (era 12.000)
+CONDIÇÃO: 50% de DESCONTO em qualquer pacote.
+REQUISITO: Gravar um vídeo curto de reação ou mandar um áudio contando como foi a surpresa. 🥺
 
-Válido só esta semana!
-
+Apenas 3 vagas com este desconto!
 lovepage.art
 ```
 

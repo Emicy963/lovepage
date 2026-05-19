@@ -1,31 +1,44 @@
-# 💕 LovePage Angola - Dia dos Namorados 2026
+# LovePage — Presentes Digitais para Qualquer Ocasião Especial
 
-Sistema de landing pages personalizadas para o Dia dos Namorados no mercado angolano.
+Serviço de landing pages personalizadas para aniversários, surpresas, namoro, casamento e muito mais. Mercado principal: Angola (Luanda).
 
-## 🚀 Quick Start
+> **Domínio:** lovepage.art | **WhatsApp:** +244 928 301 450
 
-1. Abra `index.html` no navegador para ver a landing page de vendas
-2. Os templates estão em `/templates/[nome-do-tema]/index.html`
-3. Para personalizar um template, use Find/Replace com as variáveis abaixo
+## Conceito
 
-## 📁 Estrutura do Projeto
+O nome vem da intenção de **transmitir o teu amor** à pessoa desejada — não está limitado a casais. Qualquer pessoa que queira surpreender alguém especial com algo digital, personalizado e eterno.
+
+## Quick Start
+
+1. Abre `index.html` no navegador para ver a landing page de vendas
+2. Os templates estão em `templates/[nome-do-tema]/index.html`
+3. Para personalizar um template, usa Find/Replace com as variáveis abaixo
+
+## Estrutura do Projeto
 
 ```
-ValentineDays/
+LovePage/
 ├── index.html                    # Landing page de vendas (dark theme)
-├── README.md                     # Este arquivo
+├── README.md
 ├── docs/
-│   ├── BUSINESS_MODEL.md         # Modelo de negócio
-│   ├── NOTION_GUIDE.md           # Guia para Notion
-│   └── PACKAGES_GUIDE.md         # Guia de pacotes
+│   ├── BUSINESS_MODEL.md         # Modelo de negócio e projeções
+│   ├── PACKAGES_GUIDE.md         # Guia de produção por pacote
+│   ├── BRANDING.md               # Identidade visual e tom de voz
+│   ├── MARKETING_COPY.md         # Copies prontos para WhatsApp/redes
+│   ├── PARTNERSHIP_PROPOSAL.md   # Proposta de parceria com floristas
+│   ├── FLYERS_GUIDE.md           # Guia para os flyers
+│   └── NOTION_GUIDE.md           # Gestão de encomendas no Notion
+├── assets/
+│   └── flyers/                   # Flyers PNG/PSD para marketing
 └── templates/
-    ├── classic-romance/          # 💕 Básico - Vermelho/Dourado
-    ├── modern-love/              # 💜 Básico - Rosa/Roxo gradientes
-    ├── sunset-passion/           # 🌅 Básico - Laranja/Coral
-    ├── ocean-breeze/             # 🌊 Básico - Azul/Verde-água
-    ├── dark-elegance/            # 👑 Básico - Dark mode/Rose gold
-    ├── premium/                  # 💝 PREMIUM - Cores custom + Timeline + Vídeo
-    └── deluxe/                   # 🏆 DELUXE - Quiz + Design exclusivo + Ilimitado
+    ├── birthday/                 # 🎂 NOVO - Aniversários (violeta/dourado)
+    ├── classic-romance/          # ❤️  Básico - Vermelho/Dourado
+    ├── modern-love/              # 💜  Básico - Rosa/Roxo gradientes
+    ├── sunset-passion/           # 🌅  Básico - Laranja/Coral
+    ├── ocean-breeze/             # 🌊  Básico - Azul/Verde-água
+    ├── dark-elegance/            # 👑  Básico - Dark mode/Rose gold
+    ├── premium/                  # 💝  PREMIUM - Cores custom + Timeline + Vídeo
+    └── deluxe/                   # 🏆  DELUXE - Quiz + Design exclusivo + Ilimitado
 ```
 
 ## 🎨 Temas Disponíveis
@@ -55,8 +68,8 @@ Abra o template desejado e use **Ctrl+H** (Find/Replace) para substituir:
 
 | Variável                 | Descrição                                          | Exemplo                 |
 | ------------------------ | -------------------------------------------------- | ----------------------- |
-| `{{MENSAGEM_PRINCIPAL}}` | Mensagem curta no início (1-2 frases)              |
-| `{{CARTA_AMOR}}`         | Carta de amor completa (pode ter múltiplas linhas) |
+| `{{MENSAGEM_PRINCIPAL}}` | Mensagem curta no início (1-2 frases)              |                         |
+| `{{CARTA_AMOR}}`         | Carta de amor completa (pode ter múltiplas linhas) |                         |
 | `{{DATA_CARTA}}`         | Data da carta                                      | 14 de Fevereiro de 2026 |
 
 ### Timeline
