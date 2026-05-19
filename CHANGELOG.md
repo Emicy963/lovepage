@@ -72,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/NOTION_GUIDE.md` — client management template
 - Marketing flyers (`assets/flyers/`) in PNG format, including main, premium, deluxe, and beta variants
 
-[Unreleased]: https://github.com/Emicy963/lovepage/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/Emicy963/lovepage/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/Emicy963/lovepage/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/Emicy963/lovepage/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Emicy963/lovepage/releases/tag/v1.0.0
