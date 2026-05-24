@@ -1,364 +1,217 @@
-# 📱 LovePage - Copies para Marketing
+# LovePage — Copies para Marketing
 
 **Site:** lovepage.art  
 **WhatsApp:** +244 928 301 450
 
 ---
 
-## 🎯 Mensagem Inicial para Contactos (WhatsApp Direto)
+## Processo de Venda (Ler Antes dos Scripts)
 
-### Versão "Amostra Grátis" (RECOMENDADO - Baixa Fricção) ✨
+A ordem correta é sempre: **demo → emoção → pagamento.**
+
+Nunca descreve o produto verbalmente. Nunca menciona preços antes da demo.  
+O produto fecha a venda — não tu.
+
+---
+
+## Qualificação (Antes de Tudo)
+
+Antes de fazer qualquer abordagem, qualifica o contacto com uma pergunta simples:
 
 ```md
-Oi [Nome]! 👋
-
-Lançamos a LovePage para o Dia dos Namorados e queremos dar-te uma amostra.
-
-Manda-me 2 fotos vossas aqui no WhatsApp agora. Em 10 minutos monto um rascunho rápido da vossa página (grátis) só para veres como fica. 🎁
-
-Sem compromisso. Queres ver?
+Ei [Nome], precisava da tua ajuda rápida.
+Conheces alguém que faz anos em breve e que o namorado/a ou família quisesse surpreender?
 ```
 
-### Versão Emocional (Foco no Valor Eterno) 🌹
+Objetivo: identificar se há uma **ocasião real** nos próximos 30 dias.  
+Se não há ocasião, não há urgência. Arquiva e volta quando houver.
+
+---
+
+## Demo Parcial (A Arma Principal)
+
+Quando tiveres um lead qualificado, esta é a abordagem:
 
 ```md
-Ei! 👋
-
-Já pensaste que flores murcham em 3 dias, mas memórias digitais ficam para sempre?
-
-Estou a criar as "LovePages" — um espaço online exclusivo só para ti e para o teu amor. Com as vossas fotos, a vossa música e uma carta que ele/ela pode ler sempre que tiver saudades tuas. 🥺
-
-Vê como funciona: lovepage.art
-
-Manda-me um "SIM" se quiseres que eu monte uma prévia grátis para ti agora!
+Antes de te explicar o que é — manda-me 2-3 fotos de vocês aqui no WhatsApp.
+Em 20 minutos envio-te um rascunho da página. Para veres como fica. Sem compromisso.
 ```
 
-### Versão Média (contactos gerais)
+Montas o template com as fotos reais, fazes deploy, envias o link.  
+Depois de a pessoa ver o próprio conteúdo na página, perguntas:
 
 ```md
-Olá! 😊
-
-Estou a lançar a LovePage - um serviço de páginas personalizadas para o Dia dos Namorados.
-
-A ideia é simples: tu envias as fotos, textos e a música favorita do casal, e eu crio uma página web exclusiva que ela/ele abre no celular e vê algo feito SÓ para ela/ele.
-
-💕 Com fotos de vocês
-💌 Mensagem e carta de amor
-🎵 A música do relacionamento
-
-Preço a partir de 5.000 AOA.
-
-Vê os exemplos: lovepage.art
-
-Se quiseres encomendar ou tiveres dúvidas, é só chamar!
-```
-
-### Versão Completa (para possíveis clientes)
-
-```md
-Olá! 👋
-
-Estou a lançar um serviço especial para o Dia dos Namorados chamado LovePage.
-
-🤔 O que é?
-Uma página web personalizada SÓ do teu relacionamento - com fotos de vocês, a história do casal, carta de amor e até a música favorita de vocês no Spotify.
-
-📱 Como funciona?
-Tu envias os conteúdos (fotos, textos, datas), eu crio a página em 24-72h, e recebes um link exclusivo para partilhar com ela/ele.
-
-💰 Quanto custa?
-• Básico: 5.000 AOA - 10 fotos + música + carta
-• Premium: 12.000 AOA - 30 fotos + vídeo + timeline  
-• Deluxe: 25.000 AOA - Tudo ilimitado + quiz + design exclusivo
-
-🌐 Vê os demos: lovepage.art
-
-Interesse? É só chamar aqui no WhatsApp!
-
-Ou se conheceres alguém que quer surpreender, partilha com ele/ela! 💕
+Gostaste? Esta é a versão básica.
+Queres a versão completa com [X funcionalidades do pacote escolhido]?
 ```
 
 ---
 
-## 📢 Status do WhatsApp
+## Scripts WhatsApp — Aniversários
 
-### Status 1 - O Desafio
+### Para o namorado/a que quer surpreender
 
 ```md
-💕 Desafio do Dia dos Namorados:
+Ei! Ficas com o aniversário da tua namorada/o em breve?
 
-Quem me mandar 2 fotos agora, recebe um link de surpresa em 15 minutos. 🎁
-
-Sem pagar nada para ver.
-Quem topa? 👇
+Tenho uma ideia diferente para este ano. Manda-me 2-3 fotos de vocês — em 20 minutos envio-te
+um rascunho de uma página personalizada com as vossas fotos. Para veres como fica. Grátis.
 ```
 
-### Status 2 - Revelação
+### Para a família que quer homenagear
 
 ```md
-🎉 Apresento a LOVEPAGE!
+Ei [Nome], sei que o [aniversariante] faz anos em breve.
 
-Uma página web personalizada para surpreender no Dia dos Namorados.
-
-Fotos + Mensagens + Música = Presente inesquecível
-
-A partir de 5.000 AOA
-
-lovepage.art 💕
-```
-x
-### Status 3 - Demo
-
-```md
-[VÍDEO/SCREENSHOT DO SITE]
-
-Isso é uma LovePage 👆
-
-Imagina ela abrir o celular e ver isso... 🥺
-
-Cria a tua: lovepage.art
+Criei algo diferente para presentear — uma página web com fotos, mensagens e a música favorita dele/dela.
+Manda-me 2 fotos e um texto curto e mostro-te como ficaria em 20 minutos.
 ```
 
-### Status 4 - Urgência
+### Follow-up depois da demo
 
 ```md
-⚠️ Faltam XX dias para o Dia dos Namorados!
+Conseguiste ver o link?
 
-Não deixes para última hora...
-
-Encomenda a LovePage dela/dele AGORA.
-
-lovepage.art 💕
+Esta é a versão rascunho — a versão completa tem [X fotos, timeline, carta personalizada, etc.].
+Queres avançar?
 ```
 
-### Status 5 - Prova Social
+---
+
+## Scripts WhatsApp — Ocasiões Gerais
+
+### Declaração / Surpresa
 
 ```md
-Primeiro cliente entregue! ✅
+Ei! Estou a ajudar pessoas a criar uma página web personalizada para surpreender quem amam.
 
-"Ela chorou de emoção" 🥺
+Com as vossas fotos, uma mensagem, e a música do casal — a pessoa abre o link no telemóvel
+e vê algo feito só para ela.
 
-Queres surpreender assim também?
+Se quiseres ver como ficaria — manda-me 2 fotos. Mostro-te o rascunho em 20 minutos.
+```
 
+### Versão curta para qualquer ocasião
+
+```md
+Sabes que tenho um serviço de páginas personalizadas? Fotos, mensagens, música.
+
+Se quiseres ver um exemplo com as tuas fotos, chama aqui.
+```
+
+---
+
+## WhatsApp Status (1 por semana)
+
+O objetivo dos status não é vender — é criar contexto para quando contactares alguém.
+
+### Status 1 — Mostrar o produto
+
+```md
+[screenshot do template dark-elegance ou ocean-breeze com fotos genéricas]
+
+Acabei de entregar esta 🙂
+lovepage.art
+```
+
+### Status 2 — Prova social
+
+```md
+"Ela ficou sem palavras quando abriu"
+
+Uma página web com as fotos de vocês, a vossa música, a vossa história.
+lovepage.art
+```
+
+### Status 3 — Escassez (quando tiveres 1-2 vagas reais)
+
+```md
+Tenho 2 vagas esta semana para aniversários.
+Se tiveres alguém que faz anos em breve — chama aqui antes que fechem.
+```
+
+### Status 4 — Aniversários evergreen
+
+```md
+Aniversários acontecem todos os meses.
+
+Em vez de flores que murcham — uma página que fica para sempre.
 lovepage.art
 ```
 
 ---
 
-## 📝 Post para Instagram/Facebook
-
-### Post 1 - Lançamento
-
-```md
-💕 Está a chegar o Dia dos Namorados...
-
-E se este ano o presente fosse diferente?
-
-Apresento a LovePage - uma página web EXCLUSIVA do teu relacionamento.
-
-📸 Tuas fotos favoritas
-💌 Tuas mensagens de amor
-🎵 A música de vocês
-📱 Acessível a qualquer momento
-
-Um presente que não murcha, não acaba e fica para SEMPRE.
-
-A partir de 5.000 AOA.
-
-🔗 Link na bio
-
-#DiaDoNamorados #PresenteDigital #LovePage #Angola #Amor
-```
-
-### Post 2 - Carrossel (5 slides)
-
-**Slide 1:**
-
-```md
-Flores murcham...
-Chocolates acabam...
-
-Mas a LovePage dura PARA SEMPRE 💕
-```
-
-**Slide 2:**
-
-```md
-O que é uma LovePage?
-
-Uma página web exclusiva do teu casal com:
-• Fotos de vocês
-• Timeline do relacionamento
-• Carta de amor
-• Música favorita
-```
-
-**Slide 3:**
-
-```md
-Como funciona?
-
-1️⃣ Escolhes o pacote
-2️⃣ Envias as fotos e textos
-3️⃣ Recebemos e criamos
-4️⃣ Entregas o link no Dia dos Namorados!
-```
-
-**Slide 4:**
-
-```md
-Pacotes:
-
-💕 Básico: 5.000 AOA
-💝 Premium: 12.000 AOA  
-👑 Deluxe: 25.000 AOA
-
-Vê os detalhes em lovepage.art
-```
-
-**Slide 5:**
-
-```md
-Encomenda agora!
-
-📱 WhatsApp: +244 928 301 450
-🌐 Site: lovepage.art
-
-Vagas limitadas! ⚠️
-```
-
----
-
-## 💬 Respostas Rápidas (FAQ)
+## Respostas Rápidas (FAQ)
 
 ### "Quanto custa?"
 
 ```md
 Temos 3 pacotes:
 
-💕 Básico (5.000 AOA): 10 fotos, música, carta de amor, entrega 24h
+• Básico (5.000 AOA): 10 fotos, música, carta de amor
+• Premium (12.000 AOA): 30 fotos, timeline animada, vídeo
+• Deluxe (25.000 AOA): design exclusivo, quiz interativo, QR code
 
-💝 Premium (12.000 AOA): 30 fotos + vídeo, timeline animada, cores personalizadas, entrega 48h
-
-👑 Deluxe (25.000 AOA): Fotos ilimitadas, design exclusivo, quiz interativo, QR code físico, entrega 72h
-
-Qual te interessa mais?
+Mas antes de te dizer o preço — deixa eu mostrar-te como ficaria com as tuas fotos.
+Manda-me 2-3 fotos e mostro o rascunho em 20 minutos. Sem compromisso.
 ```
 
 ### "Como funciona?"
 
 ```md
-É bem simples:
+É simples:
 
-1. Escolhes o pacote
-2. Fazes o pagamento (Multicaixa Express ou transferência)
-3. Envias as fotos, textos e a música do Spotify
-4. Em 24-72h (depende do pacote) envio o link pronto!
+1. Envias 2-3 fotos (posso fazer um rascunho grátis para veres)
+2. Escolhes o pacote
+3. Pagas e envias os conteúdos completos
+4. Entrego o link em 24-72h (depende do pacote)
 
-Ela/ele abre no celular e vê uma página linda só de vocês 💕
+Ela/ele abre no telemóvel e vê uma página feita só para vocês.
 
-Vê exemplos em lovepage.art
+Queres ver como ficaria? Manda-me 2 fotos.
 ```
 
 ### "Posso ver um exemplo?"
 
 ```md
-Claro!
+Claro — entra em lovepage.art e vês os templates.
 
-Entra em lovepage.art e clica em "Ver Templates" - tens 7 estilos diferentes para escolher.
-
-Cada um pode ser personalizado com as tuas fotos e textos.
-```
-
-### "Como faço o pagamento?"
-
-```md
-Aceito:
-
-📱 Multicaixa Express
-🏦 Transferência bancária
-
-Após o pagamento, envias o comprovativo e os conteúdos (fotos, textos, música) e começo a criar!
+Ou manda-me 2 fotos vossas e mostro-te como ficaria especificamente com o vosso conteúdo.
+Isso é mais realista do que um template genérico.
 ```
 
 ### "Quanto tempo demora?"
 
 ```md
-Depende do pacote:
-
-• Básico: 24 horas
+• Básico: 24 horas após receber os assets
 • Premium: 48 horas
 • Deluxe: 72 horas
 
-Mas se precisares urgente, podemos negociar!
+O prazo conta a partir de quando eu recebo as fotos e textos completos.
+```
+
+### "Como faço o pagamento?"
+
+```md
+• Multicaixa Express
+• Transferência bancária
+
+Após confirmação do pagamento começo a produção.
 ```
 
 ---
 
-## 🚀 Script para Grupos WhatsApp
+## Script para Parceiros (Floristas / Lojas de Presentes)
 
-### Para grupos de amigos
-
-```md
-Ei pessoal! 👋
-
-Lancei um projeto para o Dia dos Namorados e queria partilhar com vocês.
-
-É a LovePage - uma página web personalizada para surpreender quem amam.
-
-Basicamente, enviam fotos, mensagens e a música do casal, e eu crio uma página exclusiva que ela/ele abre no celular.
-
-💰 A partir de 5.000 AOA
-
-🌐 Exemplos: lovepage.art
-
-Quem tiver interesse ou conhecer alguém, chama no privado!
-
-E se puderem partilhar, ajuda muito! 🙏💕
-```
-
-### Para grupos networking
-
-```md
-[OFERTA DIA DOS NAMORADOS] 💕
-
-Páginas web personalizadas para casais.
-
-✨ O que oferece:
-• Página exclusiva com fotos do casal
-• Mensagens e carta de amor
-• Música do Spotify integrada
-• Timeline do relacionamento (Premium+)
-
-💰 Preços: 5.000 - 25.000 AOA
-🌐 Demos: lovepage.art
-📱 WhatsApp: +244 928 301 450
-
-#DiaDoNamorados #PresenteOriginal
-```
+Abordagem presencial. Ver `docs/PARTNERSHIP_PROPOSAL.md` para o script completo e a proposta de comissão.
 
 ---
 
-## 🤝 Campanha "Beta Tester" (Gerar Prova Social)
+## Checklist de Abordagem
 
-```md
-🎉 PROPORÇÃO ESPECIAL DE LANÇAMENTO!
-
-Estamos à procura dos primeiros 3 casais para inaugurar a LovePage Angola.
-
-CONDIÇÃO: 50% de DESCONTO em qualquer pacote.
-REQUISITO: Gravar um vídeo curto de reação ou mandar um áudio contando como foi a surpresa. 🥺
-
-Apenas 3 vagas com este desconto!
-lovepage.art
-```
-
----
-
-## ✅ Checklist de Lançamento
-
-- [ ] Configurar número do WhatsApp (+244 928 301 450) nos botões e links
-- [ ] Criar 3-5 status do WhatsApp em sequência
-- [ ] Enviar para 10-20 contactos próximos primeiro
-- [ ] Postar em 2-3 grupos relevantes
-- [ ] Pedir feedback/depoimento aos primeiros clientes
+- [ ] Qualifiquei o lead (há uma ocasião real?)
+- [ ] Fiz a demo parcial com fotos reais (não descrevi verbalmente)
+- [ ] Esperei a reação antes de mencionar preços
+- [ ] Após venda: confirmei satisfação em 24h
+- [ ] Pedi depoimento
+- [ ] Pedi referral: "Conheces alguém com aniversário em breve?"

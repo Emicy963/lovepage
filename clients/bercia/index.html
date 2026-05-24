@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎂 Feliz Aniversário, Bércia!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              deep: {
+                900: "#0d0a1a",
+                800: "#150f2a",
+                700: "#1e1638",
+                600: "#2a1f50",
+              },
+              violet: {
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+              },
+              gold: {
+                300: "#fde68a",
+                400: "#fbbf24",
+                500: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        background-color: #0d0a1a;
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Confetti particles */
+      .confetti-wrap {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .confetti-piece {
+        position: absolute;
+        top: -20px;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        animation: confetti-fall linear infinite;
+        will-change: transform, opacity;
+      }
+      @keyframes confetti-fall {
+        0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+      }
+
+      /* Hero gradient */
+      .hero-gradient {
+        background: linear-gradient(160deg, #2a1f50 0%, #0d0a1a 60%);
+      }
+
+      /* Gold text */
+      .gold-text {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b, #fde68a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Violet text */
+      .violet-text {
+        background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Glow effects */
+      .violet-glow {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.25);
+      }
+      .gold-glow {
+        box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
+      }
+
+      /* Age badge */
+      .age-badge {
+        background: linear-gradient(135deg, #7c3aed, #f59e0b);
+        border-radius: 9999px;
+        padding: 2px;
+      }
+      .age-badge-inner {
+        background: #0d0a1a;
+        border-radius: 9999px;
+        padding: 0.75rem 1.5rem;
+      }
+
+      /* Photo cards */
+      .photo-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .photo-card:hover {
+        transform: scale(1.04) rotate(1deg);
+      }
+      .photo-card:nth-child(even):hover {
+        transform: scale(1.04) rotate(-1deg);
+      }
+
+      /* Scroll reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Letter section */
+      .letter-bg {
+        background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(245,158,11,0.05));
+        border: 1px solid rgba(139,92,246,0.2);
+      }
+
+      /* Timeline */
+      .timeline-line {
+        background: linear-gradient(to bottom, #7c3aed, #f59e0b);
+      }
+
+      /* Spotify embed container */
+      .spotify-wrap {
+        background: rgba(139,92,246,0.1);
+        border: 1px solid rgba(139,92,246,0.2);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      /* Pulse anim for orbs */
+      @keyframes orb-pulse {
+        0%, 100% { transform: scale(1); opacity: 0.15; }
+        50%       { transform: scale(1.1); opacity: 0.25; }
+      }
+      .orb {
+        animation: orb-pulse 6s ease-in-out infinite;
+        will-change: transform, opacity;
+      }
+      .orb-delay-3s { animation-delay: 3s; }
+
+      /* Spotify iframe */
+      .spotify-wrap iframe { border-radius: 12px; }
+
+      /* Wide photo aspect ratio */
+      .aspect-wide { aspect-ratio: 16 / 9; }
+    </style>
+  </head>
+
+  <body class="font-body text-gray-100 relative">
+
+    <!-- Confetti (JS-generated) -->
+    <div class="confetti-wrap" id="confetti"></div>
+
+    <!-- Background orbs -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+      <div class="orb absolute top-10 left-1/4 w-72 h-72 bg-violet-600 rounded-full blur-3xl"></div>
+      <div class="orb orb-delay-3s absolute bottom-20 right-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative z-10 min-h-screen hero-gradient flex flex-col items-center justify-center px-4 py-20 text-center">
+      <div class="max-w-2xl mx-auto">
+
+        <!-- Occasion label -->
+        <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-6 reveal">
+          ✨ Uma surpresa especial para ti
+        </p>
+
+        <!-- Age badge -->
+        <div class="flex justify-center mb-6 reveal" data-delay="100">
+          <div class="age-badge">
+            <div class="age-badge-inner">
+              <span class="text-2xl font-bold gold-text">23 anos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main headline -->
+        <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-4 reveal" data-delay="150">
+          Feliz Aniversário,<br />
+          <span class="gold-text">Bércia</span>!
+        </h1>
+
+        <!-- From line -->
+        <p class="text-gray-400 text-lg mb-8 reveal" data-delay="200">
+          Com todo o amor de <span class="text-violet-400 font-medium">Alguém especial</span>
+        </p>
+
+        <!-- Short message -->
+        <p class="text-gray-300 text-xl leading-relaxed max-w-xl mx-auto reveal" data-delay="250">
+          Hoje o mundo celebra o dia em que chegaste. E nós celebramos contigo —
+          porque tudo fica mais bonito quando és tu.
+        </p>
+
+        <!-- Scroll hint -->
+        <div class="mt-14 reveal" data-delay="350">
+          <p class="text-gray-600 text-sm mb-2">Desliza para ver</p>
+          <div class="w-0.5 h-12 bg-gradient-to-b from-violet-500 to-transparent mx-auto"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="relative z-10 py-20 px-4">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Memórias</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold">
+            Os momentos que<br />
+            <span class="violet-text">ficam para sempre</span>
+          </h2>
+        </div>
+
+        <!-- Photo grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+          <!-- Fotos reais da Bércia (colocadas em assets/) -->
+          <div class="photo-card reveal col-span-2 md:col-span-1 row-span-2">
+            <img
+              src="assets/bercia1.jpeg"
+              alt="Bércia — Memória 1"
+              loading="lazy"
+              class="w-full h-full object-cover rounded-2xl aspect-square violet-glow"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="100">
+            <img
+              src="assets/bercia2.jpeg"
+              alt="Bércia — Memória 2"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="150">
+            <img
+              src="assets/bercia3.jpeg"
+              alt="Bércia — Memória 3"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <!-- Fotos de preenchimento (substituir por mais fotos reais se cliente enviar) -->
+          <div class="photo-card reveal" data-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&q=80"
+              alt="Memória 4"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="250">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80"
+              alt="Memória 5"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="300">
+            <img
+              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=80"
+              alt="Memória 6"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&q=80"
+              alt="Memória 7"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="250">
+            <img
+              src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80"
+              alt="Memória 8"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-wide"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="300">
+            <img
+              src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80"
+              alt="Memória 9"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div class="photo-card reveal" data-delay="350">
+            <img
+              src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&q=80"
+              alt="Memória 10"
+              loading="lazy"
+              class="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY LETTER -->
+    <section class="relative z-10 py-20 px-4">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-12 reveal">
+          <p class="text-gold-400 text-sm font-medium uppercase tracking-widest mb-3">Uma mensagem do coração</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold">
+            Para <span class="gold-text">Bércia</span>
+          </h2>
+        </div>
+
+        <div class="letter-bg rounded-3xl p-8 md:p-10 reveal" data-delay="100">
+          <!-- Decorative quote mark -->
+          <div class="text-violet-500/30 font-display text-8xl leading-none mb-4 select-none">"</div>
+
+          <div class="text-gray-300 text-lg leading-relaxed whitespace-pre-line font-body">
+Bércia,
+
+Há coisas que palavras nunca conseguem descrever completamente.
+O teu sorriso é uma delas. A forma como iluminas qualquer espaço em que entras, é outra.
+
+Neste teu dia especial, quero que saibas o quanto significas para mim.
+Cada momento ao teu lado é um presente que guardo com carinho.
+
+Que este novo ano da tua vida — os teus 23 — seja tão luminoso quanto és.
+Que cada sonho que ainda não tiveste coragem de sonhar se torne real.
+
+Tens todo o meu amor, hoje e sempre.
+          </div>
+
+          <div class="mt-8 flex items-center justify-between">
+            <div>
+              <p class="text-violet-400 font-medium">Com amor,</p>
+              <p class="text-white font-display text-2xl font-semibold mt-1">Alguém especial</p>
+            </div>
+            <p class="text-gray-600 text-sm">13 de Fevereiro</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SPOTIFY MUSIC -->
+    <section class="relative z-10 py-16 px-4">
+      <div class="max-w-md mx-auto text-center">
+
+        <div class="reveal mb-8">
+          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">🎵 A nossa música</p>
+          <h2 class="font-display text-2xl font-bold">A trilha sonora de momentos especiais</h2>
+        </div>
+
+        <div class="spotify-wrap reveal" data-delay="100">
+          <!-- Substitui o src com o link embed da música escolhida pelo cliente -->
+          <iframe
+            src="https://open.spotify.com/embed/track/4iV5W9uYEdYUVa79Axb7Rh"
+            title="Música do Spotify"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="relative z-10 py-20 px-4">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">A nossa história</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold">
+            Momentos que nunca<br />
+            <span class="violet-text">vou esquecer</span>
+          </h2>
+        </div>
+
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="absolute left-5 top-0 bottom-0 w-0.5 timeline-line rounded-full hidden md:block"></div>
+
+          <div class="space-y-10">
+
+            <!-- Timeline item 1 -->
+            <div class="reveal flex gap-6 items-start">
+              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-bold text-sm violet-glow">1</div>
+              <div class="flex-1 bg-deep-800 border border-deep-600 rounded-2xl p-6">
+                <p class="text-violet-400 text-xs font-medium uppercase tracking-wider mb-1">O início</p>
+                <h3 class="font-display text-xl font-semibold mb-2">O dia em que te conheci</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Há datas que ficam gravadas para sempre na nossa memória. Este foi um desses momentos que mudou tudo.</p>
+              </div>
+            </div>
+
+            <!-- Timeline item 2 -->
+            <div class="reveal flex gap-6 items-start" data-delay="100">
+              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-bold text-sm violet-glow">2</div>
+              <div class="flex-1 bg-deep-800 border border-deep-600 rounded-2xl p-6">
+                <p class="text-violet-400 text-xs font-medium uppercase tracking-wider mb-1">Ao longo do caminho</p>
+                <h3 class="font-display text-xl font-semibold mb-2">Cada sorriso, uma memória</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">As risadas partilhadas, os abraços apertados, as conversas que nunca terminam. São estas as coisas que guardo.</p>
+              </div>
+            </div>
+
+            <!-- Timeline item 3 -->
+            <div class="reveal flex gap-6 items-start" data-delay="200">
+              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-deep-900 font-bold text-sm gold-glow">3</div>
+              <div class="flex-1 bg-deep-800 border border-gold-500/20 rounded-2xl p-6">
+                <p class="text-gold-400 text-xs font-medium uppercase tracking-wider mb-1">13 de Fevereiro</p>
+                <h3 class="font-display text-xl font-semibold mb-2">O teu dia especial</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Hoje é o teu dia. E não há ninguém que mereça mais celebrar do que tu, Bércia.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING / SIGNATURE -->
+    <section class="relative z-10 py-20 px-4 text-center">
+      <div class="max-w-xl mx-auto">
+        <div class="reveal">
+          <span class="text-6xl mb-6 block">🎂</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+            Que este seja o teu<br />
+            <span class="gold-text">melhor ano de sempre</span>
+          </h2>
+          <p class="text-gray-400 text-lg mt-4">
+            Com todo o amor,<br />
+            <span class="text-white font-semibold text-xl">Alguém especial 💜</span>
+          </p>
+        </div>
+
+        <div class="mt-12 reveal" data-delay="150">
+          <p class="text-gray-600 text-xs">
+            Criado com LovePage · lovepage.art
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Confetti generator
+      (function() {
+        const wrap = document.getElementById('confetti');
+        const colors = ['#a78bfa','#fbbf24','#ec4899','#34d399','#f472b6','#818cf8'];
+        const count = 25;
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('div');
+          el.className = 'confetti-piece';
+          const size = 6 + Math.random() * 6;
+          el.style.cssText = [
+            'left:' + Math.random() * 100 + '%',
+            'width:' + size + 'px',
+            'height:' + size + 'px',
+            'background:' + colors[Math.floor(Math.random() * colors.length)],
+            'animation-duration:' + (5 + Math.random() * 8) + 's',
+            'animation-delay:' + (Math.random() * 6) + 's',
+            'border-radius:' + (Math.random() > 0.5 ? '50%' : '2px'),
+          ].join(';');
+          wrap.appendChild(el);
+        }
+      })();
+
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        const delay = el.dataset.delay;
+        if (delay) el.style.transitionDelay = delay + 'ms';
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
