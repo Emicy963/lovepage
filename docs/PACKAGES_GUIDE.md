@@ -2,17 +2,18 @@
 
 ## Resumo das Diferenças
 
-| Feature          | Básico (5k) | Premium (12k) | Deluxe (25k)    |
-| ---------------- | ----------- | ------------- | --------------- |
-| Template base    | ✅          | ✅            | ❌ Design único |
-| Fotos            | 10          | 30 + 1 vídeo  | Ilimitadas      |
-| Timeline         | ❌          | ✅ 3 momentos | ✅ 5+ momentos  |
-| Cores custom     | ❌          | ✅            | ✅              |
-| Animações extras | ❌          | ✅            | ✅ Premium      |
-| Quiz do casal    | ❌          | ❌            | ✅              |
-| QR Code físico   | ❌          | ❌            | ✅              |
-| Tempo produção   | 15-20 min   | 30-45 min     | 60-90 min       |
-| Prazo entrega    | 24h         | 48h           | 72h             |
+| Feature                  | Básico (5k)               | Premium (12k)         | Deluxe (25k)    |
+| ------------------------ | ------------------------- | --------------------- | --------------- |
+| Template base            | ✅                        | ✅                    | ❌ Design único |
+| Fotos                    | 10                        | 30 + 1 vídeo          | Ilimitadas      |
+| Timeline                 | ❌                        | ✅ 3 momentos         | ✅ 5+ momentos  |
+| Cores custom             | ❌                        | ✅                    | ✅              |
+| Animações extras         | ❌                        | ✅                    | ✅ Premium      |
+| Quiz do casal            | ❌                        | ❌                    | ✅              |
+| QR Code físico           | ❌                        | ❌                    | ✅              |
+| URL entregue             | link Vercel auto-gerado   | nome.lovepage.art ✨  | nome.lovepage.art ✨ |
+| Tempo produção           | 15-20 min                 | 30-45 min (+10 subdom)| 60-90 min (+10 subdom) |
+| Prazo entrega            | 24h                       | 48h                   | 72h             |
 
 ---
 
@@ -37,7 +38,7 @@
 
 1. **Duplicar template** (1 min)
 
-   ```
+   ```text
    Copia pasta do tema escolhido
    Renomeia: cliente-nome
    ```
@@ -61,15 +62,15 @@
    - Pega embed code
    - Substitui iframe
 
-6. **Deploy** (2 min)
+6. **Deploy** (3 min)
 
-   ```bash
-   cd pasta-cliente
-   vercel --name cliente-lovepage
-   ```
+   - Cria a pasta do cliente em `clients/nome-cliente/` com o `index.html` e `assets/`
+   - Faz commit e push para o GitHub (`develop` ou `main`)
+   - No Vercel: **Add New → Project** → importa o repo → define **Root Directory** como `clients/nome-cliente`
+   - URL entregue: link Vercel auto-gerado (ex: `lovepage-maria.vercel.app`)
 
 7. **Teste rápido** (2 min)
-   - Abre no celular
+   - Abre no telemóvel
    - Verifica fotos, nomes, música
 
 ---
@@ -92,7 +93,7 @@ Tudo do Básico +:
 
 #### 6. Timeline personalizada (10 min)
 
-```
+```text
 Preencher:
 {{TIMELINE_DATA_1}} = "Janeiro 2023"
 {{TIMELINE_TITULO_1}} = "Primeiro Encontro"
@@ -148,7 +149,12 @@ Opções de hosting para vídeo:
 - Google Drive (link público)
 - Cloudinary (upload direto)
 
-#### 9. Deploy + Teste (5 min)
+#### 9. Deploy + Subdomínio (10 min)
+
+- Mesmo processo de deploy do Básico (commit → Vercel project com root directory)
+- Adicionar domínio no Vercel: **Settings → Domains → `nome.lovepage.art`**
+- No Cloudflare: adicionar CNAME `nome` → valor mostrado pelo Vercel, **Proxy: DNS only**
+- Aguardar 5-15 min até Vercel mostrar ✅
 
 ---
 
@@ -292,7 +298,10 @@ Adicionar efeitos extras:
 - Confetti na carta de amor
 - Transições mais elaboradas
 
-#### 13. Deploy + Teste completo (5 min)
+#### 13. Deploy + Subdomínio + Teste completo (10 min)
+
+- Mesmo processo do Premium (commit → Vercel → subdomínio `nome.lovepage.art`)
+- Teste obrigatório no telemóvel antes de entregar
 
 ---
 
@@ -300,18 +309,19 @@ Adicionar efeitos extras:
 
 ### Script WhatsApp
 
-```
-Oi [nome]! Vi que você escolheu o pacote Básico.
+```md
+Ei [nome]! Só a avisar antes de começar a produção.
 
-Só pra você saber: o Premium por +7.000 AOA inclui:
-✅ Timeline contando a história de vocês
-✅ Cores personalizadas (a favorita dela/dele!)
+O Premium por mais 7.000 AOA inclui:
+✅ Timeline com os momentos de vocês
+✅ Cores personalizadas (cor favorita dela/dele!)
 ✅ Até 30 fotos + 1 vídeo
-✅ Animações mais bonitas
+✅ Domínio dedicado: nome.lovepage.art
 
-A maioria dos clientes escolhe o Premium porque a Timeline emociona MUITO.
+A maioria escolhe o Premium porque a Timeline e o domínio próprio
+fazem a diferença na reação de quem recebe.
 
-Quer fazer upgrade? Ainda dá tempo! 😊
+Queres fazer upgrade? Ainda dá tempo! 😊
 ```
 
 **Taxa de conversão esperada:** 20-30%
@@ -322,29 +332,31 @@ Quer fazer upgrade? Ainda dá tempo! 😊
 
 ### Script WhatsApp
 
-```
-[nome], seu Premium ficou LINDO! 🔥
+```md
+[nome], o Premium ficou muito bom! 🔥
 
-Pensei em você: que tal adicionar um Quiz do Casal?
+Lembrei-me de ti: queres adicionar um Quiz do Casal?
 
-É uma seção interativa onde quem abrir a página responde perguntas sobre vocês. Super divertido!
+É uma secção interativa onde quem abre a página responde perguntas
+sobre vocês. A reação é sempre especial!
 
-Upgrade pro Deluxe: só +13.000 AOA
-- Quiz personalizado
-- QR Code em cartão físico pra presente
-- Design ainda mais exclusivo
+Upgrade para Deluxe: só mais 13.000 AOA
+- Quiz personalizado com as perguntas de vocês
+- QR Code em cartão físico para oferecer com o presente
+- Design 100% exclusivo
 
-Topa? Consigo entregar junto! 💕
+Consigo entregar tudo junto! Queres? 💕
 ```
 
 ---
 
-## ⚠️ Limites Importantes
+## ⚠️ Limites Operacionais
 
-| Regra                   | Motivo                  |
-| ----------------------- | ----------------------- |
-| Máx 5 Deluxe total      | Muito tempo de produção |
-| Máx 2 Deluxe/dia        | Qualidade > Quantidade  |
-| Deadline Deluxe: 10/Fev | Precisa de 72h + buffer |
-| Pré-pagamento 100%      | Evita cancelamentos     |
-| 2 revisões max          | Protege seu tempo       |
+| Regra                       | Motivo                         |
+| --------------------------- | ------------------------------ |
+| Máx 2 Deluxe/dia            | Qualidade > Quantidade         |
+| Máx 4 Premium/dia           | Buffer para imprevistos        |
+| Pré-pagamento 100%          | Evita cancelamentos            |
+| Assets em 24h após pagamento| Prazo conta a partir do recebimento dos assets |
+| 2 revisões incluídas        | Protege o teu tempo            |
+| Teste no telemóvel sempre   | A maioria dos clientes abre no mobile |

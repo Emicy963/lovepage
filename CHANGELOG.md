@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `docs/SALES_PARTNERS.md`: commission structure (20% per sale), lead
+  qualification rules, handoff workflow, and Phase 1 → Phase 2 progression
+  model for sales partners
+- Subdomain `nome.lovepage.art` as a Premium and Deluxe exclusive feature;
+  Básico delivers a Vercel auto-generated URL
+
 ### Changed
 
 - `docs/BUSINESS_MODEL.md`: full rewrite — Valentine's sprint replaced with
@@ -15,6 +23,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/MARKETING_COPY.md`: removed all Valentine's-specific copy; new scripts
   built around demo-parcial approach, birthday/anniversary qualification,
   WhatsApp Status cadence
+- `docs/PACKAGES_GUIDE.md`: feature table updated with URL/domain row; deploy
+  steps rewritten for GitHub → Vercel workflow (removed broken CLI command);
+  upsell scripts updated to mention subdomain; removed Valentine's deadlines;
+  operational limits rewritten as evergreen rules
+- `index.html`: pricing cards updated — Básico shows subdomain as excluded
+  feature; Premium and Deluxe show `nome.lovepage.art` as included feature
 - `.markdownlint.json`: disable MD013 (line length) and MD060 (table alignment)
 
 ## [1.1.1] - 2026-05-19
