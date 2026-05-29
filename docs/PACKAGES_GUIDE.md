@@ -12,6 +12,8 @@
 | Quiz do casal            | ❌                        | ❌                    | ✅              |
 | QR Code físico           | ❌                        | ❌                    | ✅              |
 | URL entregue             | link Vercel auto-gerado   | nome.lovepage.art ✨  | nome.lovepage.art ✨ |
+| Hospedagem incluída      | 1 ano                     | 1 ano                 | 1 ano           |
+| Renovação anual          | 1.500 AOA                 | 1.500 AOA             | 1.500 AOA       |
 | Tempo produção           | 15-20 min                 | 30-45 min (+10 subdom)| 60-90 min (+10 subdom) |
 | Prazo entrega            | 24h                       | 48h                   | 72h             |
 

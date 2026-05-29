@@ -9,26 +9,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `docs/HOSTING_GUIDE.md`: step-by-step deploy guide (folder structure,
+  GitHub commit, Vercel project + Root Directory, Cloudflare CNAME setup,
+  troubleshooting) + client tracking table + renewal WhatsApp script
 - `docs/SALES_PARTNERS.md`: commission structure (20% per sale), lead
   qualification rules, handoff workflow, and Phase 1 → Phase 2 progression
   model for sales partners
+- `docs/PARTNER_GUIDE.md`: sales partner onboarding guide — welcome letter,
+  product overview, golden rule (demo before price), conversation scripts,
+  objection handling, commission recap
+- `clients/bercia/`: birthday demo page for Bércia de Oliveira (3 real photos)
+- `clients/samia/`: birthday demo page for Sâmia Miguel from Telvy Loth
+  (3 real photos, personalised letter, no birthday date)
 - Subdomain `nome.lovepage.art` as a Premium and Deluxe exclusive feature;
   Básico delivers a Vercel auto-generated URL
+- Annual hosting model: 1 year included in all packages, renewal at 1.500 AOA/year
 
 ### Changed
 
-- `docs/BUSINESS_MODEL.md`: full rewrite — Valentine's sprint replaced with
-  evergreen model; demo-first sales funnel, ROI-ranked acquisition channels,
-  florista partnership economics, validation milestones, updated projections
-- `docs/MARKETING_COPY.md`: removed all Valentine's-specific copy; new scripts
-  built around demo-parcial approach, birthday/anniversary qualification,
-  WhatsApp Status cadence
-- `docs/PACKAGES_GUIDE.md`: feature table updated with URL/domain row; deploy
-  steps rewritten for GitHub → Vercel workflow (removed broken CLI command);
-  upsell scripts updated to mention subdomain; removed Valentine's deadlines;
-  operational limits rewritten as evergreen rules
-- `index.html`: pricing cards updated — Básico shows subdomain as excluded
-  feature; Premium and Deluxe show `nome.lovepage.art` as included feature
+- `docs/BUSINESS_MODEL.md`: full rewrite for evergreen model + annual renewal
+  section with renewal revenue projections and client tracking reference
+- `docs/MARKETING_COPY.md`: removed Valentine's-specific copy; new demo-first
+  scripts; added FAQ answer for "Fica hospedado para sempre?"
+- `docs/PACKAGES_GUIDE.md`: feature table with URL/domain and hosting/renewal
+  rows; deploy steps rewritten for GitHub → Vercel; upsell scripts updated
+- `index.html`: all 3 pricing cards now show "1 ano de hospedagem incluído";
+  subdomain shown as excluded in Básico, included in Premium and Deluxe
 - `.markdownlint.json`: disable MD013 (line length) and MD060 (table alignment)
 
 ## [1.1.1] - 2026-05-19

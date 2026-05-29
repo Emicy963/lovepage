@@ -190,6 +190,15 @@ Isso é mais realista do que um template genérico.
 O prazo conta a partir de quando eu recebo as fotos e textos completos.
 ```
 
+### "Fica hospedado para sempre?"
+
+```md
+A página fica activa durante 1 ano — incluído no preço, sem custo extra.
+
+Perto do fim do prazo aviso-te e podes renovar por 1.500 AOA para continuar
+online por mais 1 ano. É mais do que tempo para ela abrir quando quiser 😊
+```
+
 ### "Como faço o pagamento?"
 
 ```md

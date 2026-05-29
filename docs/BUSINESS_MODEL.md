@@ -81,6 +81,52 @@ Nunca pedir pagamento sem a pessoa ter visto a própria demo com as próprias fo
 | Deluxe (15%)  | 2      | 50.000 AOA      |
 | **TOTAL**     | **17** | **160.000 AOA** |
 
+### Receita de renovações (a partir do mês 13)
+
+Cada cliente ativo gera 1.500 AOA/ano sem produção adicional.
+
+| Clientes ativos | Renovações/ano  |
+| --------------- | --------------- |
+| 10              | 15.000 AOA      |
+| 25              | 37.500 AOA      |
+| 50              | 75.000 AOA      |
+
+---
+
+## Modelo de Hospedagem e Renovação
+
+### Período incluído no preço
+
+Todos os pacotes incluem **1 ano de hospedagem activa** sem custo adicional.
+O prazo conta a partir da data de entrega ao cliente.
+
+### Renovação anual
+
+| Renovação | Preço      | Trabalho técnico |
+| --------- | ---------- | ---------------- |
+| 1 ano     | 1.500 AOA  | Nenhum           |
+
+A "renovação" é um acordo comercial — o projecto Vercel mantém-se ativo
+automaticamente. A única acção necessária é confirmar o pagamento.
+
+Se o cliente não renovar: remover o projecto do Vercel para libertar espaço.
+A pasta em GitHub mantém-se como arquivo — pode ser reativada a qualquer momento.
+
+### Comunicação de renovação
+
+Enviar 1 mês antes da expiração via WhatsApp:
+
+```md
+Ei [nome]! A página da [aniversariante] renova daqui a 1 mês.
+Para manter online mais 1 ano: 1.500 AOA.
+Queres renovar? 😊
+```
+
+### Registo de clientes
+
+Ver `docs/HOSTING_GUIDE.md` — tabela de controlo com URL, data de entrega
+e data de expiração por cliente.
+
 ---
 
 ## Canais de Aquisição (por ROI)
