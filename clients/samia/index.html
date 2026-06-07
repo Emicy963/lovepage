@@ -3,491 +3,613 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎂 Feliz Aniversário, Sâmia!</title>
+    <title>Para a Sâmia — 8 de Junho</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              deep: {
-                900: "#0d0a1a",
-                800: "#150f2a",
-                700: "#1e1638",
-                600: "#2a1f50",
-              },
-              violet: {
-                400: "#a78bfa",
-                500: "#8b5cf6",
-                600: "#7c3aed",
-              },
-              gold: {
-                300: "#fde68a",
-                400: "#fbbf24",
-                500: "#f59e0b",
-              },
-            },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
     <style>
-      * { box-sizing: border-box; }
-
+      *, *::before, *::after { box-sizing: border-box; margin: 0; }
       html { scroll-behavior: smooth; }
 
       body {
-        background-color: #0d0a1a;
-        font-family: "Inter", sans-serif;
+        background-color: #080306;
+        font-family: 'Inter', sans-serif;
+        color: #f1f5f9;
+        overflow-x: hidden;
       }
 
-      /* Confetti particles */
-      .confetti-wrap {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        pointer-events: none;
-        z-index: 0;
+      /* ── Gradient text ── */
+      .rose-text {
+        background: linear-gradient(135deg, #fb7185, #e11d48);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gold-text {
+        background: linear-gradient(135deg, #fbbf24, #d97706);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ── Hero ── */
+      .hero-wrap {
+        position: relative;
+        height: 100svh;
+        min-height: 600px;
+      }
+      .hero-wrap img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(8,3,6,0.15) 0%,
+          rgba(8,3,6,0.05) 25%,
+          rgba(8,3,6,0.55) 65%,
+          rgba(8,3,6,1) 100%
+        );
+      }
+      .hero-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 1.5rem 3.5rem;
+        text-align: center;
+      }
+
+      /* ── Age badge ── */
+      .age-ring {
+        display: inline-flex;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #be185d, #d97706);
+        padding: 2px;
+        margin-bottom: 1.25rem;
+      }
+      .age-ring-inner {
+        flex: 1;
+        border-radius: 50%;
+        background: #080306;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+      }
+
+      /* ── Glows ── */
+      .rose-glow  { box-shadow: 0 0 40px rgba(190,24,93,0.22); }
+      .gold-glow  { box-shadow: 0 0 30px rgba(217,119,6,0.2); }
+
+      /* ── Reveal ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Photo grid ── */
+      .photo-card {
         overflow: hidden;
+        border-radius: 0.875rem;
+        transition: transform 0.4s ease;
+        will-change: transform;
+        background: #120810;
+      }
+      .photo-card:hover { transform: scale(1.025); }
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── Letter ── */
+      .letter-card {
+        background: linear-gradient(135deg, rgba(190,24,93,0.07), rgba(217,119,6,0.04));
+        border: 1px solid rgba(190,24,93,0.18);
+        border-radius: 1.5rem;
+      }
+      .letter-body {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        line-height: 1.9;
+        color: #e2e8f0;
+        font-style: italic;
+        white-space: pre-line;
+      }
+
+      /* ── Timeline ── */
+      .timeline-bar { background: linear-gradient(to bottom, #be185d, #d97706); }
+      .timeline-node-rose {
+        background: #be185d;
+        box-shadow: 0 0 20px rgba(190,24,93,0.45);
+      }
+      .timeline-node-gold {
+        background: linear-gradient(135deg, #d97706, #fbbf24);
+        box-shadow: 0 0 20px rgba(217,119,6,0.4);
+      }
+      .timeline-block {
+        background: rgba(255,255,255,0.025);
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 1.25rem;
+        backdrop-filter: blur(4px);
+      }
+      .timeline-block-gold { border-color: rgba(217,119,6,0.2); }
+
+      /* ── Divider ── */
+      .rose-divider {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(190,24,93,0.25), transparent);
+        margin: 0 auto;
+        max-width: 36rem;
+      }
+
+      /* ── Spotify ── */
+      .spotify-wrap {
+        background: rgba(190,24,93,0.08);
+        border: 1px solid rgba(190,24,93,0.14);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .spotify-wrap iframe { border-radius: 12px; }
+
+      /* ── Video ── */
+      .video-wrap {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid rgba(190,24,93,0.2);
+        background: #0d0509;
+      }
+      .video-wrap video {
+        width: 100%;
+        display: block;
+        max-height: 72vh;
+        object-fit: contain;
+      }
+
+      /* ── Ambient orbs ── */
+      @keyframes orb-drift {
+        0%, 100% { transform: translate(0,0) scale(1);    opacity: 0.1; }
+        40%       { transform: translate(18px,-12px) scale(1.06); opacity: 0.16; }
+        70%       { transform: translate(-10px,8px) scale(0.96);  opacity: 0.12; }
+      }
+      .orb   { animation: orb-drift 14s ease-in-out infinite; will-change: transform, opacity; }
+      .orb-b { animation-delay: -5s; animation-duration: 18s; }
+      .orb-c { animation-delay: -9s; animation-duration: 11s; }
+
+      /* ── Confetti ── */
+      .confetti-wrap {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; overflow: hidden;
       }
       .confetti-piece {
-        position: absolute;
-        top: -20px;
-        width: 8px;
-        height: 8px;
-        border-radius: 2px;
+        position: absolute; top: -16px;
         animation: confetti-fall linear infinite;
         will-change: transform, opacity;
       }
       @keyframes confetti-fall {
-        0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        0%   { transform: translateY(-16px) rotate(0deg);   opacity: 0.85; }
+        100% { transform: translateY(110vh) rotate(540deg); opacity: 0;    }
       }
-
-      /* Hero gradient */
-      .hero-gradient {
-        background: linear-gradient(160deg, #2a1f50 0%, #0d0a1a 60%);
-      }
-
-      /* Gold text */
-      .gold-text {
-        background: linear-gradient(135deg, #fbbf24, #f59e0b, #fde68a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      /* Violet text */
-      .violet-text {
-        background: linear-gradient(135deg, #a78bfa, #8b5cf6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      /* Glow effects */
-      .violet-glow {
-        box-shadow: 0 0 40px rgba(139, 92, 246, 0.25);
-      }
-      .gold-glow {
-        box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
-      }
-
-      /* Photo cards */
-      .photo-card {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        will-change: transform;
-      }
-      .photo-card:hover {
-        transform: scale(1.04) rotate(1deg);
-      }
-      .photo-card:nth-child(even):hover {
-        transform: scale(1.04) rotate(-1deg);
-      }
-
-      /* Scroll reveal */
-      .reveal {
-        opacity: 0;
-        transform: translateY(28px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
-        will-change: opacity, transform;
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Letter section */
-      .letter-bg {
-        background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(245,158,11,0.05));
-        border: 1px solid rgba(139,92,246,0.2);
-      }
-
-      /* Timeline */
-      .timeline-line {
-        background: linear-gradient(to bottom, #7c3aed, #f59e0b);
-      }
-
-      /* Spotify embed container */
-      .spotify-wrap {
-        background: rgba(139,92,246,0.1);
-        border: 1px solid rgba(139,92,246,0.2);
-        border-radius: 1rem;
-        padding: 1rem;
-      }
-
-      /* Pulse anim for orbs */
-      @keyframes orb-pulse {
-        0%, 100% { transform: scale(1); opacity: 0.15; }
-        50%       { transform: scale(1.1); opacity: 0.25; }
-      }
-      .orb {
-        animation: orb-pulse 6s ease-in-out infinite;
-        will-change: transform, opacity;
-      }
-      .orb-delay-3s { animation-delay: 3s; }
-
-      /* Spotify iframe */
-      .spotify-wrap iframe { border-radius: 12px; }
-
-      /* Wide photo aspect ratio */
-      .aspect-wide { aspect-ratio: 16 / 9; }
     </style>
   </head>
 
-  <body class="font-body text-gray-100 relative">
+  <body>
 
-    <!-- Confetti (JS-generated) -->
+    <!-- Confetti -->
     <div class="confetti-wrap" id="confetti"></div>
 
-    <!-- Background orbs -->
-    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-      <div class="orb absolute top-10 left-1/4 w-72 h-72 bg-violet-600 rounded-full blur-3xl"></div>
-      <div class="orb orb-delay-3s absolute bottom-20 right-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl"></div>
+    <!-- Ambient orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+      <div class="orb   absolute top-16  left-1/3  w-80 h-80 bg-rose-900   rounded-full blur-3xl"></div>
+      <div class="orb-b absolute bottom-24 right-1/4 w-96 h-96 bg-amber-900 rounded-full blur-3xl"></div>
+      <div class="orb-c absolute top-1/2 left-8    w-56 h-56 bg-rose-800  rounded-full blur-3xl"></div>
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="relative z-10 min-h-screen hero-gradient flex flex-col items-center justify-center px-4 py-20 text-center">
-      <div class="max-w-2xl mx-auto">
-
-        <!-- Occasion label -->
-        <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-6 reveal">
-          ✨ Uma surpresa especial para ti
-        </p>
-
-        <!-- Main headline -->
-        <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-4 reveal" data-delay="100">
-          Feliz Aniversário,<br />
-          <span class="gold-text">Sâmia</span>!
-        </h1>
-
-        <!-- From line -->
-        <p class="text-gray-400 text-lg mb-8 reveal" data-delay="150">
-          Com todo o amor de <span class="text-violet-400 font-medium">Telvy</span>
-        </p>
-
-        <!-- Short message -->
-        <p class="text-gray-300 text-xl leading-relaxed max-w-xl mx-auto reveal" data-delay="200">
-          Hoje o mundo celebra o dia em que chegaste. E eu celebro contigo —
-          porque tudo fica mais bonito quando és tu.
-        </p>
-
-        <!-- Scroll hint -->
-        <div class="mt-14 reveal" data-delay="300">
-          <p class="text-gray-600 text-sm mb-2">Desliza para ver</p>
-          <div class="w-0.5 h-12 bg-gradient-to-b from-violet-500 to-transparent mx-auto"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHOTO GALLERY -->
-    <section class="relative z-10 py-20 px-4">
-      <div class="max-w-5xl mx-auto">
-
-        <div class="text-center mb-14 reveal">
-          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Memórias</p>
-          <h2 class="font-display text-3xl md:text-4xl font-bold">
-            Os momentos que<br />
-            <span class="violet-text">ficam para sempre</span>
-          </h2>
-        </div>
-
-        <!-- Photo grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-          <div class="photo-card reveal col-span-2 md:col-span-1 row-span-2">
-            <img
-              src="assets/samia1.jpeg"
-              alt="Sâmia — Memória 1"
-              loading="lazy"
-              class="w-full h-full object-cover rounded-2xl aspect-square violet-glow"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="100">
-            <img
-              src="assets/samia2.jpeg"
-              alt="Sâmia — Memória 2"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="150">
-            <img
-              src="assets/samia3.jpeg"
-              alt="Sâmia — Memória 3"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="200">
-            <img
-              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&q=80"
-              alt="Memória 4"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="250">
-            <img
-              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&q=80"
-              alt="Memória 5"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="300">
-            <img
-              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=80"
-              alt="Memória 6"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="200">
-            <img
-              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&q=80"
-              alt="Memória 7"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="250">
-            <img
-              src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80"
-              alt="Memória 8"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-wide"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="300">
-            <img
-              src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80"
-              alt="Memória 9"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-          <div class="photo-card reveal" data-delay="350">
-            <img
-              src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&q=80"
-              alt="Memória 10"
-              loading="lazy"
-              class="w-full object-cover rounded-2xl aspect-square"
-            />
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- BIRTHDAY LETTER -->
-    <section class="relative z-10 py-20 px-4">
-      <div class="max-w-2xl mx-auto">
-
-        <div class="text-center mb-12 reveal">
-          <p class="text-gold-400 text-sm font-medium uppercase tracking-widest mb-3">Uma mensagem do coração</p>
-          <h2 class="font-display text-3xl md:text-4xl font-bold">
-            Para <span class="gold-text">Sâmia</span>
-          </h2>
-        </div>
-
-        <div class="letter-bg rounded-3xl p-8 md:p-10 reveal" data-delay="100">
-          <div class="text-violet-500/30 font-display text-8xl leading-none mb-4 select-none">"</div>
-
-          <div class="text-gray-300 text-lg leading-relaxed whitespace-pre-line font-body">
-Sâmia,
-
-Há pessoas que entram na nossa vida e mudam tudo — sem avisar, sem pedir licença.
-Tu és uma dessas pessoas para mim.
-
-Não sei explicar bem o que sinto quando estou contigo. Sei apenas que o mundo fica diferente — mais leve, mais bonito, mais cheio de sentido.
-
-Neste teu dia tão especial, quero que guardes uma coisa:
-és vista, és admirada, és amada — mais do que imaginas.
-
-Que este novo ano da tua vida traga tudo o que mereces.
-E mereces muito, Sâmia.
-
-Tens todo o meu amor.
-          </div>
-
-          <div class="mt-8 flex items-center justify-between">
-            <div>
-              <p class="text-violet-400 font-medium">Com amor,</p>
-              <p class="text-white font-display text-2xl font-semibold mt-1">Telvy 💜</p>
+    <!-- ───────────────────────────────────────────────
+         HERO
+    ─────────────────────────────────────────────── -->
+    <section class="hero-wrap z-10 relative">
+      <img src="assets/samia1.jpeg" alt="Sâmia" />
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom">
+        <div class="flex justify-center mb-4">
+          <div class="age-ring">
+            <div class="age-ring-inner">
+              <span class="text-xl font-semibold" style="background:linear-gradient(135deg,#fb7185,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent">22</span>
+              <span class="text-gray-500 text-xs font-light">anos</span>
             </div>
           </div>
         </div>
 
+        <p class="text-rose-300/80 text-xs font-light tracking-[0.35em] uppercase mb-4">
+          8 de Junho · 2026
+        </p>
+
+        <h1 class="font-['Cormorant_Garamond'] font-light text-white leading-tight" style="font-size: clamp(2.6rem, 8vw, 5rem)">
+          Feliz Aniversário,<br />
+          <span class="rose-text font-semibold italic">Sâmia</span>
+        </h1>
+
+        <p class="text-gray-400 mt-4 text-sm tracking-widest font-light">
+          com todo o amor &middot; <span class="text-white/90">Telvy</span>
+        </p>
+
+        <div class="mt-10">
+          <p class="text-gray-600 text-xs mb-2">desliza para ver</p>
+          <div class="w-px h-10 mx-auto" style="background:linear-gradient(to bottom,rgba(190,24,93,0.6),transparent)"></div>
+        </div>
       </div>
     </section>
 
-    <!-- SPOTIFY MUSIC -->
-    <section class="relative z-10 py-16 px-4">
-      <div class="max-w-md mx-auto text-center">
 
-        <div class="reveal mb-8">
-          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">🎵 A nossa música</p>
-          <h2 class="font-display text-2xl font-bold">A trilha sonora de momentos especiais</h2>
+    <!-- ───────────────────────────────────────────────
+         GALLERY
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">Memórias</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            As fotos que ficam
+          </h2>
         </div>
 
+        <!-- Featured trio -->
+        <div class="grid grid-cols-3 gap-3 mb-3">
+          <div class="photo-card col-span-2 rose-glow reveal" style="aspect-ratio:16/9">
+            <img src="assets/samia2.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal" data-delay="80" style="aspect-ratio:9/16">
+            <img src="assets/samia3.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Main grid — 3 columns, all WhatsApp photos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.33%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.33%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal col-span-2 md:col-span-1 aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.36%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:16/9">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.36%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.37%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.37%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.37%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.47%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.47%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:4/3">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.47%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.47%20PM%20(3).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.47%20PM%20(4).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.48%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.48%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.48%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:16/9">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.48%20PM%20(3).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.48%20PM%20(4).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.49%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.49%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.49%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.49%20PM%20(3).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:4/3">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.49%20PM%20(4).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.50%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.50%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.50%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.50%20PM%20(3).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.50%20PM%20(4).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:16/9">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.51%20PM.jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.51%20PM%20(1).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-07%20at%201.22.51%20PM%20(2).jpeg" alt="Sâmia" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────
+         VIDEO
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-16 px-4 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">
+            Um momento guardado
+          </p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(1.8rem,4vw,2.6rem)">
+            Só para ti
+          </h2>
+        </div>
+        <div class="video-wrap rose-glow reveal" data-delay="100">
+          <video controls playsinline preload="metadata">
+            <source
+              src="assets/WhatsApp%20Video%202026-06-07%20at%201.22.31%20PM.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         LETTER
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-12 reveal">
+          <p class="text-amber-400/80 text-xs font-medium uppercase tracking-[0.3em] mb-4">Uma mensagem</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            Para a <span class="rose-text italic font-semibold">Sâmia</span>
+          </h2>
+        </div>
+
+        <div class="letter-card px-8 py-10 md:px-12 md:py-12 reveal" data-delay="100">
+          <div
+            class="font-['Cormorant_Garamond'] text-rose-900/30 select-none leading-none -mb-4"
+            style="font-size:6rem"
+          >"</div>
+
+          <div class="letter-body">
+Sâmia,
+
+Juro que tentei escrever isto umas quatro vezes. Apaguei tudo e comecei de novo porque nada parecia suficiente.
+
+No fundo é simples: estou muito feliz que existes.
+
+Não sou a pessoa das grandes declarações — tu sabes isso melhor do que ninguém. Mas hoje faço uma excepção. 22 anos teus merecem, no mínimo, que eu tente.
+
+Há coisas que só percebo com o tempo. Uma delas é que fico melhor quando estás por perto. Não sei explicar muito bem como isso funciona. Sei só que é assim.
+
+Espero que olhes para estas fotos e te lembres de momentos bons. Espero que quando abrires esta página daqui a meses, ainda sintas o mesmo que sentes hoje.
+
+Fica com isto: és muito vista.
+
+Com amor — e com alguma dificuldade em acabar esta carta,
+          </div>
+
+          <div class="mt-8 flex items-end justify-between gap-4 flex-wrap">
+            <div>
+              <p class="text-rose-400/70 text-sm font-light">com amor,</p>
+              <p class="font-['Cormorant_Garamond'] text-white font-semibold mt-1" style="font-size:1.75rem">
+                Telvy 🤍
+              </p>
+            </div>
+            <p class="text-gray-600 text-xs">8 de Junho de 2026</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         TIMELINE
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">A nossa história</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            Momentos que<br />
+            <span class="rose-text italic">não esqueço</span>
+          </h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-[17px] top-0 bottom-0 w-px timeline-bar rounded-full hidden md:block"></div>
+
+          <div class="space-y-8">
+
+            <div class="reveal flex gap-6 items-start">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-semibold relative z-10 timeline-node-rose">1</div>
+              <div class="flex-1 timeline-block p-6">
+                <p class="text-rose-400 text-xs uppercase tracking-widest mb-2">O início</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">Quando tudo começou</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Há momentos que parecem normais na altura e só depois percebemos que mudaram alguma coisa. Foi assim que foi contigo.</p>
+              </div>
+            </div>
+
+            <div class="reveal flex gap-6 items-start" data-delay="100">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-semibold relative z-10 timeline-node-rose">2</div>
+              <div class="flex-1 timeline-block p-6">
+                <p class="text-rose-400 text-xs uppercase tracking-widest mb-2">Pelo caminho</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">As coisas que aprendi</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Aprendi que tens um sorriso que desarma qualquer situação. Que quando ris de verdade é completamente diferente. E que gostas de fazer o que gostas, sem pedir licença a ninguém — e isso é bonito.</p>
+              </div>
+            </div>
+
+            <div class="reveal flex gap-6 items-start" data-delay="200">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold relative z-10 timeline-node-gold" style="color:#080306">3</div>
+              <div class="flex-1 timeline-block timeline-block-gold p-6">
+                <p class="text-amber-400 text-xs uppercase tracking-widest mb-2">8 de Junho · 2026</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">O teu dia</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Hoje são 22 anos. E eu quero que fiques com esta página — com estas fotos, com esta música, com esta carta — como prova de que estás a ser vista.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         SPOTIFY
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-16 px-4">
+      <div class="max-w-md mx-auto text-center">
+        <div class="reveal mb-8">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">🎵 a nossa música</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white italic" style="font-size:1.9rem">
+            If I Ain't Got You
+          </h2>
+          <p class="text-gray-500 text-sm mt-1 font-light">Alicia Keys</p>
+        </div>
         <div class="spotify-wrap reveal" data-delay="100">
+          <!-- Verificar: open.spotify.com/track/3b17KqWAeBW2pqUExvbfSy -->
           <iframe
-            src="https://open.spotify.com/embed/track/4iV5W9uYEdYUVa79Axb7Rh"
-            title="Música do Spotify"
+            src="https://open.spotify.com/embed/track/3b17KqWAeBW2pqUExvbfSy"
+            title="If I Ain't Got You — Alicia Keys"
             width="100%"
             height="152"
             frameborder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
         </div>
-
       </div>
     </section>
 
-    <!-- TIMELINE -->
-    <section class="relative z-10 py-20 px-4">
-      <div class="max-w-2xl mx-auto">
 
-        <div class="text-center mb-14 reveal">
-          <p class="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">A nossa história</p>
-          <h2 class="font-display text-3xl md:text-4xl font-bold">
-            Momentos que nunca<br />
-            <span class="violet-text">vou esquecer</span>
-          </h2>
-        </div>
-
-        <div class="relative">
-          <div class="absolute left-5 top-0 bottom-0 w-0.5 timeline-line rounded-full hidden md:block"></div>
-
-          <div class="space-y-10">
-
-            <div class="reveal flex gap-6 items-start">
-              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-bold text-sm violet-glow">1</div>
-              <div class="flex-1 bg-deep-800 border border-deep-600 rounded-2xl p-6">
-                <p class="text-violet-400 text-xs font-medium uppercase tracking-wider mb-1">O início</p>
-                <h3 class="font-display text-xl font-semibold mb-2">O dia em que te conheci</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Há datas que ficam gravadas para sempre na memória. O dia em que te vi pela primeira vez foi uma delas.</p>
-              </div>
-            </div>
-
-            <div class="reveal flex gap-6 items-start" data-delay="100">
-              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center text-white font-bold text-sm violet-glow">2</div>
-              <div class="flex-1 bg-deep-800 border border-deep-600 rounded-2xl p-6">
-                <p class="text-violet-400 text-xs font-medium uppercase tracking-wider mb-1">Ao longo do caminho</p>
-                <h3 class="font-display text-xl font-semibold mb-2">Cada momento contigo</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">As risadas partilhadas, os abraços, as conversas que nunca terminam. São estas as coisas que guardo com mais carinho.</p>
-              </div>
-            </div>
-
-            <div class="reveal flex gap-6 items-start" data-delay="200">
-              <div class="relative z-10 flex-shrink-0 w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-deep-900 font-bold text-sm gold-glow">3</div>
-              <div class="flex-1 bg-deep-800 border border-gold-500/20 rounded-2xl p-6">
-                <p class="text-gold-400 text-xs font-medium uppercase tracking-wider mb-1">Hoje</p>
-                <h3 class="font-display text-xl font-semibold mb-2">O teu dia especial</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Hoje é o teu dia. E não há ninguém que mereça mais celebrar do que tu, Sâmia.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
+    <!-- ───────────────────────────────────────────────
+         CLOSING
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-24 px-4 text-center">
+      <div class="max-w-lg mx-auto reveal">
+        <div class="w-px h-12 mx-auto mb-10" style="background:linear-gradient(to bottom,rgba(190,24,93,0.5),transparent)"></div>
+        <h2 class="font-['Cormorant_Garamond'] font-light text-white leading-snug" style="font-size:clamp(2.4rem,7vw,4rem)">
+          Feliz aniversário,<br />
+          <span class="rose-text font-semibold italic">Sâmia.</span>
+        </h2>
+        <p class="text-gray-500 text-sm mt-10 tracking-widest font-light">
+          com amor &middot; <span class="text-gray-300">Telvy</span>
+        </p>
+        <p class="text-gray-700 text-xs mt-12">
+          Criado com LovePage &middot; lovepage.art
+        </p>
       </div>
     </section>
 
-    <!-- CLOSING / SIGNATURE -->
-    <section class="relative z-10 py-20 px-4 text-center">
-      <div class="max-w-xl mx-auto">
-        <div class="reveal">
-          <span class="text-6xl mb-6 block">🎂</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
-            Que este seja o teu<br />
-            <span class="gold-text">melhor ano de sempre</span>
-          </h2>
-          <p class="text-gray-400 text-lg mt-4">
-            Com todo o amor,<br />
-            <span class="text-white font-semibold text-xl">Telvy 💜</span>
-          </p>
-        </div>
-
-        <div class="mt-12 reveal" data-delay="150">
-          <p class="text-gray-600 text-xs">
-            Criado com LovePage · lovepage.art
-          </p>
-        </div>
-      </div>
-    </section>
 
     <script>
-      // Confetti generator
-      (function() {
-        const wrap = document.getElementById('confetti');
-        const colors = ['#a78bfa','#fbbf24','#ec4899','#34d399','#f472b6','#818cf8'];
-        const count = 25;
-        for (let i = 0; i < count; i++) {
-          const el = document.createElement('div');
+      // ── Confetti ──
+      (function () {
+        const wrap  = document.getElementById('confetti');
+        const colors = ['#fb7185','#fbbf24','#f9a8d4','#fde68a','#e11d48','#f472b6'];
+        for (let i = 0; i < 22; i++) {
+          const el   = document.createElement('div');
           el.className = 'confetti-piece';
-          const size = 6 + Math.random() * 6;
+          const size = 4 + Math.random() * 7;
           el.style.cssText = [
-            'left:' + Math.random() * 100 + '%',
-            'width:' + size + 'px',
-            'height:' + size + 'px',
-            'background:' + colors[Math.floor(Math.random() * colors.length)],
-            'animation-duration:' + (5 + Math.random() * 8) + 's',
-            'animation-delay:' + (Math.random() * 6) + 's',
-            'border-radius:' + (Math.random() > 0.5 ? '50%' : '2px'),
+            'left:'              + (Math.random() * 100)       + '%',
+            'width:'             + size                         + 'px',
+            'height:'            + size                         + 'px',
+            'background:'        + colors[Math.floor(Math.random() * colors.length)],
+            'animation-duration:'+ (8 + Math.random() * 10)    + 's',
+            'animation-delay:'   + (Math.random() * 9)         + 's',
+            'border-radius:'     + (Math.random() > 0.45 ? '50%' : '2px'),
+            'opacity:0.65',
           ].join(';');
           wrap.appendChild(el);
         }
       })();
 
-      // Scroll reveal
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      }, { threshold: 0.12 });
-
+      // ── Scroll reveal ──
+      const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.1 }
+      );
       document.querySelectorAll('.reveal').forEach(el => {
-        const delay = el.dataset.delay;
-        if (delay) el.style.transitionDelay = delay + 'ms';
+        const d = el.dataset.delay;
+        if (d) el.style.transitionDelay = d + 'ms';
         observer.observe(el);
       });
     </script>
+
   </body>
 </html>
