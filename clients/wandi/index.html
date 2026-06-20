@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para a Wandi Siluki — 21 de Junho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        background-color: #080306;
+        font-family: 'Inter', sans-serif;
+        color: #f1f5f9;
+        overflow-x: hidden;
+      }
+
+      /* ── Gradient text ── */
+      .rose-text {
+        background: linear-gradient(135deg, #fb7185, #e11d48);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gold-text {
+        background: linear-gradient(135deg, #fbbf24, #d97706);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ── Hero ── */
+      .hero-wrap {
+        position: relative;
+        height: 100svh;
+        min-height: 600px;
+      }
+      .hero-wrap img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(8,3,6,0.15) 0%,
+          rgba(8,3,6,0.05) 25%,
+          rgba(8,3,6,0.55) 65%,
+          rgba(8,3,6,1) 100%
+        );
+      }
+      .hero-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 1.5rem 3.5rem;
+        text-align: center;
+      }
+
+      /* ── Age badge ── */
+      .age-ring {
+        display: inline-flex;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #be185d, #d97706);
+        padding: 2px;
+        margin-bottom: 1.25rem;
+      }
+      .age-ring-inner {
+        flex: 1;
+        border-radius: 50%;
+        background: #080306;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+      }
+
+      /* ── Glows ── */
+      .rose-glow  { box-shadow: 0 0 40px rgba(190,24,93,0.22); }
+      .gold-glow  { box-shadow: 0 0 30px rgba(217,119,6,0.2); }
+
+      /* ── Reveal ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Photo grid ── */
+      .photo-card {
+        overflow: hidden;
+        border-radius: 0.875rem;
+        transition: transform 0.4s ease;
+        will-change: transform;
+        background: #120810;
+      }
+      .photo-card:hover { transform: scale(1.025); }
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── Letter ── */
+      .letter-card {
+        background: linear-gradient(135deg, rgba(190,24,93,0.07), rgba(217,119,6,0.04));
+        border: 1px solid rgba(190,24,93,0.18);
+        border-radius: 1.5rem;
+      }
+      .letter-body {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        line-height: 1.9;
+        color: #e2e8f0;
+        font-style: italic;
+        white-space: pre-line;
+      }
+
+      /* ── Timeline ── */
+      .timeline-bar { background: linear-gradient(to bottom, #be185d, #d97706); }
+      .timeline-node-rose {
+        background: #be185d;
+        box-shadow: 0 0 20px rgba(190,24,93,0.45);
+      }
+      .timeline-node-gold {
+        background: linear-gradient(135deg, #d97706, #fbbf24);
+        box-shadow: 0 0 20px rgba(217,119,6,0.4);
+      }
+      .timeline-block {
+        background: rgba(255,255,255,0.025);
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 1.25rem;
+        backdrop-filter: blur(4px);
+      }
+      .timeline-block-gold { border-color: rgba(217,119,6,0.2); }
+
+      /* ── Divider ── */
+      .rose-divider {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(190,24,93,0.25), transparent);
+        margin: 0 auto;
+        max-width: 36rem;
+      }
+
+      /* ── Spotify ── */
+      .spotify-wrap {
+        background: rgba(190,24,93,0.08);
+        border: 1px solid rgba(190,24,93,0.14);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .spotify-wrap iframe { border-radius: 12px; }
+
+      /* ── Video ── */
+      .video-wrap {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid rgba(190,24,93,0.2);
+        background: #0d0509;
+      }
+      .video-wrap video {
+        width: 100%;
+        display: block;
+        max-height: 72vh;
+        object-fit: contain;
+      }
+
+      /* ── Ambient orbs ── */
+      @keyframes orb-drift {
+        0%, 100% { transform: translate(0,0) scale(1);    opacity: 0.1; }
+        40%       { transform: translate(18px,-12px) scale(1.06); opacity: 0.16; }
+        70%       { transform: translate(-10px,8px) scale(0.96);  opacity: 0.12; }
+      }
+      .orb   { animation: orb-drift 14s ease-in-out infinite; will-change: transform, opacity; }
+      .orb-b { animation-delay: -5s; animation-duration: 18s; }
+      .orb-c { animation-delay: -9s; animation-duration: 11s; }
+
+      /* ── Confetti ── */
+      .confetti-wrap {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; overflow: hidden;
+      }
+      .confetti-piece {
+        position: absolute; top: -16px;
+        animation: confetti-fall linear infinite;
+        will-change: transform, opacity;
+      }
+      @keyframes confetti-fall {
+        0%   { transform: translateY(-16px) rotate(0deg);   opacity: 0.85; }
+        100% { transform: translateY(110vh) rotate(540deg); opacity: 0;    }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Confetti -->
+    <div class="confetti-wrap" id="confetti"></div>
+
+    <!-- Ambient orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+      <div class="orb   absolute top-16  left-1/3  w-80 h-80 bg-rose-900   rounded-full blur-3xl"></div>
+      <div class="orb-b absolute bottom-24 right-1/4 w-96 h-96 bg-amber-900 rounded-full blur-3xl"></div>
+      <div class="orb-c absolute top-1/2 left-8    w-56 h-56 bg-rose-800  rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- ───────────────────────────────────────────────
+         HERO
+    ─────────────────────────────────────────────── -->
+    <section class="hero-wrap z-10 relative">
+      <img src="assets/wendy1.jpeg" alt="Wandi" />
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom">
+        <div class="flex justify-center mb-4">
+          <div class="age-ring">
+            <div class="age-ring-inner">
+              <span class="text-xl font-semibold" style="background:linear-gradient(135deg,#fb7185,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent">18</span>
+              <span class="text-gray-500 text-xs font-light">anos</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-rose-300/80 text-xs font-light tracking-[0.35em] uppercase mb-4">
+          21 de Junho · 2026
+        </p>
+
+        <h1 class="font-['Cormorant_Garamond'] font-light text-white leading-tight" style="font-size: clamp(2.6rem, 8vw, 5rem)">
+          Feliz Aniversário,<br />
+          <span class="rose-text font-semibold italic">Wandi Siluki</span>
+        </h1>
+
+        <p class="text-gray-400 mt-4 text-sm tracking-widest font-light">
+          com carinho &middot; <span class="text-white/90">Anónimo</span>
+        </p>
+
+        <div class="mt-10">
+          <p class="text-gray-600 text-xs mb-2">desliza para ver</p>
+          <div class="w-px h-10 mx-auto" style="background:linear-gradient(to bottom,rgba(190,24,93,0.6),transparent)"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────
+         GALLERY
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">Memórias</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            Cada foto guarda um segredo
+          </h2>
+        </div>
+
+        <!-- Featured trio -->
+        <div class="grid grid-cols-3 gap-3 mb-3">
+          <div class="photo-card col-span-2 rose-glow reveal" style="aspect-ratio:16/9">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.26%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal" data-delay="80" style="aspect-ratio:9/16">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.30%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Main grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.34%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.35%20PM%20(1).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal col-span-2 md:col-span-1 aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.35%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:16/9">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.36%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.39%20PM%20(1).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.39%20PM%20(2).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.39%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.40%20PM%20(1).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.40%20PM%20(2).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal col-span-2 md:col-span-1" data-delay="60" style="aspect-ratio:4/3">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.40%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.44%20PM%20(1).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="140">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.44%20PM%20(2).jpeg" alt="Wandi" loading="lazy" />
+          </div>
+
+          <div class="photo-card reveal aspect-square" data-delay="60">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.44%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal aspect-square" data-delay="100">
+            <img src="assets/WhatsApp%20Image%202026-06-18%20at%2011.51.45%20PM.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+          <div class="photo-card reveal col-span-2 md:col-span-1 aspect-square" data-delay="140">
+            <img src="assets/wendy1.jpeg" alt="Wandi" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────
+         VIDEO
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-16 px-4 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">
+            Um momento guardado
+          </p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(1.8rem,4vw,2.6rem)">
+            Só para ti
+          </h2>
+        </div>
+        <div class="video-wrap rose-glow reveal" data-delay="100">
+          <video controls playsinline preload="metadata">
+            <source
+              src="assets/WhatsApp%20Video%202026-06-18%20at%2011.51.36%20PM.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         LETTER
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-12 reveal">
+          <p class="text-amber-400/80 text-xs font-medium uppercase tracking-[0.3em] mb-4">Uma mensagem</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            Para a <span class="rose-text italic font-semibold">Wandi Siluki</span>
+          </h2>
+        </div>
+
+        <div class="letter-card px-8 py-10 md:px-12 md:py-12 reveal" data-delay="100">
+          <div
+            class="font-['Cormorant_Garamond'] text-rose-900/30 select-none leading-none -mb-4"
+            style="font-size:6rem"
+          >"</div>
+
+          <div class="letter-body">
+Wandi,
+
+Não me perguntes como cheguei aqui. Só sei que há certas pessoas que entram na vida de alguém e, a partir desse momento, tudo fica diferente — o ar pesa de outro jeito, os pensamentos mudam de direcção, e cada palavra tua me fica na cabeça como se fosse uma melodia que não consigo parar de cantarolar.
+
+Hoje fazes 18. E eu queria que soubesses — sem te dizer quem sou — que alguém te olha como se fosses a única luz num quarto escuro. Alguém repara quando mudas o cabelo. Alguém sorri sozinho ao ler as tuas mensagens. Alguém perde o fio do pensamento só de ver uma foto tua.
+
+E esse olhar teu… Wandi, esse olhar é perigoso. É o tipo de olhar que não pede licença — entra, desarma e fica. Sexy sem esforço, chamativo sem intenção. Há qualquer coisa nos teus olhos que prende, que queima devagar, que faz uma pessoa esquecer o que ia dizer. Já perdi a conta de quantas vezes fiquei a olhar para uma foto tua mais tempo do que devia.
+
+Não te vou dizer quem sou. Ainda não. Mas quero que fiques com isto: és desejada, és admirada, és pensada — mais vezes do que imaginas, e de formas que te fariam corar.
+
+Feliz aniversário, Wandi. Que os 18 te tragam tudo aquilo que mereces — e que alguém, um dia, tenha a coragem de te dizer tudo o que esta carta não conseguiu.
+
+Até esse dia…
+          </div>
+
+          <div class="mt-8 flex items-end justify-between gap-4 flex-wrap">
+            <div>
+              <p class="text-rose-400/70 text-sm font-light">com desejo,</p>
+              <p class="font-['Cormorant_Garamond'] text-white font-semibold mt-1" style="font-size:1.75rem">
+                Anónimo 🖤
+              </p>
+            </div>
+            <p class="text-gray-600 text-xs">21 de Junho de 2026</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         TIMELINE
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-14 reveal">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">O que sinto</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white" style="font-size:clamp(2rem,5vw,3rem)">
+            Fragmentos de<br />
+            <span class="rose-text italic">um segredo</span>
+          </h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-[17px] top-0 bottom-0 w-px timeline-bar rounded-full hidden md:block"></div>
+
+          <div class="space-y-8">
+
+            <div class="reveal flex gap-6 items-start">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-semibold relative z-10 timeline-node-rose">1</div>
+              <div class="flex-1 timeline-block p-6">
+                <p class="text-rose-400 text-xs uppercase tracking-widest mb-2">A primeira vez</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">Quando te reparei</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Houve um dia em que te vi — a sério, não apenas olhar, mas ver. E a partir desse momento qualquer coisa mudou dentro de mim. Não sei explicar o quê. Sei só que antes de ti, e depois de ti, são duas coisas diferentes.</p>
+              </div>
+            </div>
+
+            <div class="reveal flex gap-6 items-start" data-delay="100">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-semibold relative z-10 timeline-node-rose">2</div>
+              <div class="flex-1 timeline-block p-6">
+                <p class="text-rose-400 text-xs uppercase tracking-widest mb-2">O que descobri</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">Detalhes que guardo</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Descobri que tens um olhar que não se esquece. Sexy, chamativo, o tipo de olhar que entra sem pedir licença e fica. Que tens uma energia que atrai sem esforço, uma beleza que intimida — e esses olhos… esses olhos são a parte mais perigosa de ti.</p>
+              </div>
+            </div>
+
+            <div class="reveal flex gap-6 items-start" data-delay="200">
+              <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold relative z-10 timeline-node-gold" style="color:#080306">3</div>
+              <div class="flex-1 timeline-block timeline-block-gold p-6">
+                <p class="text-amber-400 text-xs uppercase tracking-widest mb-2">21 de Junho · 2026</p>
+                <h3 class="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">O teu dia</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Hoje fazes 18. E eu quero que saibas que alguém — alguém que talvez nem imaginas — preparou esta página para ti. Cada foto, cada palavra, cada detalhe. Porque mereces ser celebrada. Porque alguém te vê, mesmo quando achas que ninguém está a olhar.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="rose-divider my-8"></div>
+
+
+    <!-- ───────────────────────────────────────────────
+         SPOTIFY
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-16 px-4">
+      <div class="max-w-md mx-auto text-center">
+        <div class="reveal mb-8">
+          <p class="text-rose-400 text-xs font-medium uppercase tracking-[0.3em] mb-4">🎵 uma música para ti</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-white italic" style="font-size:1.9rem">
+            Ouve e pensa em mim
+          </h2>
+          <p class="text-gray-500 text-sm mt-1 font-light">de alguém que te admira</p>
+        </div>
+        <div class="spotify-wrap reveal" data-delay="100">
+          <iframe
+            src="https://open.spotify.com/embed/track/6PGoSes0D9eUDeeAafB2As"
+            title="Música para Wandi"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────────────────────────────────────────────
+         CLOSING
+    ─────────────────────────────────────────────── -->
+    <section class="relative z-10 py-24 px-4 text-center">
+      <div class="max-w-lg mx-auto reveal">
+        <div class="w-px h-12 mx-auto mb-10" style="background:linear-gradient(to bottom,rgba(190,24,93,0.5),transparent)"></div>
+        <h2 class="font-['Cormorant_Garamond'] font-light text-white leading-snug" style="font-size:clamp(2.4rem,7vw,4rem)">
+          Feliz aniversário,<br />
+          <span class="rose-text font-semibold italic">Wandi Siluki.</span>
+        </h2>
+        <p class="text-gray-500 text-sm mt-10 tracking-widest font-light">
+          com desejo &middot; <span class="text-gray-300">Anónimo</span>
+        </p>
+        <p class="text-gray-700 text-xs mt-12">
+          Criado com LovePage &middot; lovepage.art
+        </p>
+      </div>
+    </section>
+
+
+    <script>
+      // ── Confetti ──
+      (function () {
+        const wrap  = document.getElementById('confetti');
+        const colors = ['#fb7185','#fbbf24','#f9a8d4','#fde68a','#e11d48','#f472b6'];
+        for (let i = 0; i < 18; i++) {
+          const el   = document.createElement('div');
+          el.className = 'confetti-piece';
+          const size = 4 + Math.random() * 7;
+          el.style.cssText = [
+            'left:'              + (Math.random() * 100)       + '%',
+            'width:'             + size                         + 'px',
+            'height:'            + size                         + 'px',
+            'background:'        + colors[Math.floor(Math.random() * colors.length)],
+            'animation-duration:'+ (8 + Math.random() * 10)    + 's',
+            'animation-delay:'   + (Math.random() * 9)         + 's',
+            'border-radius:'     + (Math.random() > 0.45 ? '50%' : '2px'),
+            'opacity:0.65',
+          ].join(';');
+          wrap.appendChild(el);
+        }
+      })();
+
+      // ── Scroll reveal ──
+      const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll('.reveal').forEach(el => {
+        const d = el.dataset.delay;
+        if (d) el.style.transitionDelay = d + 'ms';
+        observer.observe(el);
+      });
+    </script>
+
+  </body>
+</html>
