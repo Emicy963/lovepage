@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Aniversário, Ariany Kitla — 20 Anos 🎉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background-color: #0D0D0D;
+        font-family: 'Inter', sans-serif;
+        color: #BFBFBF;
+        overflow-x: hidden;
+      }
+      .mono-highlight { color: #F2F2F2; }
+      .mono-muted { color: #737373; }
+      .mono-border { border-color: #404040; }
+      .mono-gradient-text {
+        background: linear-gradient(135deg, #F2F2F2, #BFBFBF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Ambient Orbs */
+      @keyframes orb-drift {
+        0%, 100% { transform: translate(0,0) scale(1); opacity: 0.15; }
+        40%      { transform: translate(30px,-20px) scale(1.05); opacity: 0.25; }
+        70%      { transform: translate(-20px,15px) scale(0.95); opacity: 0.20; }
+      }
+      .orb   { animation: orb-drift 15s ease-in-out infinite; will-change: transform, opacity; }
+      .orb-b { animation-delay: -5s; animation-duration: 20s; }
+      .orb-c { animation-delay: -10s; animation-duration: 18s; }
+
+      /* Hero */
+      .hero-wrap { position: relative; height: 100svh; min-height: 620px; }
+      .hero-wrap img {
+        position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      }
+      .hero-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, rgba(13,13,13,0.85) 65%, rgba(13,13,13,1) 100%);
+      }
+      .hero-bottom {
+        position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1.5rem 3.5rem; text-align: center;
+      }
+
+      /* Reveal */
+      .reveal {
+        opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.8s ease; will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* Cards and Images */
+      .quote-photo {
+        width: 100%; height: 420px; position: relative; overflow: hidden; border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6); border: 1px solid rgba(115,115,115,0.2);
+        transform: rotate(-1deg); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .quote-photo img {
+        width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease;
+      }
+      .quote-photo:hover { transform: rotate(0deg) scale(1.02); }
+      .quote-photo:hover img { transform: scale(1.05); }
+      
+      .multi-photo-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+      
+      .multi-photo-item {
+        position: relative; overflow: hidden; border-radius: 8px; border: 1px solid rgba(115,115,115,0.15); 
+        aspect-ratio: 3/4; transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .multi-photo-item:nth-child(odd) { transform: translateY(12px); }
+      .multi-photo-item img {
+        width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease, filter 0.4s ease;
+        filter: grayscale(40%) contrast(1.1);
+      }
+      .multi-photo-item:hover { transform: translateY(0) scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10; }
+      .multi-photo-item:hover img { transform: scale(1.05); filter: grayscale(0%) contrast(1); }
+
+      /* Letter block */
+      .letter-card {
+        background: linear-gradient(145deg, rgba(38,38,38,0.4), rgba(26,26,26,0.2));
+        border: 1px solid rgba(115,115,115,0.15); border-radius: 16px;
+        backdrop-filter: blur(8px);
+        position: relative;
+      }
+      
+      /* Decorative Quote Mark */
+      .bg-quote {
+        position: absolute; top: -10px; left: 10px; font-family: 'Cormorant Garamond', serif; 
+        font-size: 8rem; line-height: 1; color: rgba(115,115,115,0.12); pointer-events: none; user-select: none;
+      }
+
+      /* Custom Divider */
+      .diamond-divider {
+        display: flex; align-items: center; justify-content: center; margin: 2rem auto; opacity: 0.6;
+      }
+      .diamond-divider::before, .diamond-divider::after {
+        content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, #737373, transparent); max-width: 15rem;
+      }
+      .diamond-divider span {
+        display: inline-block; width: 6px; height: 6px; background-color: #BFBFBF; transform: rotate(45deg); margin: 0 1rem;
+      }
+
+      /* Confetti */
+      .confetti-wrap {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden;
+      }
+      .confetti-piece {
+        position: absolute; top: -16px; animation: confetti-fall linear infinite; will-change: transform, opacity;
+      }
+      @keyframes confetti-fall {
+        0% { transform: translateY(-16px) rotate(0deg); opacity: 0.5; }
+        100% { transform: translateY(110vh) rotate(540deg); opacity: 0; }
+      }
+
+      /* Jogo da Memória */
+      .game-card { perspective: 1000px; }
+      .card-inner { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+      .card-flipped { transform: rotateY(180deg); }
+      .card-front, .card-back {
+        backface-visibility: hidden; position: absolute; width: 100%; height: 100%;
+      }
+      .card-back { transform: rotateY(180deg); }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Ambient Orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+      <div class="orb   absolute top-1/4 left-1/4 w-96 h-96 bg-[#262626] rounded-full blur-[100px]"></div>
+      <div class="orb-b absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#1a1a1a] rounded-full blur-[80px]"></div>
+      <div class="orb-c absolute top-1/2 right-10 w-64 h-64 bg-[#333333] rounded-full blur-[90px]"></div>
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-wrap" id="confetti"></div>
+
+    <!-- HERO (Mensagem 1) -->
+    <section class="hero-wrap z-10 relative">
+      <img src="assets/image/ariany_1.jpeg" alt="Ariany Kitla" />
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom reveal">
+        <p class="mono-muted text-xs font-light tracking-[0.35em] uppercase mb-4">22 de Agosto · 2026</p>
+        <h1 class="font-['Cormorant_Garamond'] font-light text-white leading-tight" style="font-size: clamp(2.8rem, 8vw, 5.5rem)">
+          Feliz Aniversário,<br />
+          <span class="mono-gradient-text font-semibold italic">Ariany Kitla</span>
+        </h1>
+        <div class="mt-8 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto px-4" style="color: #BFBFBF">
+          "Quando os teus 18 anos chegaram provavelmente não esperavas que tanta coisa ainda viria por acontecer, e agora que fazes 20 anos provavelmente sabes que ainda muita coisa virá daqui para a frente. E em tudo darás o teu melhor, como sempre fazes."
+        </div>
+        <div class="mt-12">
+          <p class="mono-muted text-xs mb-3 tracking-widest">desliza</p>
+          <div class="w-px h-12 mx-auto" style="background:linear-gradient(to bottom, #737373,transparent)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAGEM 2 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto mt-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/image/ariany_2.1.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/image/ariany_2.2.jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 shadow-2xl">
+            <div class="bg-quote">"</div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5 relative z-10">Minha amiga, meu amor</h3>
+            <p class="leading-relaxed text-lg font-light relative z-10" style="color: #BFBFBF">
+              Meu amor e minha amiga, valorizo imensamente a amizade que tenho contigo e sou muito grata por cada momento, cada conversa e cada memória que partilhamos. Obrigada por seres essa amiga maravilhosa, especial e tão importante para mim. Que sorte a minha ter-te na minha vida. ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 3 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/image/ariany_3.1.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/image/ariany_3.2.jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 text-right shadow-2xl">
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Preciosa Amiga</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              Feliz aniversário, minha amada e preciosa amiga.<br><br>
+              Agradeço todos os dias a Deus por fazeres parte da minha vida e por desempenhares esse papel tão crucial.❤️<br>
+              Crescer contigo e puder contar contigo em qualquer situação tem sido uma benção.<br>
+              Que Deus te abençoe , e espero que nunca percas a tua essência.<br>
+              Amo-te e para sempre vou te amar, minha amiga perfeita.❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 4 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full">
+          <div class="quote-photo" style="transform: rotate(1deg);">
+            <img src="assets/image/ariany_4.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 shadow-2xl">
+            <div class="bg-quote">"</div>
+            <p class="font-['Cormorant_Garamond'] text-3xl mono-highlight leading-relaxed italic relative z-10">
+              Amo-te minha mana linda, hoje e sempre feliz aniversário.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 5 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full">
+          <div class="quote-photo">
+            <img src="assets/image/ariany_5.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 text-right shadow-2xl">
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Minha Princesa</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              Feliz aniversário, minha princesa. Você me mostrou que somos capazes de dar o nosso melhor até nos momentos mas difícil dás nossas vida. Continue a ser essa beldade por fora é dentro e por fora.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 6 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/image/ariany_6.1.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/image/ariany_6.2.jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 shadow-2xl">
+            <div class="bg-quote">"</div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5 relative z-10">Amor da minha vida</h3>
+            <p class="leading-relaxed text-lg font-light relative z-10" style="color: #BFBFBF">
+              No dia certo, Deus colocou a pessoa certa na minha vida.❤️<br><br>
+              Contigo aprendi que amor não precisa doer. Pode ser lar, pode ser paz, pode ser nós.<br>
+              Obrigado por seres meu apoio, minha risada e meu melhor lugar…<br>
+              Que possamos celebrar muitos aniversários juntos, crescendo e construindo tudo com respeito, cumplicidade e Deus guiando cada passo nosso.🙏🏽❤️<br>
+              Feliz vida, amor da minha vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 7 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/image/ariany_7.1.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/image/ariany_7.2.jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 text-right shadow-2xl">
+            <p class="leading-relaxed text-2xl font-['Cormorant_Garamond'] italic mono-highlight">
+              Feliz vida, que continues a resignificar a tua vida de maneiras bonitas. Desejo-te benções e tudo de bom que este mundo pode proporcionar, porque tu mereces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 8 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full">
+          <div class="quote-photo" style="transform: rotate(1deg);">
+            <img src="assets/image/ariany_8.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 shadow-2xl">
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Admiro-te, Prima</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              Eu admiro-te, minha prima. Tu transbordas o bem que há em ti para outras pessoas, desejo que te orgulhes de quem tu és e te tens tornado a cada dia.<br><br>
+              Queríamos crescer porque pensávamos que sempre teríamos dinheiro, estávamos tão erradas. 🤣<br><br>
+              Desejo que diferente deste pensamento nunca duvides que amanhã sempre podes ser maior do que és hoje.<br><br>
+              Feliz aniversário, prima. Amo-te!<br>
+              Tomara que gostes deste presente criativo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 9 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full">
+          <div class="quote-photo">
+            <img src="assets/image/ariany_9.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 text-right shadow-2xl">
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Olha para ti, Kiki</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              Olha para ti, Kiki. Veja o quão distante você já chegou. Você tem vencido os teus traumas, e você tem descoberto partes tuas que nem sabias que existiam. Esteja orgulhosa de ti, a tua versão pequena nem sabia que te tornarias tão madura e tão grande.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 10 & 11 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+        
+        <!-- Msg 10 -->
+        <div class="letter-card p-10 flex flex-col justify-between shadow-2xl">
+          <div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Primeiro Amor</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              O teu primeiro amor sempre cuidará de ti, não importa onde estejas.<br>
+              No teu íntimo sabes o que a mamã te diria hoje, com o mesmo olhar de admiração, amor e orgulho que sempre teve de ti.
+            </p>
+          </div>
+          <div class="multi-photo-grid mt-8">
+            <div class="multi-photo-item" style="transform: rotate(-1deg)"><img src="assets/image/ariany_10.1.jpeg" alt="" loading="lazy" /></div>
+            <div class="multi-photo-item" style="transform: rotate(2deg)"><img src="assets/image/ariany_10.2.jpeg" alt="" loading="lazy" /></div>
+          </div>
+        </div>
+
+        <!-- Msg 11 -->
+        <div class="letter-card p-10 flex flex-col justify-between shadow-2xl">
+          <div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl mono-highlight mb-5">Sempre contigo</h3>
+            <p class="leading-relaxed text-lg font-light" style="color: #BFBFBF">
+              As mamãs e as avós também cuidarão de ti, sempre.
+            </p>
+          </div>
+          <div class="multi-photo-grid mt-8">
+            <div class="multi-photo-item" style="transform: translateY(-8px)"><img src="assets/image/ariany_11.1.jpeg" alt="" loading="lazy" /></div>
+            <div class="multi-photo-item" style="transform: translateY(8px)"><img src="assets/image/ariany_11.2.jpeg" alt="" loading="lazy" /></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- JOGO DE PRESENTES -->
+    <section class="relative z-10 py-24 px-4 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <p class="mono-muted text-xs font-medium uppercase tracking-[0.3em] mb-4">Uma pausa divertida</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light mono-highlight" style="font-size:clamp(2.2rem,5vw,3.5rem)">
+            Jogo de Presentes 🎁
+          </h2>
+        </div>
+        <div class="letter-card p-8 md:p-14 reveal shadow-2xl">
+          <p class="text-center text-[#BFBFBF] font-light mb-8 text-lg">Encontra os pares perfeitos para abrir o teu presente surpresa!</p>
+          <div class="grid grid-cols-4 gap-3 max-w-md mx-auto mb-10" id="gameBoard"></div>
+          <div class="text-center">
+            <p class="text-lg text-[#BFBFBF] mb-6">Movimentos: <span id="moves" class="font-semibold text-white">0</span></p>
+            <button onclick="resetGame()" class="bg-[#262626] hover:bg-[#404040] border border-[#737373] text-[#F2F2F2] px-8 py-3 rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
+              Novo Jogo
+            </button>
+            <div id="winMessage" class="hidden mt-8 p-5" style="background:rgba(38,38,38,0.8); border:1px solid #737373; border-radius:12px; backdrop-filter:blur(4px);">
+              <p class="font-semibold text-xl font-['Cormorant_Garamond'] italic" style="color:#F2F2F2">🎉 Parabéns! Conseguiste desembrulhar tudo! 🎉</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 12 (Fecho e Galeria Final) -->
+    <section class="relative z-10 py-24 px-4 text-center">
+      <div class="max-w-6xl mx-auto reveal">
+        
+        <div class="mb-20">
+          <p class="leading-relaxed text-3xl font-light text-white italic font-['Cormorant_Garamond']">
+            "E assim nasce uma nova mulher.<br>22 de Agosto de 2026."
+          </p>
+        </div>
+
+        <!-- Galeria Final (Asymmetrical Masonry vibe) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-24 max-w-5xl mx-auto">
+          <div class="multi-photo-item md:col-span-2 md:row-span-2 shadow-xl" style="aspect-ratio: auto; border: 2px solid rgba(115,115,115,0.3)">
+            <img src="assets/image/ariany_12.1.jpeg" alt="" loading="lazy" />
+          </div>
+          <div class="multi-photo-item shadow-lg" style="transform: rotate(2deg)"><img src="assets/image/ariany_12.2.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item shadow-lg" style="transform: rotate(-1deg)"><img src="assets/image/ariany_12.3.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item shadow-lg" style="transform: translateY(15px)"><img src="assets/image/ariany_12.4.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item shadow-lg" style="transform: translateY(-10px)"><img src="assets/image/ariany_12.5.jpeg" alt="" loading="lazy" /></div>
+        </div>
+
+        <h2 class="font-['Cormorant_Garamond'] font-light text-white leading-snug mb-8" style="font-size:clamp(3rem,8vw,5rem)">
+          Feliz aniversário,<br />
+          <span class="font-semibold italic mono-gradient-text">Ariany Kitla.</span>
+        </h2>
+        <p class="mono-muted text-sm tracking-widest font-light mt-12">
+          Com carinho &middot; <span class="mono-highlight">CT.</span>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      // ── Confetti ──
+      (function () {
+        const wrap  = document.getElementById('confetti');
+        const colors = ['#F2F2F2','#BFBFBF','#737373','#404040'];
+        for (let i = 0; i < 25; i++) {
+          const el   = document.createElement('div');
+          el.className = 'confetti-piece';
+          const size = 5 + Math.random() * 8;
+          el.style.cssText = [
+            'left:' + (Math.random() * 100) + '%',
+            'width:' + size + 'px',
+            'height:' + size + 'px',
+            'background:' + colors[Math.floor(Math.random() * colors.length)],
+            'animation-duration:' + (8 + Math.random() * 10) + 's',
+            'animation-delay:' + (Math.random() * 9) + 's',
+            'border-radius:' + (Math.random() > 0.45 ? '50%' : '2px'),
+            'opacity:0.25',
+          ].join(';');
+          wrap.appendChild(el);
+        }
+      })();
+
+      // ── Scroll reveal ──
+      const revealObserver = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // ── Jogo da Memória ──
+      const gameSymbols = ['🎁', '🛍️', '🎀', '💌', '💝', '🎂', '🥂', '🎉'];
+      let gameCards = [...gameSymbols, ...gameSymbols];
+      let flippedCards = [];
+      let matches = 0;
+      let moves = 0;
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      function createGameBoard() {
+        const gameBoard = document.getElementById('gameBoard');
+        gameBoard.innerHTML = '';
+        shuffleArray(gameCards);
+
+        gameCards.forEach((symbol, index) => {
+          const card = document.createElement('div');
+          card.className = 'game-card w-16 h-16 md:w-20 md:h-20 cursor-pointer mx-auto';
+          card.innerHTML = `
+            <div class="card-inner w-full h-full relative">
+              <div class="card-front flex items-center justify-center text-2xl md:text-3xl font-bold rounded-xl shadow-lg" style="background:rgba(64,64,64,0.5); color:#F2F2F2; border:1px solid rgba(115,115,115,0.3); backdrop-filter:blur(4px);">
+                ?
+              </div>
+              <div class="card-back flex items-center justify-center text-3xl md:text-4xl rounded-xl shadow-lg" style="background:rgba(26,26,26,0.8); border:1px solid rgba(115,115,115,0.4); backdrop-filter:blur(4px);">
+                ${symbol}
+              </div>
+            </div>
+          `;
+          card.onclick = () => flipCard(card, symbol, index);
+          gameBoard.appendChild(card);
+        });
+      }
+
+      function flipCard(cardElement, symbol, index) {
+        if (flippedCards.length >= 2 || cardElement.classList.contains('card-flipped')) return;
+
+        const cardInner = cardElement.querySelector('.card-inner');
+        cardInner.classList.add('card-flipped');
+        flippedCards.push({element: cardElement, symbol: symbol, index: index});
+
+        if (flippedCards.length === 2) {
+          moves++;
+          document.getElementById('moves').textContent = moves;
+
+          setTimeout(() => {
+            if (flippedCards[0].symbol === flippedCards[1].symbol &&
+                flippedCards[0].index !== flippedCards[1].index) {
+              matches++;
+              flippedCards = [];
+
+              if (matches === gameSymbols.length) {
+                document.getElementById('winMessage').classList.remove('hidden');
+              }
+            } else {
+              flippedCards.forEach(card => {
+                card.element.querySelector('.card-inner').classList.remove('card-flipped');
+              });
+              flippedCards = [];
+            }
+          }, 1000);
+        }
+      }
+
+      function resetGame() {
+        flippedCards = [];
+        matches = 0;
+        moves = 0;
+        document.getElementById('moves').textContent = moves;
+        document.getElementById('winMessage').classList.add('hidden');
+        createGameBoard();
+      }
+
+      createGameBoard();
+    </script>
+  </body>
+</html>
