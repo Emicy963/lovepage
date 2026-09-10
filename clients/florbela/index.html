@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Aniversário, Meu Amor ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background-color: #FAF6F5; /* Soft Cream */
+        font-family: 'Inter', sans-serif;
+        color: #594346; /* Deep Burgundy/Brown */
+        overflow-x: hidden;
+      }
+      
+      .text-primary { color: #594346; }
+      .text-muted { color: #A68A88; }
+      .text-highlight { color: #D99C9C; }
+      
+      .gradient-text {
+        background: linear-gradient(135deg, #D99C9C, #A68A88);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Ambient Orbs - Light theme */
+      @keyframes orb-drift {
+        0%, 100% { transform: translate(0,0) scale(1); opacity: 0.3; }
+        40%      { transform: translate(30px,-20px) scale(1.05); opacity: 0.5; }
+        70%      { transform: translate(-20px,15px) scale(0.95); opacity: 0.4; }
+      }
+      .orb   { animation: orb-drift 18s ease-in-out infinite; will-change: transform, opacity; }
+      .orb-b { animation-delay: -5s; animation-duration: 20s; }
+      .orb-c { animation-delay: -10s; animation-duration: 15s; }
+
+      /* Hero */
+      .hero-wrap { position: relative; height: 100svh; min-height: 620px; }
+      .hero-wrap img {
+        position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      }
+      .hero-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(to bottom, rgba(250,246,245,0.1) 0%, rgba(250,246,245,0.7) 65%, rgba(250,246,245,1) 100%);
+      }
+      .hero-bottom {
+        position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1.5rem 3.5rem; text-align: center;
+      }
+
+      /* Reveal */
+      .reveal {
+        opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.8s ease; will-change: opacity, transform;
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* Cards and Images */
+      .quote-photo {
+        width: 100%; height: 440px; position: relative; overflow: hidden; border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(89,67,70,0.15); border: 4px solid #fff;
+        transform: rotate(-1deg); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .quote-photo img {
+        width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease;
+      }
+      .quote-photo:hover { transform: rotate(1deg) scale(1.02); }
+      .quote-photo:hover img { transform: scale(1.05); }
+      
+      .multi-photo-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+      
+      .multi-photo-item {
+        position: relative; overflow: hidden; border-radius: 8px; border: 3px solid #fff; 
+        aspect-ratio: 3/4; transition: transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 8px 20px rgba(89,67,70,0.08);
+      }
+      .multi-photo-item:nth-child(odd) { transform: translateY(12px) rotate(-1deg); }
+      .multi-photo-item:nth-child(even) { transform: translateY(0) rotate(2deg); }
+      .multi-photo-item img {
+        width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;
+      }
+      .multi-photo-item:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 15px 30px rgba(89,67,70,0.15); z-index: 10; }
+      .multi-photo-item:hover img { transform: scale(1.05); }
+
+      /* Video Container */
+      .video-container {
+        position: relative; border-radius: 12px; overflow: hidden; border: 4px solid #fff;
+        box-shadow: 0 20px 40px rgba(89,67,70,0.2);
+        aspect-ratio: 9/16; max-height: 500px; margin: 0 auto;
+      }
+      .video-container video { width: 100%; height: 100%; object-fit: cover; }
+
+      /* Letter block */
+      .letter-card {
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 16px;
+        backdrop-filter: blur(10px);
+        position: relative;
+        box-shadow: 0 10px 30px rgba(89,67,70,0.05);
+      }
+      
+      /* Decorative Quote Mark */
+      .bg-quote {
+        position: absolute; top: -15px; left: 10px; font-family: 'Cormorant Garamond', serif; 
+        font-size: 8rem; line-height: 1; color: rgba(217,156,156,0.15); pointer-events: none; user-select: none;
+      }
+
+      /* Custom Divider */
+      .diamond-divider {
+        display: flex; align-items: center; justify-content: center; margin: 3rem auto; opacity: 0.5;
+      }
+      .diamond-divider::before, .diamond-divider::after {
+        content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, #A68A88, transparent); max-width: 12rem;
+      }
+      .diamond-divider span {
+        display: inline-block; width: 6px; height: 6px; background-color: #D99C9C; transform: rotate(45deg); margin: 0 1rem;
+      }
+
+      /* Confetti (Petals) */
+      .confetti-wrap {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden;
+      }
+      .confetti-piece {
+        position: absolute; top: -16px; animation: confetti-fall linear infinite; will-change: transform, opacity;
+      }
+      @keyframes confetti-fall {
+        0% { transform: translateY(-16px) rotate(0deg); opacity: 0.7; }
+        100% { transform: translateY(110vh) rotate(540deg); opacity: 0; }
+      }
+
+      /* Jogo da Memória */
+      .game-card { perspective: 1000px; }
+      .card-inner { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+      .card-flipped { transform: rotateY(180deg); }
+      .card-front, .card-back {
+        backface-visibility: hidden; position: absolute; width: 100%; height: 100%;
+      }
+      .card-back { transform: rotateY(180deg); }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Ambient Orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+      <div class="orb   absolute top-1/4 left-1/4 w-96 h-96 bg-[#FFEAE6] rounded-full blur-[90px]"></div>
+      <div class="orb-b absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#FFF3F0] rounded-full blur-[80px]"></div>
+      <div class="orb-c absolute top-1/2 right-10 w-64 h-64 bg-[#F2D0D0] rounded-full blur-[100px]"></div>
+    </div>
+
+    <!-- Confetti (Petals) -->
+    <div class="confetti-wrap" id="confetti"></div>
+
+    <!-- HERO -->
+    <section class="hero-wrap z-10 relative">
+      <img src="assets/1.jpeg" alt="Florbela" />
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom reveal">
+        <p class="text-muted text-xs font-medium tracking-[0.35em] uppercase mb-4">11 de Setembro · 20 Anos</p>
+        <h1 class="font-['Cormorant_Garamond'] font-light text-primary leading-tight" style="font-size: clamp(2.8rem, 8vw, 5.5rem)">
+          Feliz aniversário,<br />
+          <span class="gradient-text font-semibold italic">Meu Amor</span>
+        </h1>
+        <div class="mt-8 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto px-4 text-primary">
+          Ainda me lembro do dia em que nos conhecemos. Ver-te fazer 20 anos hoje é um dos maiores presentes que a vida me deu.
+        </div>
+        <div class="mt-12">
+          <p class="text-muted text-xs mb-3 tracking-widest uppercase">Desliza</p>
+          <div class="w-px h-12 mx-auto" style="background:linear-gradient(to bottom, #D99C9C,transparent)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAGEM 1 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto mt-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/2.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/3.jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12">
+            <div class="bg-quote">"</div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl text-highlight mb-5 relative z-10">A minha pessoa favorita</h3>
+            <p class="leading-relaxed text-lg font-light text-primary relative z-10">
+              Nem sempre é fácil colocar em palavras tudo o que sinto por ti. Tu tens essa luz própria que ilumina qualquer lugar, e a cada dia que passa, sinto-me mais apaixonado pela mulher incrível que te estás a tornar.<br><br>
+              Amo o teu sorriso, as tuas manias, e até aquelas coisas pequenas que só nós entendemos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 2 (O VÍDEO ESPECIAL) -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-5xl mx-auto">
+      <div class="text-center mb-10 reveal">
+        <p class="text-muted text-xs font-medium uppercase tracking-[0.3em] mb-4">Aquele momento</p>
+        <h2 class="font-['Cormorant_Garamond'] font-light text-primary" style="font-size:clamp(2.2rem,5vw,3.5rem)">
+          Um <span class="gradient-text italic font-semibold">Registo</span> Especial
+        </h2>
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-10 reveal">
+        <div class="md:w-1/2 w-full">
+          <div class="video-container" style="transform: rotate(-2deg);">
+            <video controls preload="metadata" poster="assets/1.jpeg">
+              <source src="assets/WhatsApp%20Video%202026-09-10%20at%2015.04.07.mp4" type="video/mp4">
+              O teu navegador não suporta vídeos.
+            </video>
+          </div>
+        </div>
+        <div class="md:w-1/2 w-full">
+          <div class="letter-card p-10">
+            <p class="leading-relaxed text-lg font-light text-primary">
+              Sempre que olho para ti, tenho a certeza de que encontrei o meu lugar seguro. Quis guardar este momento num cantinho especial, para te lembrares de como sou feliz ao teu lado.<br><br>
+              As imagens não mentem. Play ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 3 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full">
+          <div class="quote-photo" style="transform: rotate(2deg);">
+            <img src="assets/4.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12 text-right">
+            <div class="bg-quote" style="left:auto; right:20px;">"</div>
+            <h3 class="font-['Cormorant_Garamond'] text-3xl text-highlight mb-5 relative z-10">Nós contra o mundo</h3>
+            <p class="leading-relaxed text-lg font-light text-primary relative z-10">
+              Dizem que os 20 anos são a melhor fase da vida. Se isso é verdade, mal posso esperar para viver cada segundo deles contigo.<br><br>
+              Prometo continuar a segurar a tua mão, a celebrar as tuas vitórias e a chatear-te muito... porque senão não seria eu. És linda de mais, Florbela.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM 4 -->
+    <section class="relative z-10 py-16 px-4 md:px-8 max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
+        <div class="lg:w-1/2 w-full multi-photo-grid">
+          <div class="multi-photo-item"><img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.06...jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item"><img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.06..jpeg" alt="" loading="lazy" /></div>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="letter-card p-10 md:p-12">
+            <p class="font-['Cormorant_Garamond'] text-3xl text-primary leading-relaxed italic relative z-10">
+              Obrigado por me deixares fazer parte da tua história, e por fazeres da minha vida um lugar tão mais bonito.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- JOGO DE FLORES -->
+    <section class="relative z-10 py-20 px-4 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <p class="text-muted text-xs font-medium uppercase tracking-[0.3em] mb-4">Um pequeno mimo</p>
+          <h2 class="font-['Cormorant_Garamond'] font-light text-highlight" style="font-size:clamp(2.2rem,5vw,3.5rem)">
+            O teu Buquê 💐
+          </h2>
+        </div>
+        <div class="letter-card p-8 md:p-14 reveal">
+          <p class="text-center text-primary font-light mb-8 text-lg">Encontra os pares das tuas flores e mimos preferidos!</p>
+          <div class="grid grid-cols-4 gap-3 max-w-md mx-auto mb-10" id="gameBoard"></div>
+          <div class="text-center">
+            <p class="text-lg text-primary mb-6">Movimentos: <span id="moves" class="font-semibold text-highlight">0</span></p>
+            <button onclick="resetGame()" class="bg-[#594346] hover:bg-[#A68A88] text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
+              Embaralhar
+            </button>
+            <div id="winMessage" class="hidden mt-8 p-5" style="background:rgba(255,255,255,0.9); border:1px solid #D99C9C; border-radius:12px;">
+              <p class="font-semibold text-xl font-['Cormorant_Garamond'] italic" style="color:#594346">🌸 Ganhaste! És mesmo a flor mais bonita deste jardim! 🌸</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="diamond-divider"><span></span></div>
+
+    <!-- MENSAGEM FINAL (Mural de Memórias) -->
+    <section class="relative z-10 py-24 px-4 text-center">
+      <div class="max-w-6xl mx-auto reveal">
+        
+        <div class="mb-16">
+          <p class="leading-relaxed text-3xl font-light text-primary italic font-['Cormorant_Garamond']">
+            "Feliz vida, Florbela.<br>Que este novo ciclo traga tudo o que mereces."
+          </p>
+        </div>
+
+        <!-- Galeria Final (Asymmetrical Masonry vibe) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-24 max-w-5xl mx-auto">
+          <div class="multi-photo-item shadow-lg" style="transform: rotate(3deg)"><img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.06.jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item md:col-span-2 md:row-span-2 shadow-xl" style="aspect-ratio: auto; transform: rotate(-1deg)">
+            <img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.08.jpeg" alt="" loading="lazy" />
+          </div>
+          <div class="multi-photo-item shadow-lg" style="transform: rotate(-3deg)"><img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.07..jpeg" alt="" loading="lazy" /></div>
+          <div class="multi-photo-item shadow-lg" style="transform: translateY(-15px) rotate(1deg)"><img src="assets/WhatsApp%20Image%202026-09-10%20at%2015.04.07.jpeg" alt="" loading="lazy" /></div>
+        </div>
+
+        <h2 class="font-['Cormorant_Garamond'] font-light text-primary leading-snug mb-8" style="font-size:clamp(3rem,8vw,5rem)">
+          Amo-te infinitamente.<br />
+        </h2>
+        <p class="text-muted text-sm tracking-widest font-light mt-8">
+          Com todo o meu amor &middot; <span class="font-medium text-primary">Heliano Fortuna.</span>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      // ── Confetti (Petals) ──
+      (function () {
+        const wrap  = document.getElementById('confetti');
+        const colors = ['#D99C9C','#A68A88','#FFF3F0','#F2D0D0'];
+        for (let i = 0; i < 20; i++) {
+          const el   = document.createElement('div');
+          el.className = 'confetti-piece';
+          const size = 6 + Math.random() * 10;
+          el.style.cssText = [
+            'left:' + (Math.random() * 100) + '%',
+            'width:' + size + 'px',
+            'height:' + size + 'px',
+            'background:' + colors[Math.floor(Math.random() * colors.length)],
+            'animation-duration:' + (10 + Math.random() * 12) + 's',
+            'animation-delay:' + (Math.random() * 9) + 's',
+            'border-radius:' + (Math.random() > 0.3 ? '50% 0 50% 50%' : '50%'), // Leaf/petal shape
+            'opacity:0.4',
+            'transform: rotate(' + (Math.random() * 360) + 'deg)',
+          ].join(';');
+          wrap.appendChild(el);
+        }
+      })();
+
+      // ── Scroll reveal ──
+      const revealObserver = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // ── Jogo da Memória Floral ──
+      const gameSymbols = ['🌸', '🌹', '💐', '🍷', '❤️', '✨', '💍', '🌺'];
+      let gameCards = [...gameSymbols, ...gameSymbols];
+      let flippedCards = [];
+      let matches = 0;
+      let moves = 0;
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      function createGameBoard() {
+        const gameBoard = document.getElementById('gameBoard');
+        gameBoard.innerHTML = '';
+        shuffleArray(gameCards);
+
+        gameCards.forEach((symbol, index) => {
+          const card = document.createElement('div');
+          card.className = 'game-card w-16 h-16 md:w-20 md:h-20 cursor-pointer mx-auto';
+          card.innerHTML = `
+            <div class="card-inner w-full h-full relative">
+              <div class="card-front flex items-center justify-center text-2xl md:text-3xl font-bold rounded-xl shadow-md" style="background:rgba(255,255,255,0.8); color:#D99C9C; border:2px solid #FFF3F0;">
+                ?
+              </div>
+              <div class="card-back flex items-center justify-center text-3xl md:text-4xl rounded-xl shadow-lg" style="background:#fff; border:2px solid #D99C9C;">
+                ${symbol}
+              </div>
+            </div>
+          `;
+          card.onclick = () => flipCard(card, symbol, index);
+          gameBoard.appendChild(card);
+        });
+      }
+
+      function flipCard(cardElement, symbol, index) {
+        if (flippedCards.length >= 2 || cardElement.classList.contains('card-flipped')) return;
+
+        const cardInner = cardElement.querySelector('.card-inner');
+        cardInner.classList.add('card-flipped');
+        flippedCards.push({element: cardElement, symbol: symbol, index: index});
+
+        if (flippedCards.length === 2) {
+          moves++;
+          document.getElementById('moves').textContent = moves;
+
+          setTimeout(() => {
+            if (flippedCards[0].symbol === flippedCards[1].symbol &&
+                flippedCards[0].index !== flippedCards[1].index) {
+              matches++;
+              flippedCards = [];
+
+              if (matches === gameSymbols.length) {
+                document.getElementById('winMessage').classList.remove('hidden');
+              }
+            } else {
+              flippedCards.forEach(card => {
+                card.element.querySelector('.card-inner').classList.remove('card-flipped');
+              });
+              flippedCards = [];
+            }
+          }, 1000);
+        }
+      }
+
+      function resetGame() {
+        flippedCards = [];
+        matches = 0;
+        moves = 0;
+        document.getElementById('moves').textContent = moves;
+        document.getElementById('winMessage').classList.add('hidden');
+        createGameBoard();
+      }
+
+      createGameBoard();
+    </script>
+  </body>
+</html>
