@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-AO" class="locked">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Claudia Calei · Feliz aniversário</title>
+    <meta name="description" content="Uma página feita só para a Claudia Calei, de Anderson Cafurica." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#150a0d" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%238e2b45'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='19' text-anchor='middle' fill='%23f3e7df'%3EC%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet" />
+    <noscript>
+      <style>
+        #gate { display: none !important; }
+        html.locked, html.locked body { overflow: auto !important; height: auto !important; }
+        .rv, .in { opacity: 1 !important; translate: none !important; }
+      </style>
+    </noscript>
+    <style>
+      :root {
+        --bg: #150a0d;
+        --bg-2: #1e0f14;
+        --wine: #8e2b45;
+        --wine-deep: #5a1527;
+        --rose: #e8a6b4;
+        --cream: #f3e7df;
+        --paper: #f5ece3;
+        --ink: #2b1319;
+        --muted: #b9a0a6;
+        --serif: 'Fraunces', Georgia, serif;
+        --sans: 'DM Sans', system-ui, sans-serif;
+        --hand: 'Caveat', 'Segoe Script', cursive;
+        --gutter: clamp(1.25rem, 5vw, 3rem);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      html.locked, html.locked body { overflow: hidden; height: 100svh; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--cream);
+        font-family: var(--sans);
+        font-weight: 300;
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      button { font: inherit; color: inherit; cursor: pointer; }
+      ::selection { background: var(--wine); color: var(--cream); }
+      :focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+
+      /* Fundo: brilho suave + grão de papel */
+      .glow {
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+          radial-gradient(60rem 40rem at 85% 8%, rgba(142, 43, 69, 0.22), transparent 60%),
+          radial-gradient(50rem 40rem at 5% 70%, rgba(90, 21, 39, 0.28), transparent 60%);
+      }
+      .grain {
+        position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.07; mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+      main, header, footer { position: relative; z-index: 2; }
+
+      #bar {
+        position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 70;
+        background: linear-gradient(90deg, var(--wine), var(--rose));
+        transform-origin: 0 50%; transform: scaleX(0);
+      }
+
+      /* ───────── Entrada ───────── */
+      #gate {
+        position: fixed; inset: 0; z-index: 80; background: var(--bg);
+        display: flex; align-items: center; justify-content: center; text-align: center;
+        padding: var(--gutter);
+        transition: opacity 0.9s ease, visibility 0.9s;
+      }
+      #gate[hidden] { display: none; }
+      #gate.gone { opacity: 0; visibility: hidden; }
+      .gate-in { max-width: 27rem; }
+      .gate-kicker { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.5rem; }
+      .gate-title {
+        font-family: var(--serif); font-weight: 300; font-size: clamp(2rem, 8vw, 2.9rem);
+        line-height: 1.12; margin: 0 0 2.5rem; letter-spacing: -0.01em;
+      }
+      .gate-title em { color: var(--rose); font-weight: 400; }
+      .seal {
+        position: relative; width: 7.5rem; height: 7.5rem; border-radius: 50%; border: 0;
+        background: radial-gradient(circle at 35% 30%, #b13b59, var(--wine) 55%, var(--wine-deep));
+        box-shadow: inset 0 -6px 14px rgba(0, 0, 0, 0.35), inset 0 4px 8px rgba(255, 255, 255, 0.15), 0 14px 30px -8px rgba(0, 0, 0, 0.7);
+        font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--cream);
+        transition: transform 0.3s ease;
+      }
+      .seal::after {
+        content: ''; position: absolute; inset: -0.6rem; border-radius: 50%;
+        border: 1px solid rgba(232, 166, 180, 0.45); animation: ring 2.6s ease-out infinite;
+      }
+      .seal:hover { transform: scale(1.05) rotate(-3deg); }
+      .seal:active { transform: scale(0.97); }
+      @keyframes ring { from { transform: scale(0.92); opacity: 0.9; } to { transform: scale(1.3); opacity: 0; } }
+      .gate-foot { margin: 2.5rem auto 0; max-width: 21rem; font-size: 0.85rem; color: var(--muted); }
+
+      /* ───────── Hero ───────── */
+      .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+      .hero-photo { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+      .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; }
+      .hero-photo::after {
+        content: ''; position: absolute; inset: 0;
+        background: linear-gradient(to bottom, rgba(21, 10, 13, 0.1) 0%, rgba(21, 10, 13, 0.05) 30%, rgba(21, 10, 13, 0.82) 68%, var(--bg) 100%);
+      }
+      .hero-copy { padding: 2rem var(--gutter) 3.2rem; max-width: 40rem; }
+      .kicker { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rose); margin: 0 0 1rem; font-weight: 400; }
+      h1 {
+        font-family: var(--serif); font-weight: 300; font-size: clamp(3rem, 12.5vw, 5.2rem);
+        line-height: 0.98; letter-spacing: -0.025em; margin: 0;
+      }
+      h1 em { display: inline-block; font-style: italic; font-weight: 400; color: var(--rose); margin-top: 0.05em; }
+      .hand { font-family: var(--hand); font-weight: 600; line-height: 1.15; }
+      .hero-sub { font-size: 1.5rem; color: var(--cream); opacity: 0.85; margin: 1.1rem 0 0; }
+      .cue { display: inline-flex; flex-direction: column; align-items: center; gap: 0.6rem; margin-top: 2.2rem; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+      .cue::after { content: ''; width: 1px; height: 2.6rem; background: linear-gradient(var(--muted), transparent); animation: drip 2s ease-in-out infinite; transform-origin: top; }
+      @keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+
+      .in { opacity: 0; translate: 0 18px; }
+      body.open .in { animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; animation-delay: var(--d, 0s); }
+      @keyframes rise { to { opacity: 1; translate: 0 0; } }
+      body.open .hero-photo img { animation: settle 2.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+      @keyframes settle { from { scale: 1.1; } to { scale: 1; } }
+
+      @media (min-width: 900px) {
+        .hero {
+          display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 3rem;
+          max-width: 75rem; margin: 0 auto; padding: 4rem var(--gutter); overflow: visible;
+        }
+        .hero-photo {
+          position: relative; inset: auto; z-index: 0; order: 2; justify-self: end; width: 100%; max-width: 27rem;
+          height: min(80svh, 41rem); border-radius: 999px 999px 1.5rem 1.5rem;
+          box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(232, 166, 180, 0.18);
+        }
+        .hero-photo::after { background: linear-gradient(to bottom, transparent 70%, rgba(21, 10, 13, 0.35)); }
+        .hero-copy { padding: 0; order: 1; max-width: none; }
+        h1 { font-size: clamp(3.5rem, 6.6vw, 6.4rem); }
+      }
+
+      /* ───────── Secções ───────── */
+      section { padding: clamp(4rem, 11vw, 7.5rem) var(--gutter); }
+      .wrap { max-width: 62rem; margin: 0 auto; }
+      .sec-head { max-width: 38rem; margin: 0 auto clamp(2.5rem, 7vw, 4rem); text-align: center; }
+      h2 {
+        font-family: var(--serif); font-weight: 300; font-size: clamp(2rem, 6.5vw, 3.4rem);
+        line-height: 1.08; letter-spacing: -0.02em; margin: 0;
+      }
+      h2 em { font-style: italic; font-weight: 400; color: var(--rose); }
+      .sec-head p.lead { margin: 1.1rem 0 0; color: var(--muted); font-size: 1.02rem; }
+
+      .rv { opacity: 0; translate: 0 26px; transition: opacity 0.9s ease, translate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .rv.visible { opacity: 1; translate: 0 0; }
+
+      /* Rascunhos */
+      .drafts { padding-block: clamp(2rem, 6vw, 4rem) clamp(3rem, 8vw, 5rem); }
+      .note {
+        position: relative; max-width: 23rem; margin: 0 auto; padding: 2.2rem 1.8rem 1.8rem;
+        background: #efdcae; color: #3b2a18; rotate: -2deg;
+        box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.75);
+      }
+      .note::before, .tape::before {
+        content: ''; position: absolute; top: -0.9rem; left: 50%; width: 5.5rem; height: 1.6rem; translate: -50% 0; rotate: 3deg;
+        background: rgba(243, 231, 223, 0.28); backdrop-filter: blur(1px); border: 1px solid rgba(243, 231, 223, 0.12);
+      }
+      .note h3 { margin: 0 0 0.8rem; font-size: 1.7rem; }
+      .note ul { list-style: none; margin: 0; padding: 0; font-size: 1.55rem; }
+      .note li { margin: 0.1rem 0; }
+      .note s { text-decoration-color: var(--wine); text-decoration-thickness: 2px; opacity: 0.75; }
+      .note .keep { margin-top: 0.9rem; color: var(--wine-deep); }
+
+      /* Exposição */
+      .expo-grid { display: grid; gap: 2.8rem 1.75rem; grid-template-columns: 1fr; align-items: start; }
+      .polaroid {
+        margin: 0; width: min(100%, 22rem); padding: 0.8rem 0.8rem 1.1rem; background: var(--paper); color: var(--ink);
+        rotate: var(--r, 0deg); box-shadow: 0 26px 40px -22px rgba(0, 0, 0, 0.85);
+        transition: rotate 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.5s ease;
+      }
+      .polaroid:nth-child(odd) { justify-self: start; }
+      .polaroid:nth-child(even) { justify-self: end; }
+      .polaroid:hover { rotate: 0deg; box-shadow: 0 34px 50px -22px rgba(0, 0, 0, 0.95); }
+      .ph { display: block; width: 100%; padding: 0; border: 0; background: #d9cdc4; overflow: hidden; }
+      .ph img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: var(--pos, 50% 40%); transition: scale 0.8s ease; }
+      .ph:hover img { scale: 1.04; }
+      .polaroid figcaption { font-size: 1.4rem; margin: 0.85rem 0.3rem 0; color: var(--ink); }
+      @media (min-width: 760px) {
+        .expo-grid { grid-template-columns: 1fr 1fr; gap: 3.2rem 2rem; }
+        .polaroid { width: min(100%, 25rem); }
+        .polaroid:nth-child(even) { margin-top: 4rem; }
+        .polaroid.wide { grid-column: 1 / -1; justify-self: center; width: min(100%, 40rem); margin-top: 0; }
+        .polaroid.wide img { aspect-ratio: 4 / 3; }
+      }
+
+      /* Lightbox */
+      dialog#lightbox {
+        padding: 0; border: 0; background: var(--paper); color: var(--ink); max-width: min(92vw, 34rem); max-height: 94svh; overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+      }
+      dialog#lightbox::backdrop { background: rgba(10, 4, 6, 0.88); backdrop-filter: blur(4px); }
+      #lightbox img { width: 100%; max-height: 78svh; object-fit: contain; background: #1a0d11; }
+      .lb-cap { margin: 0; padding: 0.7rem 1rem 0.9rem; font-size: 1.35rem; }
+      .lb-close {
+        position: absolute; top: 0.6rem; right: 0.6rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 0;
+        background: rgba(21, 10, 13, 0.75); color: var(--cream); font-size: 1.5rem; line-height: 1;
+      }
+
+      /* Reparei */
+      .noticed { background: linear-gradient(var(--bg), var(--bg-2) 20%, var(--bg-2) 80%, var(--bg)); }
+      .list { list-style: none; counter-reset: n; margin: 0 auto; padding: 0; max-width: 44rem; }
+      .list li {
+        counter-increment: n; display: grid; grid-template-columns: 3.4rem 1fr; gap: 1rem; align-items: baseline;
+        padding: 1.5rem 0; border-top: 1px solid rgba(232, 166, 180, 0.18);
+      }
+      .list li:last-child { border-bottom: 1px solid rgba(232, 166, 180, 0.18); }
+      .list li::before {
+        content: counter(n); font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 2.6rem; line-height: 1; color: var(--wine);
+        -webkit-text-stroke: 0; color: var(--rose); opacity: 0.8;
+      }
+      .list p { margin: 0; font-size: clamp(1.02rem, 2.8vw, 1.2rem); color: var(--cream); }
+
+      /* Jogo */
+      .game-card {
+        max-width: 31rem; margin: 0 auto; padding: clamp(1.1rem, 4vw, 2rem); border-radius: 1.4rem;
+        background: rgba(255, 255, 255, 0.025); border: 1px solid rgba(232, 166, 180, 0.16);
+      }
+      .board { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(0.4rem, 2vw, 0.7rem); }
+      .mem { position: relative; aspect-ratio: 1 / 1; padding: 0; border: 0; background: none; perspective: 700px; -webkit-tap-highlight-color: transparent; }
+      .mem-in { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1); }
+      .mem.flip .mem-in { transform: rotateY(180deg); }
+      .face { position: absolute; inset: 0; border-radius: 0.7rem; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+      .face.back {
+        display: grid; place-items: center;
+        background: radial-gradient(circle at 30% 25%, #a53552, var(--wine-deep));
+        border: 1px solid rgba(232, 166, 180, 0.35);
+      }
+      .face.back i { font-family: var(--serif); font-size: clamp(1.4rem, 7vw, 2rem); color: var(--cream); opacity: 0.85; }
+      .face.front { transform: rotateY(180deg); background: #2a1219; }
+      .face.front img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+      .mem.done .face.front { box-shadow: inset 0 0 0 2px var(--rose); }
+      .mem.done { animation: pop 0.5s ease 0.35s; }
+      @keyframes pop { 50% { scale: 1.07; } }
+      .game-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 1.4rem; font-size: 0.95rem; color: var(--muted); }
+      .game-bar b { color: var(--cream); font-weight: 500; font-variant-numeric: tabular-nums; }
+      .btn-ghost { padding: 0.55rem 1.2rem; border-radius: 999px; background: transparent; border: 1px solid rgba(232, 166, 180, 0.4); color: var(--cream); font-size: 0.9rem; transition: background 0.3s; }
+      .btn-ghost:hover { background: rgba(232, 166, 180, 0.12); }
+      #win { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px dashed rgba(232, 166, 180, 0.3); text-align: center; }
+      #win[hidden] { display: none; }
+      #win .win-h { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin: 0 0 0.4rem; color: var(--rose); }
+      #win p { margin: 0 0 0.9rem; }
+      #win .win-s { font-family: var(--hand); font-weight: 600; font-size: 1.55rem; line-height: 1.2; color: var(--cream); margin: 1.1rem 0 0; }
+
+      /* Carta */
+      .letter-sec { padding-top: clamp(3rem, 8vw, 5rem); }
+      .letter {
+        position: relative; max-width: 40rem; margin: 0 auto; padding: clamp(2.2rem, 7vw, 4rem) clamp(1.5rem, 7vw, 3.8rem) clamp(2rem, 6vw, 3rem);
+        background: var(--paper); color: var(--ink); rotate: -0.5deg;
+        box-shadow: 0 40px 70px -28px rgba(0, 0, 0, 0.9);
+        background-image: radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.5), transparent 60%);
+      }
+      .letter::before { content: ''; position: absolute; top: -0.9rem; left: 50%; width: 6rem; height: 1.7rem; translate: -50% 0; rotate: -2deg; background: rgba(142, 43, 69, 0.4); }
+      .letter .hello { font-size: clamp(2rem, 7vw, 2.6rem); color: var(--wine); margin: 0 0 1.4rem; }
+      .letter p.t {
+        font-family: var(--serif); font-weight: 380; font-size: clamp(1.06rem, 2.9vw, 1.2rem); line-height: 1.85; margin: 0 0 1.35rem; hanging-punctuation: first;
+      }
+      .letter .big { font-size: clamp(1.25rem, 4vw, 1.5rem); font-style: italic; font-weight: 400; color: var(--wine-deep); }
+      .letter .sign { font-size: clamp(2rem, 8vw, 2.6rem); color: var(--wine); margin: 1.8rem 0 0; rotate: -3deg; display: inline-block; }
+      .letter .ps { font-size: 1.45rem; margin: 1.4rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgba(43, 19, 25, 0.15); color: var(--ink); opacity: 0.9; }
+
+      /* Fecho */
+      .finale { text-align: center; padding-bottom: clamp(4rem, 10vw, 6rem); }
+      .finale h2 { font-size: clamp(2.6rem, 10.5vw, 5.8rem); line-height: 1; }
+      .finale .by { margin: 1.6rem 0 2.4rem; color: var(--muted); font-size: 0.95rem; }
+      .cta {
+        display: inline-flex; align-items: center; gap: 0.7rem; padding: 1rem 1.9rem; border-radius: 999px; text-decoration: none;
+        background: var(--wine); color: var(--cream); font-weight: 400; letter-spacing: 0.01em;
+        box-shadow: 0 14px 30px -12px rgba(142, 43, 69, 0.9); transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .cta:hover { background: #a53552; transform: translateY(-2px); }
+      .cta-note { display: block; margin-top: 1rem; font-size: 0.82rem; color: var(--muted); }
+
+      /* Pétalas */
+      .petal {
+        position: fixed; top: -2rem; z-index: 1; pointer-events: none; width: 0.65rem; height: 0.9rem;
+        background: var(--rose); border-radius: 80% 0 80% 0; opacity: 0;
+        animation: fall var(--t, 16s) linear var(--dl, 0s) var(--n, infinite);
+      }
+      @keyframes fall {
+        0% { transform: translate3d(0, -2rem, 0) rotate(0); opacity: 0; }
+        10% { opacity: var(--o, 0.35); }
+        50% { transform: translate3d(var(--sway, 40px), 55vh, 0) rotate(220deg); }
+        90% { opacity: var(--o, 0.35); }
+        100% { transform: translate3d(calc(var(--sway, 40px) * -0.6), 108vh, 0) rotate(460deg); opacity: 0; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        .rv, .in { opacity: 1; translate: none; }
+        .petal { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div id="bar" aria-hidden="true"></div>
+
+    <!-- ENTRADA -->
+    <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+      <div class="gate-in">
+        <p class="gate-kicker">psst</p>
+        <p class="gate-title" id="gate-title">Esta página foi feita para <em>uma pessoa</em>.</p>
+        <button class="seal" id="enter" type="button">Sou eu</button>
+        <p class="gate-foot">Se não és a Claudia Calei, é melhor fechares. Não é nada contigo, só que ia ser muito estranho de ler.</p>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-photo">
+        <img src="assets/web/7.jpg" width="1280" height="1600" fetchpriority="high" alt="A Claudia encostada a uma parede, de camisa branca e gravata preta, com a mão no cabelo e um sorriso de lado" />
+      </div>
+      <div class="hero-copy">
+        <p class="kicker in" style="--d: 0.15s">8 de Outubro de 2026</p>
+        <h1 class="in" style="--d: 0.3s">Feliz<br />aniversário,<br /><em>Claudia.</em></h1>
+        <p class="hero-sub hand in" style="--d: 0.55s">de Anderson Cafurica, com algum nervosismo</p>
+        <a class="cue in" style="--d: 0.8s" href="#rascunhos">desce</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- RASCUNHOS -->
+      <section class="drafts" id="rascunhos">
+        <div class="note hand rv">
+          <h3>Rascunhos que não sobreviveram</h3>
+          <ul>
+            <li><s>"Parabéns, que Deus te dê muitos anos de vida"</s></li>
+            <li><s>"Mais um ano, mais uma vela, mais sabedoria"</s></li>
+            <li><s>um poema (ainda bem)</s></li>
+          </ul>
+          <p class="keep">→ isto, que foi o que sobrou.</p>
+        </div>
+      </section>
+
+      <!-- EXPOSIÇÃO -->
+      <section id="expo">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <p class="kicker">pequena exposição</p>
+            <h2>Fotos que escolhi com <em>demasiado</em> cuidado</h2>
+            <p class="lead">Toca numa para ver maior. As legendas são minhas, as poses são tuas.</p>
+          </div>
+
+          <div class="expo-grid">
+            <figure class="polaroid rv" style="--r: -2.2deg">
+              <button class="ph" type="button" data-full="assets/web/1.jpg" data-alt="A Claudia a tirar uma selfie ao espelho, com o telemóvel à frente da cara, camisa azul-clara e calças brancas, junto a uma parede de mármore">
+                <img src="assets/web/t1.jpg" srcset="assets/web/t1.jpg 384w, assets/web/1.jpg 1280w" sizes="(min-width: 760px) 400px, 80vw" width="1280" height="1600" loading="lazy" decoding="async" alt="A Claudia a tirar uma selfie ao espelho, com o telemóvel à frente da cara, junto a uma parede de mármore" />
+              </button>
+              <figcaption class="hand">Escondeste a cara atrás do telemóvel. Fizeste bem, assim consigo escrever esta legenda.</figcaption>
+            </figure>
+
+            <figure class="polaroid rv" style="--r: 1.8deg; --pos: 50% 35%">
+              <button class="ph" type="button" data-full="assets/web/2.jpg" data-alt="A Claudia num hall de hotel, com a cabeça inclinada, óculos, mala castanha e calças brancas largas">
+                <img src="assets/web/t2.jpg" srcset="assets/web/t2.jpg 384w, assets/web/2.jpg 1280w" sizes="(min-width: 760px) 400px, 80vw" width="1280" height="1600" loading="lazy" decoding="async" alt="A Claudia num hall de hotel, com a cabeça inclinada, óculos, mala castanha e calças brancas largas" />
+              </button>
+              <figcaption class="hand">Cabeça inclinada, sorriso de quem sabe o que está a fazer. Sabes.</figcaption>
+            </figure>
+
+            <figure class="polaroid rv" style="--r: 2deg; --pos: 45% 50%">
+              <button class="ph" type="button" data-full="assets/web/3.jpg" data-alt="A Claudia de boné e óculos de sol em cima de uma pedra enorme, com vegetação e uma pequena queda de água atrás">
+                <img src="assets/web/t3.jpg" srcset="assets/web/t3.jpg 360w, assets/web/3.jpg 1200w" sizes="(min-width: 760px) 400px, 80vw" width="1200" height="1600" loading="lazy" decoding="async" alt="A Claudia de boné e óculos de sol em cima de uma pedra enorme, com vegetação atrás" />
+              </button>
+              <figcaption class="hand">Subiste para uma pedra enorme só para a foto sair bem. Eu tinha ficado cá em baixo a segurar nas coisas.</figcaption>
+            </figure>
+
+            <figure class="polaroid rv" style="--r: -1.6deg; --pos: 50% 45%">
+              <button class="ph" type="button" data-full="assets/web/4.jpg" data-alt="Selfie da Claudia ao espelho, de óculos, batom vinho, brincos de pérola e blusa branca de mangas bufantes">
+                <img src="assets/web/t4.jpg" srcset="assets/web/t4.jpg 384w, assets/web/4.jpg 1280w" sizes="(min-width: 760px) 400px, 80vw" width="1280" height="1600" loading="lazy" decoding="async" alt="Selfie da Claudia ao espelho, de óculos, batom vinho e blusa branca de mangas bufantes" />
+              </button>
+              <figcaption class="hand">Batom vinho, óculos, zero esforço. Não é justo para os outros.</figcaption>
+            </figure>
+
+            <figure class="polaroid rv" style="--r: 2.4deg; --pos: 40% 35%">
+              <button class="ph" type="button" data-full="assets/web/5.jpg" data-alt="A Claudia ao espelho com uma camisa de ganga, óculos, relógio e unhas cor de vinho">
+                <img src="assets/web/t5.jpg" srcset="assets/web/t5.jpg 384w, assets/web/5.jpg 1280w" sizes="(min-width: 760px) 400px, 80vw" width="1280" height="1600" loading="lazy" decoding="async" alt="A Claudia ao espelho com uma camisa de ganga, óculos, relógio e unhas cor de vinho" />
+              </button>
+              <figcaption class="hand">As unhas continuam a combinar com o batom. Reparo nestas coisas.</figcaption>
+            </figure>
+
+            <figure class="polaroid rv" style="--r: -2deg; --pos: 50% 55%">
+              <button class="ph" type="button" data-full="assets/web/6.jpg" data-alt="A Claudia de óculos escuros e casaco branco, em frente a uma pick-up vermelha">
+                <img src="assets/web/t6.jpg" srcset="assets/web/t6.jpg 360w, assets/web/6.jpg 1200w" sizes="(min-width: 760px) 400px, 80vw" width="1200" height="1600" loading="lazy" decoding="async" alt="A Claudia de óculos escuros e casaco branco, em frente a uma pick-up vermelha" />
+              </button>
+              <figcaption class="hand">A pick-up vermelha tem muita presença, mas ninguém olha para a pick-up.</figcaption>
+            </figure>
+
+            <figure class="polaroid wide rv" style="--r: 1.2deg; --pos: 40% 66%">
+              <button class="ph" type="button" data-full="assets/web/8.jpg" data-alt="A Claudia sentada numa rocha, de boné, a olhar a paisagem e uma lagoa ao longe">
+                <img src="assets/web/t8.jpg" srcset="assets/web/t8.jpg 360w, assets/web/8.jpg 1200w" sizes="(min-width: 760px) 640px, 80vw" width="1200" height="1600" loading="lazy" decoding="async" alt="A Claudia sentada numa rocha, de boné, a olhar a paisagem" />
+              </button>
+              <figcaption class="hand">Sentada a olhar o horizonte, a pensar em coisas grandes. Eu só queria saber em quê.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPAREI -->
+      <section class="noticed" id="reparei">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <p class="kicker">observações</p>
+            <h2>Coisas que reparei em ti, <em>sem ninguém pedir</em></h2>
+          </div>
+          <ol class="list">
+            <li class="rv"><p>O batom e as unhas andam sempre na mesma família de vinho. Ou é coincidência, ou é estratégia. Respeito as duas.</p></li>
+            <li class="rv"><p>Inclinas a cabeça quando sabes que a foto vai sair boa. Sai sempre.</p></li>
+            <li class="rv"><p>Gostas de sítios altos e com vista. Eu sou mais de sítios com tomada e wi-fi, mas estou a tentar acompanhar.</p></li>
+            <li class="rv"><p>Consegues vestir gravata e saia preta e parecer que a reunião é tua. Não sei que reunião era. Fiquei com medo na mesma.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- JOGO -->
+      <section id="jogo">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <p class="kicker">intervalo</p>
+            <h2>Jogo da <em>memória</em></h2>
+            <p class="lead">Dezasseis cartas, oito fotos tuas. Sim, é um jogo com a tua cara. Não tenho vergonha nenhuma.</p>
+          </div>
+          <div class="game-card rv">
+            <div class="board" id="board" aria-label="Tabuleiro do jogo da memória"></div>
+            <div class="game-bar">
+              <span>Jogadas: <b id="moves">0</b></span>
+              <button class="btn-ghost" id="restart" type="button">Recomeçar</button>
+            </div>
+            <div id="win" hidden aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARTA -->
+      <section class="letter-sec" id="carta">
+        <article class="letter rv">
+          <p class="hand hello">Claudia,</p>
+          <p class="t">Isto já vai na quarta versão. Se leste a nota lá em cima, percebes porquê. Vou escrever como falo, que é o único jeito que sei.</p>
+          <p class="t">Hoje fazes anos e eu não queria ser mais uma mensagem de parabéns no meio de trinta iguais. Não sei cantar nem desenhar. Sei fazer páginas, por isso fiz esta. As fotos escolhi uma a uma, e demorei mais do que admito.</p>
+          <p class="t">Também vou dizer a parte que me custa: gosto de ti. Escrevi esta frase e apaguei duas vezes. Fica aqui, escrita, antes que eu mude de ideias.</p>
+          <p class="t">Não te estou a pedir nada. Isto não é um pedido disfarçado de presente. Só achei que devias saber que há alguém por aí a achar-te uma pessoa muito boa de se ter por perto. Se isto ficar só por aqui, tudo bem. O presente é teu na mesma.</p>
+          <p class="t">Para este ano que começa, desejo-te coisas simples e boas. Que as pessoas certas fiquem e as erradas se percam no caminho. Que tenhas sempre uma vista bonita à tua frente e alguém para quem mandar a foto.</p>
+          <p class="t big">Feliz aniversário, Claudia. Obrigado por teres lido até aqui.</p>
+          <p class="hand sign">Anderson Cafurica</p>
+          <p class="hand ps">P.S. Escolhi o vinho como cor da página por causa das tuas unhas e do teu batom. Se acharem que foi por causa da bebida, não desminto.</p>
+        </article>
+      </section>
+
+      <!-- FECHO -->
+      <section class="finale">
+        <div class="wrap">
+          <h2 class="rv">Feliz aniversário,<br /><em>Claudia.</em></h2>
+          <p class="by rv">Feito com muito café e pouca coragem, por Anderson Cafurica, para Claudia Calei.</p>
+          <div class="rv">
+            <a class="cta" href="https://wa.me/244928301450?text=J%C3%A1%20vi%20a%20p%C3%A1gina%20toda.%20Podes%20respirar." target="_blank" rel="noopener">Responder ao Anderson</a>
+            <span class="cta-note">Abre o WhatsApp. Ninguém é obrigado.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <dialog id="lightbox" aria-label="Foto ampliada">
+      <form method="dialog"><button class="lb-close" aria-label="Fechar">×</button></form>
+      <img alt="" />
+      <p class="lb-cap hand"></p>
+    </dialog>
+
+    <script>
+      (function () {
+        var $ = function (s, c) { return (c || document).querySelector(s); };
+        var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ── Entrada ──
+        var gate = $('#gate');
+        $('#enter').addEventListener('click', function () {
+          gate.classList.add('gone');
+          document.documentElement.classList.remove('locked');
+          window.scrollTo(0, 0);
+          document.body.classList.add('open');
+          setTimeout(function () { gate.hidden = true; }, 950);
+          if (!reduce) { setTimeout(function () { petals(10, 1); }, 600); }
+        });
+
+        // ── Revelar ao descer ──
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        $$('.rv').forEach(function (el) { io.observe(el); });
+
+        // ── Barra de progresso ──
+        var bar = $('#bar'), ticking = false;
+        window.addEventListener('scroll', function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            var h = document.documentElement, max = h.scrollHeight - window.innerHeight;
+            bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, h.scrollTop / max) : 0) + ')';
+            ticking = false;
+          });
+        }, { passive: true });
+
+        // ── Pétalas ──
+        function petals(n, once) {
+          if (reduce) return;
+          for (var i = 0; i < n; i++) {
+            var p = document.createElement('span');
+            p.className = 'petal';
+            p.setAttribute('aria-hidden', 'true');
+            p.style.left = (Math.random() * 100) + 'vw';
+            p.style.setProperty('--t', (11 + Math.random() * 9) + 's');
+            p.style.setProperty('--dl', (Math.random() * (once ? 2.5 : 14)) + 's');
+            p.style.setProperty('--sway', (Math.random() * 90 - 20) + 'px');
+            p.style.setProperty('--o', (0.22 + Math.random() * 0.3).toFixed(2));
+            if (once) {
+              p.style.setProperty('--n', '1');
+              p.addEventListener('animationend', function (ev) { ev.target.remove(); });
+            }
+            var s = 0.7 + Math.random() * 0.8;
+            p.style.width = (0.65 * s) + 'rem';
+            p.style.height = (0.9 * s) + 'rem';
+            document.body.appendChild(p);
+          }
+        }
+        petals(9, 0);
+
+        // ── Lightbox ──
+        var lb = $('#lightbox'), lbImg = $('img', lb), lbCap = $('.lb-cap', lb);
+        $$('.ph').forEach(function (b) {
+          b.addEventListener('click', function () {
+            lbImg.src = b.dataset.full;
+            lbImg.alt = b.dataset.alt;
+            lbCap.textContent = b.parentNode.querySelector('figcaption').textContent;
+            if (lb.showModal) lb.showModal();
+          });
+        });
+        lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+
+        // ── Jogo da memória ──
+        var ids = [1, 2, 3, 4, 5, 6, 7, 8];
+        var board = $('#board'), movesEl = $('#moves'), win = $('#win');
+        var first = null, locked = false, moves = 0, found = 0;
+
+        function shuffle(a) {
+          for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = a[i]; a[i] = a[j]; a[j] = t;
+          }
+          return a;
+        }
+
+        function build() {
+          board.innerHTML = '';
+          first = null; locked = false; moves = 0; found = 0;
+          movesEl.textContent = '0';
+          win.hidden = true;
+          shuffle(ids.concat(ids)).forEach(function (id) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'mem';
+            b.dataset.id = id;
+            b.setAttribute('aria-label', 'Carta virada para baixo');
+            b.innerHTML = '<span class="mem-in"><span class="face back"><i>C</i></span>' +
+              '<span class="face front"><img src="assets/web/t' + id + '.jpg" alt="" decoding="async"></span></span>';
+            b.addEventListener('click', function () { pick(b); });
+            board.appendChild(b);
+          });
+        }
+
+        function pick(b) {
+          if (locked || b.classList.contains('flip')) return;
+          b.classList.add('flip');
+          b.setAttribute('aria-label', 'Carta virada: foto da Claudia');
+          if (!first) { first = b; return; }
+          moves++;
+          movesEl.textContent = moves;
+          if (first.dataset.id === b.dataset.id) {
+            first.classList.add('done'); b.classList.add('done');
+            first = null; found++;
+            if (found === ids.length) finish();
+          } else {
+            locked = true;
+            var a = first; first = null;
+            setTimeout(function () {
+              [a, b].forEach(function (c) {
+                c.classList.remove('flip');
+                c.setAttribute('aria-label', 'Carta virada para baixo');
+              });
+              locked = false;
+            }, 850);
+          }
+        }
+
+        function finish() {
+          var tier = moves <= 11
+            ? 'Memória de elefante. Fico avisado: contigo não posso esquecer nada.'
+            : moves <= 17
+              ? 'Boa memória, sem exageros. Já dá para confiar-te segredos.'
+              : 'Demoraste, mas eu demorei três rascunhos a escrever isto. Estamos quites.';
+          win.innerHTML = '<p class="win-h">Fechaste em ' + moves + ' jogadas.</p><p>' + tier + '</p>' +
+            '<p class="win-s">E o prémio? Não há prémio. Era só um truque para te ter aqui mais uns minutinhos. Resultou?</p>';
+          setTimeout(function () { win.hidden = false; petals(16, 1); }, 600);
+        }
+
+        $('#restart').addEventListener('click', build);
+        build();
+      })();
+    </script>
+  </body>
+</html>
